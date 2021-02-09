@@ -1,0 +1,346 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/06/2018  00:15:47  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE Drive_Eeprom.obj, EEPROM_Main.obj, Drive_1602.obj TO EEPROM RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Drive_Eeprom.obj (DRIVE_EEPROM)
+  EEPROM_Main.obj (EEPROM_MAIN)
+  Drive_1602.obj (DRIVE_1602)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  EEPROM (DRIVE_EEPROM)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000DH     UNIT         ?DT?EEPROM_MAIN
+            DATA    0015H     0007H     UNIT         _DATA_GROUP_
+            IDATA   001CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0070H     UNIT         ?PR?MAIN?EEPROM_MAIN
+            CODE    00FFH     0045H     UNIT         ?PR?_ISP_IAP_READDATA?DRIVE_EEPROM
+            CODE    0144H     0042H     UNIT         ?PR?_ISP_IAP_WRITEDATA?DRIVE_EEPROM
+            CODE    0186H     0035H     UNIT         ?PR?_DISP_1602_STR?DRIVE_1602
+            CODE    01BBH     002BH     UNIT         ?C?LIB_CODE
+            CODE    01E6H     0015H     UNIT         ?PR?_ISP_IAP_SECTORERASE?DRIVE_EEPROM
+            CODE    01FBH     0014H     UNIT         ?PR?INIT_1602?DRIVE_1602
+            CODE    020FH     0012H     UNIT         ?C_INITSEG
+            CODE    0221H     0011H     UNIT         ?PR?_WR_CMD?DRIVE_1602
+            CODE    0232H     0011H     UNIT         ?PR?_WR_DAT?DRIVE_1602
+            CODE    0243H     000BH     UNIT         ?PR?READY?DRIVE_1602
+            CODE    024EH     000BH     UNIT         ?PR?RD_STA?DRIVE_1602
+            CODE    0259H     000AH     UNIT         ?PR?ISP_IAP_DISABLE?DRIVE_EEPROM
+            CODE    0263H     0009H     UNIT         ?PR?ISP_IAP_TRIGGER?DRIVE_EEPROM
+
+
+
+OVERLAY MAP OF MODULE:   EEPROM (DRIVE_EEPROM)
+
+
+SEGMENT                                         DATA_GROUP 
+  +--> CALLED SEGMENT                         START    LENGTH
+-------------------------------------------------------------
+?C_C51STARTUP                                 -----    -----
+  +--> ?PR?MAIN?EEPROM_MAIN
+  +--> ?C_INITSEG
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/06/2018  00:15:47  PAGE 2
+
+
+
+?PR?MAIN?EEPROM_MAIN                          -----    -----
+  +--> ?PR?INIT_1602?DRIVE_1602
+  +--> ?PR?_ISP_IAP_READDATA?DRIVE_EEPROM
+  +--> ?PR?_DISP_1602_STR?DRIVE_1602
+  +--> ?PR?_ISP_IAP_SECTORERASE?DRIVE_EEPROM
+  +--> ?PR?_ISP_IAP_WRITEDATA?DRIVE_EEPROM
+
+?PR?INIT_1602?DRIVE_1602                      -----    -----
+  +--> ?PR?_WR_CMD?DRIVE_1602
+
+?PR?_WR_CMD?DRIVE_1602                        0018H    0001H
+  +--> ?PR?READY?DRIVE_1602
+
+?PR?READY?DRIVE_1602                          -----    -----
+  +--> ?PR?RD_STA?DRIVE_1602
+
+?PR?_ISP_IAP_READDATA?DRIVE_EEPROM            0015H    0007H
+  +--> ?PR?ISP_IAP_TRIGGER?DRIVE_EEPROM
+  +--> ?PR?ISP_IAP_DISABLE?DRIVE_EEPROM
+
+?PR?_DISP_1602_STR?DRIVE_1602                 0015H    0003H
+  +--> ?PR?_WR_CMD?DRIVE_1602
+  +--> ?PR?_WR_DAT?DRIVE_1602
+
+?PR?_WR_DAT?DRIVE_1602                        0018H    0001H
+  +--> ?PR?READY?DRIVE_1602
+
+?PR?_ISP_IAP_SECTORERASE?DRIVE_EEPROM         -----    -----
+  +--> ?PR?ISP_IAP_TRIGGER?DRIVE_EEPROM
+  +--> ?PR?ISP_IAP_DISABLE?DRIVE_EEPROM
+
+?PR?_ISP_IAP_WRITEDATA?DRIVE_EEPROM           0015H    0007H
+  +--> ?PR?ISP_IAP_TRIGGER?DRIVE_EEPROM
+  +--> ?PR?ISP_IAP_DISABLE?DRIVE_EEPROM
+
+
+
+SYMBOL TABLE OF MODULE:  EEPROM (DRIVE_EEPROM)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DRIVE_EEPROM
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0263H         PUBLIC        ISP_IAP_trigger
+  D:00B0H         PUBLIC        P3
+  D:00E6H         PUBLIC        ISP_TRIG
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:01E6H         PUBLIC        _ISP_IAP_sectorErase
+  D:00B8H         PUBLIC        IP
+  D:00E5H         PUBLIC        ISP_CMD
+  C:00FFH         PUBLIC        _ISP_IAP_readData
+  D:00E3H         PUBLIC        ISP_ADDRH
+  C:0144H         PUBLIC        _ISP_IAP_writeData
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/06/2018  00:15:47  PAGE 3
+
+
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00E4H         PUBLIC        ISP_ADDRL
+  D:00E7H         PUBLIC        ISP_CONTR
+  C:0259H         PUBLIC        ISP_IAP_disable
+  D:00C8H         PUBLIC        T2CON
+  D:00E2H         PUBLIC        ISP_DATA
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          ISP_IAP_DISABLE
+  C:0259H         LINE#         18
+  C:0259H         LINE#         19
+  C:0259H         LINE#         20
+  C:025BH         LINE#         21
+  C:025EH         LINE#         22
+  C:0260H         LINE#         23
+  C:0262H         LINE#         24
+  -------         ENDPROC       ISP_IAP_DISABLE
+  -------         PROC          ISP_IAP_TRIGGER
+  C:0263H         LINE#         25
+  C:0263H         LINE#         26
+  C:0263H         LINE#         27
+  C:0265H         LINE#         28
+  C:0268H         LINE#         29
+  C:026BH         LINE#         30
+  -------         ENDPROC       ISP_IAP_TRIGGER
+  -------         PROC          _ISP_IAP_READDATA
+  D:0004H         SYMBOL        beginAddr
+  D:0017H         SYMBOL        pBuf
+  D:001AH         SYMBOL        dataSize
+  C:00FFH         LINE#         31
+  C:0109H         LINE#         32
+  C:0109H         LINE#         33
+  C:010CH         LINE#         34
+  C:010FH         LINE#         35
+  C:0112H         LINE#         36
+  C:011FH         LINE#         37
+  C:011FH         LINE#         38
+  C:0121H         LINE#         39
+  C:0124H         LINE#         40
+  C:0127H         LINE#         41
+  C:012CH         LINE#         42
+  C:013FH         LINE#         43
+  C:0141H         LINE#         44
+  -------         ENDPROC       _ISP_IAP_READDATA
+  -------         PROC          _ISP_IAP_WRITEDATA
+  D:0004H         SYMBOL        beginAddr
+  D:0017H         SYMBOL        pDat
+  D:001AH         SYMBOL        dataSize
+  C:0144H         LINE#         47
+  C:014EH         LINE#         48
+  C:014EH         LINE#         49
+  C:0151H         LINE#         50
+  C:0154H         LINE#         51
+  C:0161H         LINE#         52
+  C:0161H         LINE#         53
+  C:0163H         LINE#         54
+  C:0166H         LINE#         55
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/06/2018  00:15:47  PAGE 4
+
+
+  C:0179H         LINE#         56
+  C:017EH         LINE#         57
+  C:0181H         LINE#         58
+  C:0183H         LINE#         59
+  -------         ENDPROC       _ISP_IAP_WRITEDATA
+  -------         PROC          _ISP_IAP_SECTORERASE
+  D:0004H         SYMBOL        sectorAddr
+  C:01E6H         LINE#         62
+  C:01EAH         LINE#         63
+  C:01EAH         LINE#         64
+  C:01EDH         LINE#         65
+  C:01F0H         LINE#         66
+  C:01F2H         LINE#         67
+  C:01F5H         LINE#         68
+  C:01F8H         LINE#         69
+  -------         ENDPROC       _ISP_IAP_SECTORERASE
+  -------         ENDMOD        DRIVE_EEPROM
+
+  -------         MODULE        EEPROM_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  B:0080H.7       PUBLIC        WE
+  C:008FH         PUBLIC        main
+  D:0008H         PUBLIC        pbuf
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:000DH         PUBLIC        str
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:008FH         LINE#         30
+  C:008FH         LINE#         31
+  C:008FH         LINE#         32
+  C:0092H         LINE#         34
+  C:0095H         LINE#         35
+  C:0097H         LINE#         36
+  C:0099H         LINE#         38
+  C:00ACH         LINE#         40
+  C:00AEH         LINE#         42
+  C:00B8H         LINE#         43
+  C:00C8H         LINE#         44
+  C:00D4H         LINE#         45
+  C:00D7H         LINE#         47
+  C:00E3H         LINE#         49
+  C:00EAH         LINE#         50
+  C:00FDH         LINE#         52
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        EEPROM_MAIN
+
+  -------         MODULE        DRIVE_1602
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/06/2018  00:15:47  PAGE 5
+
+
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0221H         PUBLIC        _WR_Cmd
+  C:0232H         PUBLIC        _WR_Dat
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00B0H.4       PUBLIC        EN_1602
+  C:024EH         PUBLIC        RD_sta
+  C:01FBH         PUBLIC        Init_1602
+  B:00B0H.6       PUBLIC        RS_1602
+  B:00B0H.5       PUBLIC        RW_1602
+  D:00C8H         PUBLIC        T2CON
+  C:0243H         PUBLIC        Ready
+  C:0186H         PUBLIC        _Disp_1602_str
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DISP_1602_STR
+  D:0007H         SYMBOL        row
+  D:0005H         SYMBOL        column
+  D:0015H         SYMBOL        str
+  -------         DO            
+  D:0007H         SYMBOL        addr
+  -------         ENDDO         
+  C:0186H         LINE#         9
+  C:018CH         LINE#         10
+  C:018CH         LINE#         13
+  C:0196H         LINE#         14
+  C:019CH         LINE#         16
+  C:01A7H         LINE#         17
+  C:01A7H         LINE#         18
+  C:01B8H         LINE#         19
+  C:01BAH         LINE#         20
+  -------         ENDPROC       _DISP_1602_STR
+  -------         PROC          INIT_1602
+  C:01FBH         LINE#         22
+  C:01FBH         LINE#         23
+  C:01FBH         LINE#         24
+  C:0200H         LINE#         25
+  C:0205H         LINE#         26
+  C:020AH         LINE#         27
+  -------         ENDPROC       INIT_1602
+  -------         PROC          READY
+  C:0243H         LINE#         29
+  C:0243H         LINE#         30
+  C:0243H         LINE#         31
+  C:0246H         LINE#         32
+  C:024DH         LINE#         33
+  -------         ENDPROC       READY
+  -------         PROC          RD_STA
+  -------         DO            
+  D:0007H         SYMBOL        sta
+  -------         ENDDO         
+  C:024EH         LINE#         35
+  C:024EH         LINE#         36
+  C:024EH         LINE#         39
+  C:0250H         LINE#         40
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/06/2018  00:15:47  PAGE 6
+
+
+  C:0252H         LINE#         42
+  C:0254H         LINE#         43
+  C:0256H         LINE#         44
+  C:0258H         LINE#         46
+  C:0258H         LINE#         47
+  -------         ENDPROC       RD_STA
+  -------         PROC          _WR_CMD
+  D:0018H         SYMBOL        cmd
+  C:0221H         LINE#         48
+  C:0223H         LINE#         49
+  C:0223H         LINE#         50
+  C:0226H         LINE#         52
+  C:0228H         LINE#         53
+  C:022AH         LINE#         55
+  C:022DH         LINE#         57
+  C:022FH         LINE#         58
+  C:0231H         LINE#         59
+  -------         ENDPROC       _WR_CMD
+  -------         PROC          _WR_DAT
+  D:0018H         SYMBOL        dat
+  C:0232H         LINE#         60
+  C:0234H         LINE#         61
+  C:0234H         LINE#         62
+  C:0237H         LINE#         64
+  C:0239H         LINE#         65
+  C:023BH         LINE#         67
+  C:023EH         LINE#         69
+  C:0240H         LINE#         70
+  C:0242H         LINE#         71
+  -------         ENDPROC       _WR_DAT
+  -------         ENDMOD        DRIVE_1602
+
+  -------         MODULE        ?C?CLDPTR
+  C:01BBH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:01D4H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+Program Size: data=29.0 xdata=0 code=620
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
