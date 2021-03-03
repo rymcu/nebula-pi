@@ -1,9 +1,8 @@
 #include <stdio.h>
- 
-int main()
+void main()
 {
-    /* 我的第一个 C 程序 */
+    /* 第一段C语言代码 */
     printf("Hello, World! \n");
- 
-    return 0;
+    //返回
+    return;
 }
