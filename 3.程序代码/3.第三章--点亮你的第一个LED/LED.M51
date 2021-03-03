@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/06/2020  21:05:16  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/02/2021  17:41:27  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
-F:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, led.obj TO LED RAMSIZE (256)
+D:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, led.obj TO LED RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -59,7 +59,7 @@ SYMBOL TABLE OF MODULE:  LED (?C_STARTUP)
   N:0080H         SYMBOL        IDATALEN
   C:0006H         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/06/2020  21:05:16  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/02/2021  17:41:27  PAGE 2
 
 
   N:0100H         SYMBOL        PBPSTACKTOP
