@@ -382,9 +382,9 @@
               <FilePath>.\STARTUP.A51</FilePath>
             </File>
             <File>
-              <FileName>timer01.c</FileName>
+              <FileName>timer3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\timer01.c</FilePath>
+              <FilePath>.\timer3.c</FilePath>
             </File>
           </Files>
         </Group>

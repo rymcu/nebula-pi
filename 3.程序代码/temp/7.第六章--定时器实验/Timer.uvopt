@@ -199,8 +199,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\timer01.c</PathWithFileName>
-      <FilenameWithoutPath>timer01.c</FilenameWithoutPath>
+      <PathWithFileName>.\timer3.c</PathWithFileName>
+      <FilenameWithoutPath>timer3.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

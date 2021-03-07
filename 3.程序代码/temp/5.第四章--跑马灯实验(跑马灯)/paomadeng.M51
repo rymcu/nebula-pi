@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/07/2020  23:14:22  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/05/2021  19:03:16  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, main1.obj TO paomadeng RAMSIZE (256)
+D:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, test.obj TO paomadeng RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -10,8 +10,8 @@ MEMORY MODEL: SMALL
 
 INPUT MODULES INCLUDED:
   STARTUP.obj (?C_STARTUP)
-  main1.obj (MAIN1)
-  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  test.obj (TEST)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
 
 
 LINK MAP OF MODULE:  paomadeng (?C_STARTUP)
@@ -22,13 +22,13 @@ LINK MAP OF MODULE:  paomadeng (?C_STARTUP)
 
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
-            DATA    0008H     0004H     UNIT         ?DT?MAIN1
+            DATA    0008H     0004H     UNIT         ?DT?TEST
             IDATA   000CH     0001H     UNIT         ?STACK
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
             CODE    0003H     008CH     UNIT         ?C_C51STARTUP
-            CODE    008FH     0046H     UNIT         ?PR?MAIN?MAIN1
+            CODE    008FH     0046H     UNIT         ?PR?MAIN?TEST
             CODE    00D5H     0005H     UNIT         ?C_INITSEG
 
 
@@ -40,7 +40,7 @@ SEGMENT
   +--> CALLED SEGMENT
 ---------------------
 ?C_C51STARTUP
-  +--> ?PR?MAIN?MAIN1
+  +--> ?PR?MAIN?TEST
   +--> ?C_INITSEG
 
 
@@ -59,7 +59,7 @@ SYMBOL TABLE OF MODULE:  paomadeng (?C_STARTUP)
   D:0083H         SYMBOL        DPH
   D:0082H         SYMBOL        DPL
   N:0000H         SYMBOL        IBPSTACK
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/07/2020  23:14:22  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/05/2021  19:03:16  PAGE 2
 
 
   N:0100H         SYMBOL        IBPSTACKTOP
@@ -87,13 +87,11 @@ SYMBOL TABLE OF MODULE:  paomadeng (?C_STARTUP)
   C:000CH         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
-  -------         MODULE        MAIN1
+  -------         MODULE        TEST
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
-  D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-  D:00E8H         PUBLIC        P4
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:0008H         PUBLIC        flag
@@ -119,11 +117,11 @@ SYMBOL TABLE OF MODULE:  paomadeng (?C_STARTUP)
   C:00CBH         LINE#         38
   C:00D3H         LINE#         39
   C:00D3H         LINE#         40
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/07/2020  23:14:22  PAGE 3
-
-
   -------         ENDPROC       MAIN
-  -------         ENDMOD        MAIN1
+  -------         ENDMOD        TEST
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/05/2021  19:03:16  PAGE 3
+
+
 
 Program Size: data=13.0 xdata=0 code=218
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
