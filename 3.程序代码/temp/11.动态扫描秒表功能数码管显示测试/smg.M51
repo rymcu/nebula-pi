@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        09/05/2018  23:00:02  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/15/2021  22:20:51  PAGE 1
 
 
-BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL\C51\BIN\BL51.EXE smg2.obj TO smg RAMSIZE (256)
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE smg2.obj TO smg RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -10,9 +10,9 @@ MEMORY MODEL: SMALL
 
 INPUT MODULES INCLUDED:
   smg2.obj (SMG2)
-  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
-  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
-  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
 
 
 LINK MAP OF MODULE:  smg (SMG2)
@@ -31,11 +31,11 @@ LINK MAP OF MODULE:  smg (SMG2)
                     0003H     0008H                  *** GAP ***
             CODE    000BH     0003H     ABSOLUTE     
             CODE    000EH     008CH     UNIT         ?C_C51STARTUP
-            CODE    009AH     0081H     UNIT         ?PR?TIMER0?SMG2
-            CODE    011BH     0071H     UNIT         ?PR?MAIN?SMG2
-            CODE    018CH     0055H     UNIT         ?C?LIB_CODE
-            CODE    01E1H     0017H     UNIT         ?C_INITSEG
-            CODE    01F8H     0016H     UNIT         ?CO?SMG2
+            CODE    009AH     0085H     UNIT         ?PR?TIMER0?SMG2
+            CODE    011FH     0071H     UNIT         ?PR?MAIN?SMG2
+            CODE    0190H     0055H     UNIT         ?C?LIB_CODE
+            CODE    01E5H     0017H     UNIT         ?C_INITSEG
+            CODE    01FCH     0016H     UNIT         ?CO?SMG2
 
 
 
@@ -59,7 +59,7 @@ SEGMENT
 SYMBOL TABLE OF MODULE:  smg (SMG2)
 
   VALUE           TYPE          NAME
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/05/2018  23:00:02  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/15/2021  22:20:51  PAGE 2
 
 
   ----------------------------------
@@ -77,13 +77,13 @@ SYMBOL TABLE OF MODULE:  smg (SMG2)
   B:0080H.7       PUBLIC        WE
   D:0008H         PUBLIC        Sec
   D:000AH         PUBLIC        flag
-  C:011BH         PUBLIC        main
+  C:011FH         PUBLIC        main
   D:000CH         PUBLIC        count
-  C:01F8H         PUBLIC        table_D
+  C:01FCH         PUBLIC        table_D
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
-  C:0209H         PUBLIC        table_W
+  C:020DH         PUBLIC        table_W
   B:00A8H.1       PUBLIC        ET0
   D:008CH         PUBLIC        TH0
   D:008AH         PUBLIC        TL0
@@ -94,59 +94,59 @@ SYMBOL TABLE OF MODULE:  smg (SMG2)
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
-  C:011BH         LINE#         46
-  C:011BH         LINE#         47
-  C:011BH         LINE#         48
-  C:011EH         LINE#         49
-  C:0121H         LINE#         50
-  C:0124H         LINE#         52
-  C:0126H         LINE#         53
-  C:0128H         LINE#         54
-  C:012AH         LINE#         56
-  C:012AH         LINE#         57
-  C:012AH         LINE#         58
-  C:0135H         LINE#         59
-  C:0135H         LINE#         60
-  C:013AH         LINE#         61
-  C:0142H         LINE#         63
-  C:014EH         LINE#         64
-  C:0162H         LINE#         65
-  C:0176H         LINE#         66
-  C:018AH         LINE#         67
-  C:018AH         LINE#         68
+  C:011FH         LINE#         46
+  C:011FH         LINE#         47
+  C:011FH         LINE#         48
+  C:0122H         LINE#         49
+  C:0125H         LINE#         50
+  C:0128H         LINE#         52
+  C:012AH         LINE#         53
+  C:012CH         LINE#         54
+  C:012EH         LINE#         56
+  C:012EH         LINE#         57
+  C:012EH         LINE#         58
+  C:0139H         LINE#         59
+  C:0139H         LINE#         60
+  C:013EH         LINE#         61
+  C:0146H         LINE#         63
+  C:0152H         LINE#         64
+  C:0166H         LINE#         65
+  C:017AH         LINE#         66
+  C:018EH         LINE#         67
+  C:018EH         LINE#         68
   -------         ENDPROC       MAIN
   -------         PROC          TIMER0
   C:009AH         LINE#         71
-  C:00A9H         LINE#         73
-  C:00ACH         LINE#         74
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/05/2018  23:00:02  PAGE 3
+  C:00A7H         LINE#         73
+  C:00AAH         LINE#         74
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/15/2021  22:20:51  PAGE 3
 
 
-  C:00AFH         LINE#         76
-  C:00B7H         LINE#         77
-  C:00BFH         LINE#         78
-  C:00C8H         LINE#         79
-  C:00C8H         LINE#         80
-  C:00CEH         LINE#         82
-  C:00D6H         LINE#         83
-  C:00D8H         LINE#         84
-  C:00DAH         LINE#         86
-  C:00E7H         LINE#         87
-  C:00E9H         LINE#         88
-  C:00EBH         LINE#         90
-  C:00F3H         LINE#         91
-  C:00F5H         LINE#         92
-  C:00F7H         LINE#         94
-  C:00FFH         LINE#         95
-  C:0108H         LINE#         96
-  C:010EH         LINE#         97
-  C:010EH         LINE#         98
+  C:00ADH         LINE#         76
+  C:00B5H         LINE#         77
+  C:00BDH         LINE#         78
+  C:00C6H         LINE#         79
+  C:00C6H         LINE#         80
+  C:00CCH         LINE#         82
+  C:00D4H         LINE#         83
+  C:00D6H         LINE#         84
+  C:00D8H         LINE#         86
+  C:00E4H         LINE#         87
+  C:00E6H         LINE#         88
+  C:00E8H         LINE#         90
+  C:00F9H         LINE#         91
+  C:00FBH         LINE#         92
+  C:00FDH         LINE#         94
+  C:0105H         LINE#         95
+  C:010EH         LINE#         96
+  C:0114H         LINE#         97
+  C:0114H         LINE#         98
   -------         ENDPROC       TIMER0
   -------         ENDMOD        SMG2
 
   -------         MODULE        ?C?UIDIV
-  C:018CH         PUBLIC        ?C?UIDIV
+  C:0190H         PUBLIC        ?C?UIDIV
   -------         ENDMOD        ?C?UIDIV
 
-Program Size: data=21.0 xdata=0 code=518
+Program Size: data=21.0 xdata=0 code=522
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
