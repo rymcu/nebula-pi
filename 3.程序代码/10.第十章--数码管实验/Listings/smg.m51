@@ -1,0 +1,128 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/16/2021  01:58:41  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\smg3.obj TO .\Objects\smg PRINT (.\Listings\smg.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\smg3.obj (SMG3)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\smg (SMG3)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         ?DT?SMG3
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0008H     UNIT         ?C_INITSEG
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     0055H     UNIT         ?PR?TIMER0?SMG3
+            CODE    00EFH     0015H     UNIT         ?CO?SMG3
+            CODE    0104H     0011H     UNIT         ?PR?MAIN?SMG3
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\smg (SMG3)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?TIMER0?SMG3
+  +--> ?CO?SMG3
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?SMG3
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\smg (SMG3)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SMG3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/16/2021  01:58:41  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  B:0080H.6       PUBLIC        DU
+  D:00B8H         PUBLIC        IP
+  B:0080H.7       PUBLIC        WE
+  C:0104H         PUBLIC        main
+  D:0009H         PUBLIC        count
+  C:00EFH         PUBLIC        table_D
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:0100H         PUBLIC        table_W
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  C:009AH         PUBLIC        timer0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0104H         LINE#         36
+  C:0104H         LINE#         37
+  C:0104H         LINE#         38
+  C:0107H         LINE#         39
+  C:010AH         LINE#         40
+  C:010DH         LINE#         42
+  C:010FH         LINE#         45
+  C:0111H         LINE#         46
+  C:0113H         LINE#         48
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0
+  -------         DO            
+  D:0008H         SYMBOL        flag
+  -------         ENDDO         
+  C:009AH         LINE#         52
+  C:00A2H         LINE#         56
+  C:00A5H         LINE#         57
+  C:00A8H         LINE#         59
+  C:00B0H         LINE#         60
+  C:00B9H         LINE#         62
+  C:00B9H         LINE#         63
+  C:00BFH         LINE#         64
+  C:00C7H         LINE#         65
+  C:00C9H         LINE#         66
+  C:00CBH         LINE#         68
+  C:00D3H         LINE#         69
+  C:00D5H         LINE#         70
+  C:00D7H         LINE#         72
+  C:00D9H         LINE#         73
+  C:00E6H         LINE#         74
+  C:00E6H         LINE#         75
+  -------         ENDPROC       TIMER0
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/16/2021  01:58:41  PAGE 3
+
+
+  -------         ENDMOD        SMG3
+
+Program Size: data=12.0 xdata=0 code=277
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
