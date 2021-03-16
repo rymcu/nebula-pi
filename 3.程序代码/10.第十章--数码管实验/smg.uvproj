@@ -377,9 +377,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>smg3.c</FileName>
+              <FileName>smg6.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\smg3.c</FilePath>
+              <FilePath>.\smg6.c</FilePath>
             </File>
           </Files>
         </Group>
