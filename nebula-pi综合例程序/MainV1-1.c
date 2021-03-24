@@ -385,7 +385,7 @@ void Uart_r(void) interrupt 4
 	{
 		RI = 0;		   //清零接收中断
 		
-		if(SBUF==0x55)IAP_CONTR = 0x60;//自动下载
+	//	if(SBUF==0x55)IAP_CONTR = 0x60;//自动下载
 		
 		SBUF = SBUF;   //读取接收到的数据加1并发送出去		
 	}

@@ -1,6 +1,7 @@
 #include"reg52.h"
 #include"Drive_NRF24L01.h"
 
+
  sbit CE=P4^4;  //RX/TX模式选择端
  sbit IRQ=P4^6; //可屏蔽中断端
  sbit CSN=P4^0; //SPI片选端//就是SS
