@@ -1,0 +1,549 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/24/2021  22:25:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Drive_1602.obj, .\Objects\Drive_I2C.obj, .\Objects\Drive_AT24Cxx.obj, .\Objects\Ma
+>> inAT24Cxx-01.obj TO .\Objects\AT24C0x PRINT (.\Listings\AT24C0x.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Drive_1602.obj (DRIVE_1602)
+  .\Objects\Drive_I2C.obj (DRIVE_I2C)
+  .\Objects\Drive_AT24Cxx.obj (DRIVE_AT24CXX)
+  .\Objects\MainAT24Cxx-01.obj (MAINAT24CXX_01)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\AT24C0x (DRIVE_1602)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         _DATA_GROUP_
+            DATA    000EH     0003H     UNIT         ?DT?_WRBYTE_AT24CXX?DRIVE_AT24CXX
+            DATA    0011H     0003H     UNIT         ?DT?_RDBYTE_AT24CXX?DRIVE_AT24CXX
+            DATA    0014H     0001H     UNIT         ?DT?_ADDRESSING_AT24CXX?DRIVE_AT24CXX
+                    0015H     000BH                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?_ADDRESSING_AT24CXX?DRIVE_AT24CXX
+            BIT     0020H.1   0000H.1   UNIT         _BIT_GROUP_
+                    0020H.2   0000H.6                *** GAP ***
+            DATA    0021H     0025H     UNIT         ?DT?MAINAT24CXX_01
+            IDATA   0046H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0063H     UNIT         ?PR?_WRSTR_AT24CXX?DRIVE_AT24CXX
+            CODE    00F2H     0060H     UNIT         ?PR?_RDSTR_AT24CXX?DRIVE_AT24CXX
+            CODE    0152H     0039H     UNIT         ?PR?MAIN?MAINAT24CXX_01
+            CODE    018BH     0035H     UNIT         ?PR?_DISP_1602_STR?DRIVE_1602
+            CODE    01C0H     002CH     UNIT         ?PR?_WR_I2C?DRIVE_I2C
+            CODE    01ECH     002BH     UNIT         ?C?LIB_CODE
+            CODE    0217H     002AH     UNIT         ?PR?RDACK_I2C?DRIVE_I2C
+            CODE    0241H     002AH     UNIT         ?PR?_RDBYTE_AT24CXX?DRIVE_AT24CXX
+            CODE    026BH     0028H     UNIT         ?PR?RDNAK_I2C?DRIVE_I2C
+            CODE    0293H     0021H     UNIT         ?PR?_WRBYTE_AT24CXX?DRIVE_AT24CXX
+            CODE    02B4H     0015H     UNIT         ?PR?_ADDRESSING_AT24CXX?DRIVE_AT24CXX
+            CODE    02C9H     0014H     UNIT         ?PR?INIT_1602?DRIVE_1602
+            CODE    02DDH     0014H     UNIT         ?C_INITSEG
+            CODE    02F1H     0011H     UNIT         ?PR?_WR_CMD?DRIVE_1602
+            CODE    0302H     0011H     UNIT         ?PR?_WR_DAT?DRIVE_1602
+            CODE    0313H     000FH     UNIT         ?PR?STOP_I2C?DRIVE_I2C
+            CODE    0322H     000DH     UNIT         ?PR?START_I2C?DRIVE_I2C
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 2
+
+
+            CODE    032FH     000CH     UNIT         ?PR?DELAY_I2C?DRIVE_I2C
+            CODE    033BH     000BH     UNIT         ?PR?READY?DRIVE_1602
+            CODE    0346H     000BH     UNIT         ?PR?RD_STA?DRIVE_1602
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\AT24C0x (DRIVE_1602)
+
+
+SEGMENT                                          BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                         START    LENGTH     START    LENGTH
+---------------------------------------------------------------------------------
+?C_C51STARTUP                                 -----    -----      -----    -----
+  +--> ?PR?MAIN?MAINAT24CXX_01
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAINAT24CXX_01                       -----    -----      -----    -----
+  +--> ?PR?INIT_1602?DRIVE_1602
+  +--> ?PR?_WRSTR_AT24CXX?DRIVE_AT24CXX
+  +--> ?PR?_RDSTR_AT24CXX?DRIVE_AT24CXX
+  +--> ?PR?_DISP_1602_STR?DRIVE_1602
+
+?PR?INIT_1602?DRIVE_1602                      -----    -----      -----    -----
+  +--> ?PR?_WR_CMD?DRIVE_1602
+
+?PR?_WR_CMD?DRIVE_1602                        -----    -----      000BH    0001H
+  +--> ?PR?READY?DRIVE_1602
+
+?PR?READY?DRIVE_1602                          -----    -----      -----    -----
+  +--> ?PR?RD_STA?DRIVE_1602
+
+?PR?_WRSTR_AT24CXX?DRIVE_AT24CXX              -----    -----      0008H    0006H
+  +--> ?PR?START_I2C?DRIVE_I2C
+  +--> ?PR?_WR_I2C?DRIVE_I2C
+  +--> ?PR?STOP_I2C?DRIVE_I2C
+
+?PR?START_I2C?DRIVE_I2C                       -----    -----      -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?_WR_I2C?DRIVE_I2C                         0020H.1  0000H.1    -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?STOP_I2C?DRIVE_I2C                        -----    -----      -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?_RDSTR_AT24CXX?DRIVE_AT24CXX              -----    -----      0008H    0006H
+  +--> ?PR?START_I2C?DRIVE_I2C
+  +--> ?PR?_WR_I2C?DRIVE_I2C
+  +--> ?PR?STOP_I2C?DRIVE_I2C
+  +--> ?PR?RDACK_I2C?DRIVE_I2C
+  +--> ?PR?RDNAK_I2C?DRIVE_I2C
+
+?PR?RDACK_I2C?DRIVE_I2C                       -----    -----      -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?RDNAK_I2C?DRIVE_I2C                       -----    -----      -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 3
+
+
+
+?PR?_DISP_1602_STR?DRIVE_1602                 -----    -----      0008H    0003H
+  +--> ?PR?_WR_CMD?DRIVE_1602
+  +--> ?PR?_WR_DAT?DRIVE_1602
+
+?PR?_WR_DAT?DRIVE_1602                        -----    -----      000BH    0001H
+  +--> ?PR?READY?DRIVE_1602
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\AT24C0x (DRIVE_1602)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DRIVE_1602
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:02F1H         PUBLIC        _WR_Cmd
+  C:0302H         PUBLIC        _WR_Dat
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00B0H.4       PUBLIC        EN_1602
+  C:0346H         PUBLIC        RD_sta
+  C:02C9H         PUBLIC        Init_1602
+  B:00B0H.6       PUBLIC        RS_1602
+  B:00B0H.5       PUBLIC        RW_1602
+  D:00C8H         PUBLIC        T2CON
+  C:033BH         PUBLIC        Ready
+  C:018BH         PUBLIC        _Disp_1602_str
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DISP_1602_STR
+  D:0007H         SYMBOL        row
+  D:0005H         SYMBOL        column
+  D:0008H         SYMBOL        str
+  -------         DO            
+  D:0007H         SYMBOL        addr
+  -------         ENDDO         
+  C:018BH         LINE#         9
+  C:0191H         LINE#         10
+  C:0191H         LINE#         13
+  C:019BH         LINE#         14
+  C:01A1H         LINE#         16
+  C:01ACH         LINE#         17
+  C:01ACH         LINE#         18
+  C:01BDH         LINE#         19
+  C:01BFH         LINE#         20
+  -------         ENDPROC       _DISP_1602_STR
+  -------         PROC          INIT_1602
+  C:02C9H         LINE#         22
+  C:02C9H         LINE#         23
+  C:02C9H         LINE#         24
+  C:02CEH         LINE#         25
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 4
+
+
+  C:02D3H         LINE#         26
+  C:02D8H         LINE#         27
+  -------         ENDPROC       INIT_1602
+  -------         PROC          READY
+  C:033BH         LINE#         29
+  C:033BH         LINE#         30
+  C:033BH         LINE#         31
+  C:033EH         LINE#         32
+  C:0345H         LINE#         33
+  -------         ENDPROC       READY
+  -------         PROC          RD_STA
+  -------         DO            
+  D:0007H         SYMBOL        sta
+  -------         ENDDO         
+  C:0346H         LINE#         35
+  C:0346H         LINE#         36
+  C:0346H         LINE#         39
+  C:0348H         LINE#         40
+  C:034AH         LINE#         42
+  C:034CH         LINE#         43
+  C:034EH         LINE#         44
+  C:0350H         LINE#         46
+  C:0350H         LINE#         47
+  -------         ENDPROC       RD_STA
+  -------         PROC          _WR_CMD
+  D:000BH         SYMBOL        cmd
+  C:02F1H         LINE#         48
+  C:02F3H         LINE#         49
+  C:02F3H         LINE#         50
+  C:02F6H         LINE#         52
+  C:02F8H         LINE#         53
+  C:02FAH         LINE#         55
+  C:02FDH         LINE#         57
+  C:02FFH         LINE#         58
+  C:0301H         LINE#         59
+  -------         ENDPROC       _WR_CMD
+  -------         PROC          _WR_DAT
+  D:000BH         SYMBOL        dat
+  C:0302H         LINE#         60
+  C:0304H         LINE#         61
+  C:0304H         LINE#         62
+  C:0307H         LINE#         64
+  C:0309H         LINE#         65
+  C:030BH         LINE#         67
+  C:030EH         LINE#         69
+  C:0310H         LINE#         70
+  C:0312H         LINE#         71
+  -------         ENDPROC       _WR_DAT
+  -------         ENDMOD        DRIVE_1602
+
+  -------         MODULE        DRIVE_I2C
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  B:0080H.1       PUBLIC        SCL_I2C
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 5
+
+
+  C:0336H         PUBLIC        Delay_I2C
+  D:00B8H         PUBLIC        IP
+  C:0217H         PUBLIC        RdACK_I2C
+  C:0322H         PUBLIC        Start_I2C
+  C:026BH         PUBLIC        RdNAK_I2C
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0313H         PUBLIC        Stop_I2C
+  D:00C8H         PUBLIC        T2CON
+  C:01C0H         PUBLIC        _Wr_I2C
+  B:0080H.2       PUBLIC        SDA_I2C
+  D:00D0H         PUBLIC        PSW
+  C:0331H         SYMBOL        L?0023
+  -------         PROC          L?0022
+  -------         ENDPROC       L?0022
+  C:0331H         SYMBOL        L?0023
+  -------         PROC          DELAY_I2C
+  C:0336H         LINE#         8
+  C:0336H         LINE#         9
+  C:0336H         LINE#         10
+  C:0337H         LINE#         11
+  C:0338H         LINE#         12
+  C:0339H         LINE#         13
+  C:033AH         LINE#         15
+  -------         ENDPROC       DELAY_I2C
+  -------         PROC          START_I2C
+  C:0322H         LINE#         17
+  C:0322H         LINE#         18
+  C:0322H         LINE#         20
+  C:0324H         LINE#         21
+  C:0324H         LINE#         22
+  C:0324H         LINE#         23
+  C:0324H         LINE#         24
+  C:0327H         LINE#         25
+  C:0329H         LINE#         26
+  C:032CH         LINE#         27
+  C:032EH         LINE#         28
+  -------         ENDPROC       START_I2C
+  -------         PROC          STOP_I2C
+  C:0313H         LINE#         30
+  C:0313H         LINE#         31
+  C:0313H         LINE#         33
+  C:0315H         LINE#         34
+  C:0317H         LINE#         35
+  C:0317H         LINE#         36
+  C:0317H         LINE#         37
+  C:031AH         LINE#         38
+  C:031CH         LINE#         39
+  C:031FH         LINE#         40
+  C:0321H         LINE#         41
+  -------         ENDPROC       STOP_I2C
+  -------         PROC          _WR_I2C
+  D:0007H         SYMBOL        dat
+  -------         DO            
+  B:0020H.1       SYMBOL        ack
+  D:0006H         SYMBOL        mask
+  -------         ENDDO         
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 6
+
+
+  C:01C0H         LINE#         43
+  C:01C0H         LINE#         44
+  C:01C0H         LINE#         48
+  C:01C5H         LINE#         49
+  C:01C5H         LINE#         50
+  C:01CCH         LINE#         51
+  C:01CEH         LINE#         53
+  C:01CEH         LINE#         54
+  C:01CEH         LINE#         55
+  C:01D1H         LINE#         56
+  C:01D3H         LINE#         57
+  C:01D9H         LINE#         59
+  C:01DBH         LINE#         60
+  C:01DEH         LINE#         61
+  C:01E0H         LINE#         62
+  C:01E4H         LINE#         63
+  C:01E7H         LINE#         64
+  C:01E9H         LINE#         66
+  C:01EBH         LINE#         67
+  -------         ENDPROC       _WR_I2C
+  -------         PROC          RDNAK_I2C
+  -------         DO            
+  D:0006H         SYMBOL        mask
+  D:0007H         SYMBOL        dat
+  -------         ENDDO         
+  C:026BH         LINE#         70
+  C:026BH         LINE#         71
+  C:026BH         LINE#         75
+  C:026DH         LINE#         76
+  C:0272H         LINE#         77
+  C:0272H         LINE#         78
+  C:0275H         LINE#         79
+  C:0277H         LINE#         80
+  C:027FH         LINE#         81
+  C:0282H         LINE#         82
+  C:0285H         LINE#         83
+  C:0287H         LINE#         84
+  C:028DH         LINE#         85
+  C:028DH         LINE#         86
+  C:028DH         LINE#         87
+  C:028DH         LINE#         88
+  C:0290H         LINE#         89
+  C:0292H         LINE#         91
+  C:0292H         LINE#         92
+  -------         ENDPROC       RDNAK_I2C
+  -------         PROC          RDACK_I2C
+  -------         DO            
+  D:0006H         SYMBOL        mask
+  D:0007H         SYMBOL        dat
+  -------         ENDDO         
+  C:0217H         LINE#         95
+  C:0217H         LINE#         96
+  C:0217H         LINE#         100
+  C:0219H         LINE#         101
+  C:021EH         LINE#         102
+  C:021EH         LINE#         103
+  C:0221H         LINE#         104
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 7
+
+
+  C:0223H         LINE#         105
+  C:022BH         LINE#         106
+  C:022EH         LINE#         107
+  C:0231H         LINE#         108
+  C:0233H         LINE#         109
+  C:0239H         LINE#         110
+  C:023BH         LINE#         111
+  C:023BH         LINE#         112
+  C:023BH         LINE#         113
+  C:023EH         LINE#         114
+  C:0240H         LINE#         116
+  C:0240H         LINE#         117
+  -------         ENDPROC       RDACK_I2C
+  -------         ENDMOD        DRIVE_I2C
+
+  -------         MODULE        DRIVE_AT24CXX
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:00F2H         PUBLIC        _RdStr_AT24Cxx
+  D:00A8H         PUBLIC        IE
+  C:008FH         PUBLIC        _WrStr_AT24Cxx
+  D:00B8H         PUBLIC        IP
+  C:02B4H         PUBLIC        _Addressing_AT24Cxx
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0241H         PUBLIC        _RdByte_AT24Cxx
+  D:00C8H         PUBLIC        T2CON
+  C:0293H         PUBLIC        _WrByte_AT24Cxx
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _WRBYTE_AT24CXX
+  D:000EH         SYMBOL        addr
+  D:0010H         SYMBOL        dat
+  C:0293H         LINE#         5
+  C:0299H         LINE#         6
+  C:0299H         LINE#         7
+  C:029CH         LINE#         8
+  C:02A1H         LINE#         10
+  C:02A7H         LINE#         11
+  C:02ACH         LINE#         13
+  C:02B1H         LINE#         14
+  -------         ENDPROC       _WRBYTE_AT24CXX
+  -------         PROC          _RDBYTE_AT24CXX
+  D:0011H         SYMBOL        addr
+  -------         DO            
+  D:0013H         SYMBOL        dat
+  -------         ENDDO         
+  C:0241H         LINE#         17
+  C:0245H         LINE#         18
+  C:0245H         LINE#         21
+  C:0248H         LINE#         22
+  C:024DH         LINE#         24
+  C:0253H         LINE#         25
+  C:0258H         LINE#         27
+  C:025BH         LINE#         28
+  C:0260H         LINE#         29
+  C:0265H         LINE#         30
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 8
+
+
+  C:0268H         LINE#         32
+  C:026AH         LINE#         33
+  -------         ENDPROC       _RDBYTE_AT24CXX
+  -------         PROC          _WRSTR_AT24CXX
+  D:0008H         SYMBOL        str
+  D:000BH         SYMBOL        addr
+  D:000DH         SYMBOL        len
+  C:008FH         LINE#         35
+  C:0099H         LINE#         36
+  C:0099H         LINE#         37
+  C:00A4H         LINE#         38
+  C:00A4H         LINE#         39
+  C:00A4H         LINE#         40
+  C:00A4H         LINE#         41
+  C:00A7H         LINE#         42
+  C:00AEH         LINE#         43
+  C:00B1H         LINE#         44
+  C:00B3H         LINE#         45
+  C:00B9H         LINE#         46
+  C:00BEH         LINE#         48
+  C:00C9H         LINE#         49
+  C:00C9H         LINE#         50
+  C:00DEH         LINE#         51
+  C:00E0H         LINE#         52
+  C:00E8H         LINE#         53
+  C:00ECH         LINE#         54
+  C:00ECH         LINE#         57
+  C:00ECH         LINE#         58
+  C:00EFH         LINE#         59
+  C:00F1H         LINE#         60
+  -------         ENDPROC       _WRSTR_AT24CXX
+  -------         PROC          _RDSTR_AT24CXX
+  D:0008H         SYMBOL        str
+  D:000BH         SYMBOL        addr
+  D:000DH         SYMBOL        len
+  C:00F2H         LINE#         62
+  C:00FCH         LINE#         63
+  C:00FCH         LINE#         64
+  C:00FCH         LINE#         65
+  C:00FCH         LINE#         66
+  C:00FFH         LINE#         67
+  C:0106H         LINE#         68
+  C:0109H         LINE#         69
+  C:010BH         LINE#         71
+  C:0111H         LINE#         72
+  C:0116H         LINE#         74
+  C:0119H         LINE#         75
+  C:011EH         LINE#         76
+  C:0129H         LINE#         77
+  C:0129H         LINE#         78
+  C:013EH         LINE#         79
+  C:0140H         LINE#         80
+  C:0142H         LINE#         81
+  C:014FH         LINE#         82
+  -------         ENDPROC       _RDSTR_AT24CXX
+  -------         PROC          _ADDRESSING_AT24CXX
+  D:0014H         SYMBOL        addr
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 9
+
+
+  -------         DO            
+  B:0020H.0       SYMBOL        ack
+  -------         ENDDO         
+  C:02B4H         LINE#         85
+  C:02B6H         LINE#         86
+  C:02B6H         LINE#         89
+  C:02B9H         LINE#         90
+  C:02C3H         LINE#         91
+  C:02C6H         LINE#         93
+  C:02C8H         LINE#         94
+  -------         ENDPROC       _ADDRESSING_AT24CXX
+  -------         ENDMOD        DRIVE_AT24CXX
+
+  -------         MODULE        MAINAT24CXX_01
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:0021H         PUBLIC        str1
+  D:0032H         PUBLIC        str2
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  B:0080H.7       PUBLIC        WE
+  C:0152H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0152H         LINE#         29
+  C:0152H         LINE#         30
+  C:0152H         LINE#         31
+  C:0155H         LINE#         32
+  C:0157H         LINE#         33
+  C:0159H         LINE#         35
+  C:015CH         LINE#         37
+  C:016CH         LINE#         38
+  C:017CH         LINE#         40
+  C:0189H         LINE#         42
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAINAT24CXX_01
+
+  -------         MODULE        ?C?CLDPTR
+  C:01ECH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0205H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_WRBYTE_AT24CXX?DRIVE_AT24CXX
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_RDBYTE_AT24CXX?DRIVE_AT24CXX
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/24/2021  22:25:32  PAGE 10
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ADDRESSING_AT24CXX?DRIVE_AT24CXX
+
+Program Size: data=59.2 xdata=0 code=849
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)
