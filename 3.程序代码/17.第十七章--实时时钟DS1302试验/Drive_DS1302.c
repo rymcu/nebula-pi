@@ -72,6 +72,7 @@ void WrBurst_1302(uchar *SetTime)
 	{
 		WrByte_1302(SetTime[j]);//写入7位时钟数据
 	}
+		WrByte_1302(0);//写第8个寄存器，不写的话可能无法使用
 	CE_1302 = 0;//拉低片选	
 }
 //突发读模式
@@ -98,11 +99,11 @@ void Init_1302(uchar *SetTime)
 
 	WrSingle_1302(0x8E,0x00);//解除写保护（WP=0）
 	
-	/*for(j=0;j<=6;j++)
+	for(j=0;j<=6;j++)
 	{
 		WrSingle_1302(0x80+2*j,SetTime[j]);//写入7个时钟数据
-	}*/
-	WrBurst_1302(SetTime);//当采用Burst模式时，使用此语句替代上面for循环语句
+	}
+	//WrBurst_1302(SetTime);//当采用Burst模式时，使用此语句替代上面for循环语句
 }
 //获取当前时间值
 void GetTime(uchar *CurrentTime)
@@ -112,13 +113,13 @@ void GetTime(uchar *CurrentTime)
 	  CE_1302 = 0;//初始化通信引脚
 	SCLK_1302 = 0;
 
-	/*for(j=0;j<=6;j++)
+	for(j=0;j<=6;j++)
 	{
 		 *CurrentTime = RdSingle_1302(0x81+2*j);//读取7个时钟数据
 		 CurrentTime++;
-	}*/
+	}
 	
-	RdBurst_1302(CurrentTime); //当采用Burst模式时，使用此语句替代上面for循环语句
+	//RdBurst_1302(CurrentTime); //当采用Burst模式时，使用此语句替代上面for循环语句
 }
 
 
