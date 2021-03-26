@@ -1,0 +1,116 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/25/2021  21:35:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Motor.obj TO .\Objects\Motor PRINT (.\Listings\Motor.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Motor.obj (MOTOR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Motor (MOTOR)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?MOTOR
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0008H     UNIT         ?CO?MOTOR
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     002FH     UNIT         ?PR?TIMER0?MOTOR
+            CODE    00C9H     0018H     UNIT         ?PR?MAIN?MOTOR
+            CODE    00E1H     0004H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Motor (MOTOR)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?TIMER0?MOTOR
+  +--> ?CO?MOTOR
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MOTOR
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Motor (MOTOR)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MOTOR
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/25/2021  21:35:39  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:0003H         PUBLIC        MotorCode
+  B:0080H.6       PUBLIC        DU
+  D:00B8H         PUBLIC        IP
+  C:00C9H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  C:009AH         PUBLIC        timer0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:00C9H         LINE#         27
+  C:00C9H         LINE#         28
+  C:00C9H         LINE#         29
+  C:00CCH         LINE#         30
+  C:00CEH         LINE#         31
+  C:00D0H         LINE#         33
+  C:00D3H         LINE#         34
+  C:00D6H         LINE#         35
+  C:00D9H         LINE#         37
+  C:00DBH         LINE#         38
+  C:00DDH         LINE#         39
+  C:00DFH         LINE#         41
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0
+  -------         DO            
+  D:0008H         SYMBOL        index
+  -------         ENDDO         
+  C:009AH         LINE#         45
+  C:00A2H         LINE#         49
+  C:00A5H         LINE#         50
+  C:00A8H         LINE#         52
+  C:00B0H         LINE#         53
+  C:00B2H         LINE#         54
+  C:00C0H         LINE#         56
+  -------         ENDPROC       TIMER0
+  -------         ENDMOD        MOTOR
+
+Program Size: data=10.0 xdata=0 code=229
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
