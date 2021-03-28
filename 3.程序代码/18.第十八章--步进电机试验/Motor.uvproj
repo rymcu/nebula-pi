@@ -377,9 +377,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Motor.c</FileName>
+              <FileName>Motor1.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Motor.c</FilePath>
+              <FilePath>.\Motor1.c</FilePath>
             </File>
           </Files>
         </Group>
