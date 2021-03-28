@@ -14,7 +14,7 @@
       <TargetOption>
         <TargetCommonOption>
           <Device>AT89C52</Device>
-          <Vendor>Microchip</Vendor>
+          <Vendor>Atmel</Vendor>
           <Cpu>IRAM(0-0xFF) IROM(0-0x1FFF) CLOCK(24000000)</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"LIB\STARTUP.A51" ("Standard 8051 Startup Code")</StartupFile>
@@ -45,14 +45,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>Uart</OutputName>
+          <OutputDirectory>.\</OutputDirectory>
+          <OutputName>OLED</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\Listings\</ListingPath>
+          <ListingPath>.\</ListingPath>
           <HexFormatSelection>0</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -324,7 +324,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\SRC</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -377,24 +377,19 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>uart02.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uart02.c</FilePath>
+              <FileName>STARTUP.A51</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\STARTUP.A51</FilePath>
             </File>
             <File>
-              <FileName>bmp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bmp.h</FilePath>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
             </File>
             <File>
               <FileName>oled.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\oled.c</FilePath>
-            </File>
-            <File>
-              <FileName>oled.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\oled.h</FilePath>
+              <FilePath>.\SRC\oled.c</FilePath>
             </File>
           </Files>
         </Group>
