@@ -19,7 +19,7 @@ void Disp_1602_str(unsigned char row,unsigned char column,char *str)
 	}
 }
 
-void Init_1602() //1602初始化函
+extern void Init_1602() //1602初始化函
 {
 	WR_Cmd(0x38);//设置16x2显示，5x7点阵，8位数据接口
 	WR_Cmd(0x0C);//开显示，关闭光标
