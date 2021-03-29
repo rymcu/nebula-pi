@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/23/2021  16:33:54  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/28/2021  22:56:47  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -59,7 +59,7 @@ SEGMENT                                 DATA_GROUP
 ?PR?INIT_1602?DRIVE_1602              -----    -----
   +--> ?PR?_WR_CMD?DRIVE_1602
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  16:33:54  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/28/2021  22:56:47  PAGE 2
 
 
 ?PR?_WR_CMD?DRIVE_1602                000BH    0001H
@@ -119,11 +119,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\LCD1602 (?C_STARTUP)
   -------         MODULE        DRIVE_1602
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  16:33:54  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/28/2021  22:56:47  PAGE 3
 
 
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   C:00A3H         PUBLIC        _WR_Cmd
@@ -178,10 +179,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\LCD1602 (?C_STARTUP)
   C:00DCH         LINE#         35
   C:00DCH         LINE#         36
   C:00DCH         LINE#         39
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/28/2021  22:56:47  PAGE 4
+
+
   C:00DEH         LINE#         40
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  16:33:54  PAGE 4
-
-
   C:00E0H         LINE#         42
   C:00E2H         LINE#         43
   C:00E4H         LINE#         44
@@ -220,6 +221,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\LCD1602 (?C_STARTUP)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
   D:00A8H         PUBLIC        IE
   B:0080H.6       PUBLIC        DU
   D:00B8H         PUBLIC        IP
@@ -237,11 +239,11 @@ SYMBOL TABLE OF MODULE:  .\Objects\LCD1602 (?C_STARTUP)
   C:003FH         LINE#         27
   C:0042H         LINE#         29
   C:004FH         LINE#         30
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/28/2021  22:56:47  PAGE 5
+
+
   C:005CH         LINE#         32
   -------         ENDPROC       MAIN
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  16:33:54  PAGE 5
-
-
   -------         ENDMOD        MAINLCD1602
 
   -------         MODULE        ?C?CLDPTR
