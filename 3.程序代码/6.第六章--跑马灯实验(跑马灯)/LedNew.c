@@ -6,7 +6,7 @@
 *                                                                                                                               	
 * ¡¾°æ  ±¾¡¿£º V1.0                                          	
 * ¡¾×÷  Õß¡¿£º hugh                            	
-* ¡¾Íø  Õ¾¡¿£º www.rymcu.com                            	
+* ¡¾Íø  Õ¾¡¿£º http://rymcu.com                            	
 * ¡¾ÓÊ  Ïä¡¿£º hugh@rymcu.com                                         	
 * ¡¾µê  ÆÌ¡¿£º rymcu.taobao.com                                          	
 *                                                                 	

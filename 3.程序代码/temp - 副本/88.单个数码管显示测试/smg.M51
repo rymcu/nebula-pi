@@ -1,0 +1,88 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/07/2020  23:48:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE smg2.obj TO smg RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  smg2.obj (SMG2)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  smg (SMG2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0019H     UNIT         ?PR?MAIN?SMG2
+            CODE    001CH     0016H     UNIT         ?CO?SMG2
+            CODE    0032H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   smg (SMG2)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SMG2
+
+?PR?MAIN?SMG2
+  +--> ?CO?SMG2
+
+
+
+SYMBOL TABLE OF MODULE:  smg (SMG2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SMG2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  D:00A8H         PUBLIC        IE
+  B:0080H.6       PUBLIC        DU
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/07/2020  23:48:36  PAGE 2
+
+
+  D:00B8H         PUBLIC        IP
+  B:0080H.7       PUBLIC        WE
+  C:0003H         PUBLIC        main
+  C:001CH         PUBLIC        table_D
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:002DH         PUBLIC        table_W
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0003H         LINE#         34
+  C:0003H         LINE#         35
+  C:0003H         LINE#         37
+  C:000AH         LINE#         38
+  C:000CH         LINE#         39
+  C:000EH         LINE#         41
+  C:0016H         LINE#         42
+  C:0018H         LINE#         43
+  C:001AH         LINE#         45
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SMG2
+
+Program Size: data=9.0 xdata=0 code=62
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

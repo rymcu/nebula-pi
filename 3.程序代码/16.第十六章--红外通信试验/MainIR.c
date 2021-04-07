@@ -21,16 +21,12 @@ unsigned char *Key_Str=0;
 void main()
 {
 	unsigned char Key;
+	
 	Init_1602();//1602初始化 
 
-	TMOD |= 0x10;	 //定时器1工作模式配置
-	TL1  = 12;	//装载初始值
-	TH1  = 34;
-//	TR1  = 1;		 //启动定时器
-	ET1  = 1;		 //允许定时器中断
-	EA   = 1;		 //开总中断
-	Disp_1602_str(1,2,"Nebula-Pi IR");//第1行第2列开始显示"RongYi Mini-51"
-	Disp_1602_str(2,1,"KEY:");//第1行第2列开始显示"RongYi Mini-51"	
+	Disp_1602_str(1,2,"Nebula-Pi IR");//第1行第2列开始显示"Nebula-Pi IR"
+	Disp_1602_str(2,1,"KEY:");//第1行第2列开始显示
+	
 	InitIR();
 
 	while(1)
