@@ -131,26 +131,6 @@ void OLED_Set_Pos(unsigned char x, unsigned char y)
 	OLED_WR_Byte(((x&0xf0)>>4)|0x10,OLED_CMD);
 	OLED_WR_Byte((x&0x0f),OLED_CMD); 
 }
-
-
-/********************************************
-// fill_Picture
-********************************************/
-void fill_picture(unsigned char fill_Data)
-{
-	unsigned char m,n;
-	for(m=0;m<8;m++)
-	{
-		OLED_WR_Byte(0xb0+m,0);	//page0-page1
-		OLED_WR_Byte(0x00,0);		//low column start address
-		OLED_WR_Byte(0x10,0);		//high column start address
-		for(n=0;n<128;n++)
-			{
-				OLED_WR_Byte(fill_Data,1);
-			}
-	}
-}
-
 /********************************************************************
 * 0.96 OLED 128*64像素，即:128列 x 64行
 * 64行被均分成了8页，最开始8行为第0页，最后8行为第7页。
@@ -183,19 +163,17 @@ void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
 			OLED_WR_Byte(F6x8[c][i],OLED_DATA);				
 		}
 }
-//m^n函数
+/********************************************************************
+* 
+* 函数功能为:m的n次方
+* 
+********************************************************************/	
 u32 oled_pow(u8 m,u8 n)
 {
 	u32 result=1;	 
 	while(n--)result*=m;    
 	return result;
 }				  
-//显示2个数字
-//x,y :起点坐标	 
-//len :数字的位数
-//size:字体大小
-//mode:模式	0,填充模式;1,叠加模式
-//num:数值(0~4294967295);	
 
 /********************************************************************
 * 0.96 OLED 128*64像素，即:128列 x 64行
@@ -213,7 +191,8 @@ void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
 {         	
 	u8 t,temp,RowChar,CharSize;
 	u8 enshow=0;	
-	if(Char_Size==16)
+	
+	if(Char_Size==16)//判断字体大小
 	{
 		RowChar = 8;
 		CharSize= 16;
@@ -231,7 +210,7 @@ void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
 		{
 			if(temp==0)
 			{
-				OLED_ShowChar(x+RowChar*t,y,' ',CharSize);
+				OLED_ShowChar(x+RowChar*t,y,' ',CharSize);//第一个非0数字之前用空格替代
 				continue;
 			}
 			else enshow=1; 
@@ -248,7 +227,7 @@ void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
 *
 * x:0-127(列)
 * y:0-7  (页)
-* len:数字长度
+* *chr:字符串首地址
 * Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
 *
 ********************************************************************/	
@@ -279,33 +258,57 @@ void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 Char_Size)
 			j++;
 	}
 }
-//显示汉字
-void OLED_ShowCHinese(u8 x,u8 y,u8 no)
+/********************************************************************
+* 0.96 OLED 128*64像素，即:128列 x 64行
+* 64行被均分成了8页，最开始8行为第0页，最后8行为第7页。
+* 
+* 函数功能为:从x列，y页开始显示汉字，汉字大小16x16
+*
+* x:0-127(列)
+* y:0-7  (页)
+* *chr:字符串首地址
+* Num:第Num个汉字，汉字定义在oledfont.h的数组HzK[]中。
+*
+********************************************************************/	
+void OLED_ShowCHinese(u8 x,u8 y,u8 Num)
 {      			    
 	u8 t,adder=0;
+	
 	OLED_Set_Pos(x,y);	
     for(t=0;t<16;t++)
 		{
-				OLED_WR_Byte(Hzk[2*no][t],OLED_DATA);
+				OLED_WR_Byte(Hzk[2*Num][t],OLED_DATA);
 				adder+=1;
      }	
 		OLED_Set_Pos(x,y+1);	
     for(t=0;t<16;t++)
 			{	
-				OLED_WR_Byte(Hzk[2*no+1][t],OLED_DATA);
+				OLED_WR_Byte(Hzk[2*Num+1][t],OLED_DATA);
 				adder+=1;
       }					
 }
 /***********功能描述：显示显示BMP图片128×64起始点坐标(x,y),x的范围0～127，y为页的范围0～7*****************/
-void OLED_DrawBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[])
+/********************************************************************
+* 0.96 OLED 128*64像素，即:128列 x 64行
+* 64行被均分成了8页，最开始8行为第0页，最后8行为第7页。
+* 
+* 函数功能为:从x0列，y0页开始显示图片，坐标
+*
+* x:0-127(列)
+* y:0-7  (页)
+* *chr:字符串首地址
+* Num:第Num个汉字，汉字定义在oledfont.h的数组HzK[]中。
+*
+********************************************************************/	
+void OLED_DrawBMP(u8 x0,u8 y0,u8 BMP[])
 { 	
  unsigned int j=0;
  unsigned char x,y;
   
-	for(y=y0;y<y1;y++)
+	for(y=y0;y<8;y++)
 	{
 		OLED_Set_Pos(x0,y);
-    for(x=x0;x<x1;x++)
+    for(x=x0;x<128;x++)
 	    {      
 	    	OLED_WR_Byte(BMP[j++],OLED_DATA);	    	
 	    }

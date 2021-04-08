@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/23/2021  17:26:40  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/08/2021  21:19:43  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -38,28 +38,28 @@ LINK MAP OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     0008H                  *** GAP ***
             CODE    000BH     0003H     ABSOLUTE     
-            CODE    000EH     009EH     UNIT         ?PR?MAIN?MAIN18B20
-            CODE    00ACH     008CH     UNIT         ?C_C51STARTUP
-            CODE    0138H     006EH     UNIT         ?C?LIB_CODE
-            CODE    01A6H     0035H     UNIT         ?PR?_DISP_1602_STR?DRIVE_1602
-            CODE    01DBH     0031H     UNIT         ?PR?RDBYTE_18B20?DRIVE_DS18B20
-            CODE    020CH     002DH     UNIT         ?PR?GETT_18B20?DRIVE_DS18B20
-            CODE    0239H     0029H     UNIT         ?PR?_WRBYTE_18B20?DRIVE_DS18B20
-            CODE    0262H     0016H     UNIT         ?PR?INIT_DS18B20?DRIVE_DS18B20
-            CODE    0278H     0014H     UNIT         ?PR?INIT_1602?DRIVE_1602
-            CODE    028CH     0013H     UNIT         ?PR?TIMER0?MAIN18B20
-            CODE    029FH     0011H     UNIT         ?PR?_WR_CMD?DRIVE_1602
-            CODE    02B0H     0011H     UNIT         ?PR?_WR_DAT?DRIVE_1602
-            CODE    02C1H     0011H     UNIT         ?PR?_DELAYT_10US?DRIVE_DS18B20
-            CODE    02D2H     0011H     UNIT         ?C_INITSEG
-            CODE    02E3H     000BH     UNIT         ?PR?READY?DRIVE_1602
-            CODE    02EEH     000BH     UNIT         ?PR?RD_STA?DRIVE_1602
-            CODE    02F9H     000AH     UNIT         ?CO?MAIN18B20
+            CODE    000EH     0097H     UNIT         ?PR?MAIN?MAIN18B20
+            CODE    00A5H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0131H     006EH     UNIT         ?C?LIB_CODE
+            CODE    019FH     0035H     UNIT         ?PR?_DISP_1602_STR?DRIVE_1602
+            CODE    01D4H     0031H     UNIT         ?PR?RDBYTE_18B20?DRIVE_DS18B20
+            CODE    0205H     002DH     UNIT         ?PR?GETT_18B20?DRIVE_DS18B20
+            CODE    0232H     0029H     UNIT         ?PR?_WRBYTE_18B20?DRIVE_DS18B20
+            CODE    025BH     0016H     UNIT         ?PR?INIT_DS18B20?DRIVE_DS18B20
+            CODE    0271H     0014H     UNIT         ?PR?INIT_1602?DRIVE_1602
+            CODE    0285H     0013H     UNIT         ?PR?TIMER0?MAIN18B20
+            CODE    0298H     0011H     UNIT         ?PR?_WR_CMD?DRIVE_1602
+            CODE    02A9H     0011H     UNIT         ?PR?_WR_DAT?DRIVE_1602
+            CODE    02BAH     0011H     UNIT         ?PR?_DELAYT_10US?DRIVE_DS18B20
+            CODE    02CBH     0011H     UNIT         ?C_INITSEG
+            CODE    02DCH     000BH     UNIT         ?PR?READY?DRIVE_1602
+            CODE    02E7H     000BH     UNIT         ?PR?RD_STA?DRIVE_1602
+            CODE    02F2H     000AH     UNIT         ?CO?MAIN18B20
 
 
 
 OVERLAY MAP OF MODULE:   .\Objects\DS18B20 (?C_STARTUP)
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 2
 
 
 
@@ -115,11 +115,11 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   ----------------------------------
 
   -------         MODULE        ?C_STARTUP
-  C:00ACH         SEGMENT       ?C_C51STARTUP
+  C:00A5H         SEGMENT       ?C_C51STARTUP
   I:0021H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 3
 
 
   D:00F0H         SYMBOL        B
@@ -128,7 +128,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   N:0000H         SYMBOL        IBPSTACK
   N:0100H         SYMBOL        IBPSTACKTOP
   N:0080H         SYMBOL        IDATALEN
-  C:00AFH         SYMBOL        IDATALOOP
+  C:00A8H         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
   N:0100H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
@@ -137,18 +137,18 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   N:0000H         SYMBOL        PPAGEENABLE
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
-  C:00ACH         SYMBOL        STARTUP1
+  C:00A5H         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
-  C:00ACH         LINE#         133
-  C:00AEH         LINE#         134
-  C:00AFH         LINE#         135
-  C:00B0H         LINE#         136
-  C:00B2H         LINE#         185
-  C:00B5H         LINE#         196
+  C:00A5H         LINE#         133
+  C:00A7H         LINE#         134
+  C:00A8H         LINE#         135
+  C:00A9H         LINE#         136
+  C:00ABH         LINE#         185
+  C:00AEH         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
   -------         MODULE        DRIVE_1602
@@ -156,20 +156,21 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:029FH         PUBLIC        _WR_Cmd
-  C:02B0H         PUBLIC        _WR_Dat
+  C:0298H         PUBLIC        _WR_Cmd
+  C:02A9H         PUBLIC        _WR_Dat
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   B:00B0H.4       PUBLIC        EN_1602
-  C:02EEH         PUBLIC        RD_sta
-  C:0278H         PUBLIC        Init_1602
+  C:02E7H         PUBLIC        RD_sta
+  C:0271H         PUBLIC        Init_1602
   B:00B0H.6       PUBLIC        RS_1602
   B:00B0H.5       PUBLIC        RW_1602
   D:00C8H         PUBLIC        T2CON
-  C:02E3H         PUBLIC        Ready
-  C:01A6H         PUBLIC        _Disp_1602_str
+  C:02DCH         PUBLIC        Ready
+  C:019FH         PUBLIC        _Disp_1602_str
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DISP_1602_STR
   D:0007H         SYMBOL        row
@@ -178,74 +179,74 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   -------         DO            
   D:0007H         SYMBOL        addr
   -------         ENDDO         
-  C:01A6H         LINE#         9
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 4
 
 
-  C:01ACH         LINE#         10
-  C:01ACH         LINE#         13
-  C:01B6H         LINE#         14
-  C:01BCH         LINE#         16
-  C:01C7H         LINE#         17
-  C:01C7H         LINE#         18
-  C:01D8H         LINE#         19
-  C:01DAH         LINE#         20
+  C:019FH         LINE#         9
+  C:01A5H         LINE#         10
+  C:01A5H         LINE#         13
+  C:01AFH         LINE#         14
+  C:01B5H         LINE#         16
+  C:01C0H         LINE#         17
+  C:01C0H         LINE#         18
+  C:01D1H         LINE#         19
+  C:01D3H         LINE#         20
   -------         ENDPROC       _DISP_1602_STR
   -------         PROC          INIT_1602
-  C:0278H         LINE#         22
-  C:0278H         LINE#         23
-  C:0278H         LINE#         24
-  C:027DH         LINE#         25
-  C:0282H         LINE#         26
-  C:0287H         LINE#         27
+  C:0271H         LINE#         22
+  C:0271H         LINE#         23
+  C:0271H         LINE#         24
+  C:0276H         LINE#         25
+  C:027BH         LINE#         26
+  C:0280H         LINE#         27
   -------         ENDPROC       INIT_1602
   -------         PROC          READY
-  C:02E3H         LINE#         29
-  C:02E3H         LINE#         30
-  C:02E3H         LINE#         31
-  C:02E6H         LINE#         32
-  C:02EDH         LINE#         33
+  C:02DCH         LINE#         29
+  C:02DCH         LINE#         30
+  C:02DCH         LINE#         31
+  C:02DFH         LINE#         32
+  C:02E6H         LINE#         33
   -------         ENDPROC       READY
   -------         PROC          RD_STA
   -------         DO            
   D:0007H         SYMBOL        sta
   -------         ENDDO         
-  C:02EEH         LINE#         35
-  C:02EEH         LINE#         36
-  C:02EEH         LINE#         39
-  C:02F0H         LINE#         40
-  C:02F2H         LINE#         42
-  C:02F4H         LINE#         43
-  C:02F6H         LINE#         44
-  C:02F8H         LINE#         46
-  C:02F8H         LINE#         47
+  C:02E7H         LINE#         35
+  C:02E7H         LINE#         36
+  C:02E7H         LINE#         39
+  C:02E9H         LINE#         40
+  C:02EBH         LINE#         42
+  C:02EDH         LINE#         43
+  C:02EFH         LINE#         44
+  C:02F1H         LINE#         46
+  C:02F1H         LINE#         47
   -------         ENDPROC       RD_STA
   -------         PROC          _WR_CMD
   D:0019H         SYMBOL        cmd
-  C:029FH         LINE#         48
-  C:02A1H         LINE#         49
-  C:02A1H         LINE#         50
-  C:02A4H         LINE#         52
-  C:02A6H         LINE#         53
-  C:02A8H         LINE#         55
-  C:02ABH         LINE#         57
-  C:02ADH         LINE#         58
-  C:02AFH         LINE#         59
+  C:0298H         LINE#         48
+  C:029AH         LINE#         49
+  C:029AH         LINE#         50
+  C:029DH         LINE#         52
+  C:029FH         LINE#         53
+  C:02A1H         LINE#         55
+  C:02A4H         LINE#         57
+  C:02A6H         LINE#         58
+  C:02A8H         LINE#         59
   -------         ENDPROC       _WR_CMD
   -------         PROC          _WR_DAT
   D:0019H         SYMBOL        dat
-  C:02B0H         LINE#         60
-  C:02B2H         LINE#         61
-  C:02B2H         LINE#         62
-  C:02B5H         LINE#         64
-  C:02B7H         LINE#         65
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 5
+  C:02A9H         LINE#         60
+  C:02ABH         LINE#         61
+  C:02ABH         LINE#         62
+  C:02AEH         LINE#         64
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 5
 
 
-  C:02B9H         LINE#         67
-  C:02BCH         LINE#         69
-  C:02BEH         LINE#         70
-  C:02C0H         LINE#         71
+  C:02B0H         LINE#         65
+  C:02B2H         LINE#         67
+  C:02B5H         LINE#         69
+  C:02B7H         LINE#         70
+  C:02B9H         LINE#         71
   -------         ENDPROC       _WR_DAT
   -------         ENDMOD        DRIVE_1602
 
@@ -253,68 +254,69 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:0262H         PUBLIC        Init_DS18B20
+  C:025BH         PUBLIC        Init_DS18B20
   B:00B0H.7       PUBLIC        DS18B20
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:01DBH         PUBLIC        RdByte_18B20
-  C:0239H         PUBLIC        _WrByte_18B20
-  C:020CH         PUBLIC        GetT_18B20
+  C:01D4H         PUBLIC        RdByte_18B20
+  C:0232H         PUBLIC        _WrByte_18B20
+  C:0205H         PUBLIC        GetT_18B20
   D:00C8H         PUBLIC        T2CON
-  C:02C1H         PUBLIC        _DelayT_10us
+  C:02BAH         PUBLIC        _DelayT_10us
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DELAYT_10US
   D:0007H         SYMBOL        count
-  C:02C1H         LINE#         9
-  C:02C1H         LINE#         10
-  C:02C1H         LINE#         11
-  C:02C7H         LINE#         12
-  C:02C7H         LINE#         13
-  C:02C8H         LINE#         14
-  C:02C9H         LINE#         15
-  C:02CAH         LINE#         16
-  C:02CBH         LINE#         18
-  C:02CCH         LINE#         19
-  C:02CDH         LINE#         20
-  C:02CEH         LINE#         21
-  C:02CFH         LINE#         22
-  C:02D1H         LINE#         23
+  C:02BAH         LINE#         9
+  C:02BAH         LINE#         10
+  C:02BAH         LINE#         11
+  C:02C0H         LINE#         12
+  C:02C0H         LINE#         13
+  C:02C1H         LINE#         14
+  C:02C2H         LINE#         15
+  C:02C3H         LINE#         16
+  C:02C4H         LINE#         18
+  C:02C5H         LINE#         19
+  C:02C6H         LINE#         20
+  C:02C7H         LINE#         21
+  C:02C8H         LINE#         22
+  C:02CAH         LINE#         23
   -------         ENDPROC       _DELAYT_10US
   -------         PROC          INIT_DS18B20
-  C:0262H         LINE#         24
-  C:0262H         LINE#         25
-  C:0262H         LINE#         27
-  C:0264H         LINE#         28
-  C:0269H         LINE#         30
-  C:026BH         LINE#         31
-  C:0270H         LINE#         33
-  C:0273H         LINE#         34
+  C:025BH         LINE#         24
+  C:025BH         LINE#         25
+  C:025BH         LINE#         27
+  C:025DH         LINE#         28
+  C:0262H         LINE#         30
+  C:0264H         LINE#         31
+  C:0269H         LINE#         33
+  C:026CH         LINE#         34
   -------         ENDPROC       INIT_DS18B20
   -------         PROC          _WRBYTE_18B20
   D:0005H         SYMBOL        dat
   -------         DO            
   D:0003H         SYMBOL        j
   B:0020H.0       SYMBOL        flag
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 6
+
+
   -------         ENDDO         
-  C:0239H         LINE#         36
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 6
-
-
-  C:023BH         LINE#         37
-  C:023BH         LINE#         41
-  C:0247H         LINE#         42
-  C:0247H         LINE#         43
-  C:024BH         LINE#         44
-  C:024FH         LINE#         46
-  C:0251H         LINE#         47
-  C:0252H         LINE#         48
-  C:0253H         LINE#         50
-  C:0257H         LINE#         51
-  C:025CH         LINE#         53
-  C:025EH         LINE#         54
-  C:0261H         LINE#         55
+  C:0232H         LINE#         36
+  C:0234H         LINE#         37
+  C:0234H         LINE#         41
+  C:0240H         LINE#         42
+  C:0240H         LINE#         43
+  C:0244H         LINE#         44
+  C:0248H         LINE#         46
+  C:024AH         LINE#         47
+  C:024BH         LINE#         48
+  C:024CH         LINE#         50
+  C:0250H         LINE#         51
+  C:0255H         LINE#         53
+  C:0257H         LINE#         54
+  C:025AH         LINE#         55
   -------         ENDPROC       _WRBYTE_18B20
   -------         PROC          RDBYTE_18B20
   -------         DO            
@@ -322,22 +324,22 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   D:0003H         SYMBOL        flag
   D:0004H         SYMBOL        j
   -------         ENDDO         
-  C:01DBH         LINE#         56
-  C:01DBH         LINE#         57
-  C:01DBH         LINE#         59
-  C:01E7H         LINE#         60
-  C:01E7H         LINE#         61
-  C:01E9H         LINE#         62
-  C:01EAH         LINE#         63
-  C:01EBH         LINE#         64
-  C:01EDH         LINE#         65
-  C:01EEH         LINE#         66
-  C:01EFH         LINE#         68
-  C:01F4H         LINE#         69
-  C:01F9H         LINE#         72
-  C:0206H         LINE#         73
-  C:0209H         LINE#         74
-  C:020BH         LINE#         75
+  C:01D4H         LINE#         56
+  C:01D4H         LINE#         57
+  C:01D4H         LINE#         59
+  C:01E0H         LINE#         60
+  C:01E0H         LINE#         61
+  C:01E2H         LINE#         62
+  C:01E3H         LINE#         63
+  C:01E4H         LINE#         64
+  C:01E6H         LINE#         65
+  C:01E7H         LINE#         66
+  C:01E8H         LINE#         68
+  C:01EDH         LINE#         69
+  C:01F2H         LINE#         72
+  C:01FFH         LINE#         73
+  C:0202H         LINE#         74
+  C:0204H         LINE#         75
   -------         ENDPROC       RDBYTE_18B20
   -------         PROC          GETT_18B20
   -------         DO            
@@ -345,29 +347,30 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   D:0007H         SYMBOL        Temp_H
   D:0006H         SYMBOL        Temp
   -------         ENDDO         
-  C:020CH         LINE#         76
-  C:020CH         LINE#         77
-  C:020CH         LINE#         81
-  C:020FH         LINE#         82
-  C:0214H         LINE#         83
-  C:0219H         LINE#         84
-  C:021CH         LINE#         85
-  C:0221H         LINE#         86
-  C:0226H         LINE#         88
-  C:022BH         LINE#         89
-  C:022EH         LINE#         91
-  C:0238H         LINE#         92
-  C:0238H         LINE#         93
+  C:0205H         LINE#         76
+  C:0205H         LINE#         77
+  C:0205H         LINE#         81
+  C:0208H         LINE#         82
+  C:020DH         LINE#         83
+  C:0212H         LINE#         84
+  C:0215H         LINE#         85
+  C:021AH         LINE#         86
+  C:021FH         LINE#         88
+  C:0224H         LINE#         89
+  C:0227H         LINE#         91
+  C:0231H         LINE#         92
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 7
+
+
+  C:0231H         LINE#         93
   -------         ENDPROC       GETT_18B20
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 7
-
-
   -------         ENDMOD        DRIVE_DS18B20
 
   -------         MODULE        MAIN18B20
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
   B:00A8H.7       PUBLIC        EA
   D:00A8H         PUBLIC        IE
   D:0008H         PUBLIC        Temp
@@ -379,7 +382,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   B:00A8H.1       PUBLIC        ET0
   D:008CH         PUBLIC        TH0
   D:008AH         PUBLIC        TL0
-  C:028CH         PUBLIC        timer0
+  C:0285H         PUBLIC        timer0
   B:0088H.4       PUBLIC        TR0
   D:000AH         PUBLIC        str
   D:0014H         PUBLIC        T_count
@@ -406,34 +409,32 @@ SYMBOL TABLE OF MODULE:  .\Objects\DS18B20 (?C_STARTUP)
   C:0046H         LINE#         57
   C:0065H         LINE#         58
   C:0075H         LINE#         59
-  C:0078H         LINE#         60
-  C:0091H         LINE#         61
-  C:0096H         LINE#         63
-  C:0099H         LINE#         64
-  C:009CH         LINE#         65
-  C:00A8H         LINE#         66
-  C:00AAH         LINE#         67
-  C:00AAH         LINE#         68
+  C:0078H         LINE#         64
+  C:0092H         LINE#         65
+  C:0095H         LINE#         66
+  C:00A1H         LINE#         67
+  C:00A3H         LINE#         68
+  C:00A3H         LINE#         69
   -------         ENDPROC       MAIN
   -------         PROC          TIMER0
-  C:028CH         LINE#         70
-  C:028EH         LINE#         72
-  C:0291H         LINE#         73
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/23/2021  17:26:40  PAGE 8
+  C:0285H         LINE#         71
+  C:0287H         LINE#         73
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/08/2021  21:19:43  PAGE 8
 
 
-  C:0294H         LINE#         74
-  C:029CH         LINE#         75
+  C:028AH         LINE#         74
+  C:028DH         LINE#         75
+  C:0295H         LINE#         76
   -------         ENDPROC       TIMER0
   -------         ENDMOD        MAIN18B20
 
   -------         MODULE        ?C?CLDPTR
-  C:0138H         PUBLIC        ?C?CLDPTR
+  C:0131H         PUBLIC        ?C?CLDPTR
   -------         ENDMOD        ?C?CLDPTR
 
   -------         MODULE        ?C?UIDIV
-  C:0151H         PUBLIC        ?C?UIDIV
+  C:014AH         PUBLIC        ?C?UIDIV
   -------         ENDMOD        ?C?UIDIV
 
-Program Size: data=27.1 xdata=0 code=763
+Program Size: data=27.1 xdata=0 code=756
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
