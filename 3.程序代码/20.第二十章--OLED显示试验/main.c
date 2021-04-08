@@ -3,6 +3,7 @@
 #include "oled.h"
 #include "Drive_DS18B20.h"
 #include "Drive_DS1302.h"
+#include "AutoDownload.h"
 
 #define uchar unsigned char
 #define uint  unsigned int
@@ -43,6 +44,7 @@ float tt;
 
 void main()
 {
+	AutoDownload_init();//自动下载初始化函数
 	//0.96 II2C OLED  test
 	OLED_Init();//初始化OLED  
 	OLED_Clear();//清除屏幕
@@ -50,7 +52,15 @@ void main()
 	//OLED_Display_Off();//关闭OLED	 
 	//OLED_On();
 	OLED_ShowChar(0,0,'A',16);
-	OLED_ShowChar(8,0,'.',8);
+	OLED_ShowChar(0,2,'B',8);
+	OLED_ShowChar(0,4,'C',16);
+	OLED_ShowChar(0,6,'D',16);
+	
+	//OLED_ShowNum( 0,0,12,2,16);
+	//OLED_ShowNum( 8,1,34,2,16);
+	//OLED_ShowNum(16,2,56,2,16);
+	
+	OLED_ShowString(0,0,"Nebula-Pi,RYMCU 51 test!",8);
 	while(1);
 
 }

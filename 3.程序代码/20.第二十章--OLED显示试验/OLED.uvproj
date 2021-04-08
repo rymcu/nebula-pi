@@ -469,6 +469,16 @@
               <FileType>5</FileType>
               <FilePath>.\Drive_DS18B20.h</FilePath>
             </File>
+            <File>
+              <FileName>AutoDownload.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AutoDownload.c</FilePath>
+            </File>
+            <File>
+              <FileName>AutoDownload.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\AutoDownload.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

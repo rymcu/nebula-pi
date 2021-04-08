@@ -151,18 +151,14 @@ void fill_picture(unsigned char fill_Data)
 	}
 }
 
-//在指定位置显示一个字符,包括部分字符
-//x:0~127
-//y:0~63
-//mode:0,反白显示;1,正常显示				 
-//size:选择字体 16/12 
 /********************************************************************
 * 0.96 OLED 128*64像素，即:128列 x 64行
+* 64行被均分成了8页，最开始8行为第0页，最后8行为第7页。
 * 
-* 函数功能为:从x列，y行开始显示一个字符,Char_Size为字体大小。
+* 函数功能为:从x列，y页开始显示一个字符,Char_Size为字体大小。
 *
 * x:0-127(列)
-* y:0-63 (行)
+* y:0-7  (页)
 * Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
 * 
 ********************************************************************/	
@@ -172,19 +168,20 @@ void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
 		c=chr-' ';//得到偏移后的值			
 		if(x>Max_Column-1){x=0;y=y+2;}
 		if(Char_Size ==16)
-			{
+		{
 			OLED_Set_Pos(x,y);	
 			for(i=0;i<8;i++)
 			OLED_WR_Byte(F8X16[c*16+i],OLED_DATA);
 			OLED_Set_Pos(x,y+1);
 			for(i=0;i<8;i++)
 			OLED_WR_Byte(F8X16[c*16+i+8],OLED_DATA);
-			}
-			else {	
-				OLED_Set_Pos(x,y);
-				for(i=0;i<6;i++)
-				OLED_WR_Byte(F6x8[c][i],OLED_DATA);				
-			}
+		}
+		else 
+		{	
+			OLED_Set_Pos(x,y);
+			for(i=0;i<6;i++)
+			OLED_WR_Byte(F6x8[c][i],OLED_DATA);				
+		}
 }
 //m^n函数
 u32 oled_pow(u8 m,u8 n)
@@ -198,11 +195,35 @@ u32 oled_pow(u8 m,u8 n)
 //len :数字的位数
 //size:字体大小
 //mode:模式	0,填充模式;1,叠加模式
-//num:数值(0~4294967295);	 		  
-void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size2)
+//num:数值(0~4294967295);	
+
+/********************************************************************
+* 0.96 OLED 128*64像素，即:128列 x 64行
+* 64行被均分成了8页，最开始8行为第0页，最后8行为第7页。
+* 
+* 函数功能为:从x列，y页开始显示数字。
+*
+* x:0-127(列)
+* y:0-7  (页)
+* len:数字长度
+* Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
+*
+********************************************************************/	
+void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
 {         	
-	u8 t,temp;
-	u8 enshow=0;						   
+	u8 t,temp,RowChar,CharSize;
+	u8 enshow=0;	
+	if(Char_Size==16)
+	{
+		RowChar = 8;
+		CharSize= 16;
+	}
+	else
+	{
+		RowChar = 6;
+		CharSize= 8;		
+	}
+	
 	for(t=0;t<len;t++)
 	{
 		temp=(num/oled_pow(10,len-t-1))%10;
@@ -210,22 +231,51 @@ void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size2)
 		{
 			if(temp==0)
 			{
-				OLED_ShowChar(x+(size2/2)*t,y,' ',size2);
+				OLED_ShowChar(x+RowChar*t,y,' ',CharSize);
 				continue;
-			}else enshow=1; 
+			}
+			else enshow=1; 
 		 	 
 		}
-	 	OLED_ShowChar(x+(size2/2)*t,y,temp+'0',size2); 
+	 	OLED_ShowChar(x+RowChar*t,y,temp+'0',CharSize); 
 	}
 } 
-//显示一个字符号串
+/********************************************************************
+* 0.96 OLED 128*64像素，即:128列 x 64行
+* 64行被均分成了8页，最开始8行为第0页，最后8行为第7页。
+* 
+* 函数功能为:从x列，y页开始显示字符串。
+*
+* x:0-127(列)
+* y:0-7  (页)
+* len:数字长度
+* Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
+*
+********************************************************************/	
 void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 Char_Size)
 {
-	unsigned char j=0;
+	u8 CharSize,RowChar,j=0;
+	
+	if(Char_Size==16)
+	{
+		RowChar = 8;
+		CharSize= 16;
+	}
+	else
+	{
+		RowChar = 6;
+		CharSize= 8;		
+	}	
+	
 	while (chr[j]!='\0')
-	{		OLED_ShowChar(x,y,chr[j],Char_Size);
-			x+=8;
-		if(x>120){x=0;y+=2;}
+	{		
+		OLED_ShowChar(x,y,chr[j],CharSize);
+		x+=RowChar;
+		if(x>(120-RowChar))//行尾不足一个字，换行
+		{
+			x=0;
+			y+=2;
+		}
 			j++;
 	}
 }

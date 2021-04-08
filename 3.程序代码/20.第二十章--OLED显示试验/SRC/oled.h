@@ -30,7 +30,7 @@ void OLED_Set_Pos(unsigned char x, unsigned char y);//设置坐标
 
 
 void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size);//显示字符
-void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size2);//显示数字
+void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size);//显示数字
 void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);//显示字符串	 
 void OLED_ShowCHinese(u8 x,u8 y,u8 no);//显示中文字符
 void OLED_DrawBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[]);//显示图片
