@@ -140,9 +140,9 @@ void OLED_Set_Pos(unsigned char x, unsigned char y)
 * x:0-127(列)
 * y:0-7  (页)
 * Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
-* 
+* flag,反白显示，默认为0，正常显示。1：反白显示。
 ********************************************************************/	
-void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
+void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size,bit flag)
 {      	
 	unsigned char c=0,i=0;	
 		c=chr-' ';//得到偏移后的值			
@@ -151,16 +151,25 @@ void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size)
 		{
 			OLED_Set_Pos(x,y);	
 			for(i=0;i<8;i++)
-			OLED_WR_Byte(F8X16[c*16+i],OLED_DATA);
+			{
+				if(flag == 0) OLED_WR_Byte( F8X16[c*16+i],OLED_DATA);
+				else          OLED_WR_Byte(~F8X16[c*16+i],OLED_DATA);				
+			}			
 			OLED_Set_Pos(x,y+1);
 			for(i=0;i<8;i++)
-			OLED_WR_Byte(F8X16[c*16+i+8],OLED_DATA);
+			{
+				if(flag == 0) OLED_WR_Byte( F8X16[c*16+i+8],OLED_DATA);
+				else          OLED_WR_Byte(~F8X16[c*16+i+8],OLED_DATA);				
+			}
 		}
 		else 
 		{	
 			OLED_Set_Pos(x,y);
 			for(i=0;i<6;i++)
-			OLED_WR_Byte(F6x8[c][i],OLED_DATA);				
+			{
+				if(flag == 0) OLED_WR_Byte( F6x8[c][i],OLED_DATA);
+				else          OLED_WR_Byte(~F6x8[c][i],OLED_DATA);					
+			}		
 		}
 }
 /********************************************************************
@@ -187,7 +196,7 @@ u32 oled_pow(u8 m,u8 n)
 * Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
 *
 ********************************************************************/	
-void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
+void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size,bit flag)
 {         	
 	u8 t,temp,RowChar,CharSize;
 	u8 enshow=0;	
@@ -210,13 +219,13 @@ void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
 		{
 			if(temp==0)
 			{
-				OLED_ShowChar(x+RowChar*t,y,' ',CharSize);//第一个非0数字之前用空格替代
+				OLED_ShowChar(x+RowChar*t,y,' ',CharSize,flag);//第一个非0数字之前用空格替代
 				continue;
 			}
 			else enshow=1; 
 		 	 
 		}
-	 	OLED_ShowChar(x+RowChar*t,y,temp+'0',CharSize); 
+	 	OLED_ShowChar(x+RowChar*t,y,temp+'0',CharSize,flag); 
 	}
 } 
 /********************************************************************
@@ -231,7 +240,7 @@ void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 Char_Size)
 * Char_Size: 16(字体大小为：8列 x 16行)，其他(6列 x 8行)
 *
 ********************************************************************/	
-void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 Char_Size)
+void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 Char_Size,bit flag)
 {
 	u8 CharSize,RowChar,j=0;
 	
@@ -248,7 +257,7 @@ void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 Char_Size)
 	
 	while (chr[j]!='\0')
 	{		
-		OLED_ShowChar(x,y,chr[j],CharSize);
+		OLED_ShowChar(x,y,chr[j],CharSize,flag);
 		x+=RowChar;
 		if(x>(120-RowChar))//行尾不足一个字，换行
 		{
@@ -270,20 +279,22 @@ void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 Char_Size)
 * Num:第Num个汉字，汉字定义在oledfont.h的数组HzK[]中。
 *
 ********************************************************************/	
-void OLED_ShowCHinese(u8 x,u8 y,u8 Num)
+void OLED_ShowCHinese(u8 x,u8 y,u8 Num,bit flag)
 {      			    
 	u8 t,adder=0;
 	
 	OLED_Set_Pos(x,y);	
     for(t=0;t<16;t++)
 		{
-				OLED_WR_Byte(Hzk[2*Num][t],OLED_DATA);
+				if(flag == 0) OLED_WR_Byte( Hzk[2*Num][t],OLED_DATA);
+				else 					OLED_WR_Byte(~Hzk[2*Num][t],OLED_DATA);
 				adder+=1;
      }	
 		OLED_Set_Pos(x,y+1);	
     for(t=0;t<16;t++)
 			{	
-				OLED_WR_Byte(Hzk[2*Num+1][t],OLED_DATA);
+				if(flag == 0) OLED_WR_Byte( Hzk[2*Num+1][t],OLED_DATA);
+				else 					OLED_WR_Byte(~Hzk[2*Num+1][t],OLED_DATA);
 				adder+=1;
       }					
 }
@@ -300,7 +311,7 @@ void OLED_ShowCHinese(u8 x,u8 y,u8 Num)
 * Num:第Num个汉字，汉字定义在oledfont.h的数组HzK[]中。
 *
 ********************************************************************/	
-void OLED_DrawBMP(u8 x0,u8 y0,u8 BMP[])
+void OLED_DrawBMP(u8 x0,u8 y0,u8 BMP[],bit flag)
 { 	
  unsigned int j=0;
  unsigned char x,y;
@@ -310,7 +321,8 @@ void OLED_DrawBMP(u8 x0,u8 y0,u8 BMP[])
 		OLED_Set_Pos(x0,y);
     for(x=x0;x<128;x++)
 	    {      
-	    	OLED_WR_Byte(BMP[j++],OLED_DATA);	    	
+	    	if(flag == 0) OLED_WR_Byte( BMP[j++],OLED_DATA);	
+				else					OLED_WR_Byte(~BMP[j++],OLED_DATA);			
 	    }
 	}
 } 
