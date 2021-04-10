@@ -44,47 +44,110 @@ void main()
 	
 	AutoDownload_init();//自动下载初始化函数
 	Init_1302(SetTime);//1302初始化
-	//0.96 II2C OLED  test
 	OLED_Init();//初始化OLED  
 	OLED_Clear();//清除屏幕
 	OLED_Display_On();//开启OLED
-	//OLED_Display_Off();//关闭OLED	 
-	//OLED_On();
-	//OLED_ShowChar( 0,0,'A',16);
-	//OLED_ShowChar( 8,0,'B',16);
-	//OLED_ShowChar(16,0,'C',16);
-	//OLED_ShowChar(24,0,'D',16);
 	
-	//OLED_ShowNum( 0,2,12,5,16);
-	//OLED_ShowNum( 8,1,34,2,16);
-	//OLED_ShowNum(16,2,56,2,16);
+/*****************************************
+	*
+	*0.96 OLED 字符显示测试
+	*
+*******************************************/
+	OLED_ShowChar( 0,0,'A',16,0);
+	OLED_ShowChar( 8,0,'B',16,0);
+	OLED_ShowChar(16,0,'C',16,0);
+	OLED_ShowChar(24,0,'D',16,0);
 	
-	//OLED_ShowString(0,4,"Nebula-Pi,RYMCU    51 test!",16);
-	//OLED_ShowCHinese(50,1,0);//软
+	OLED_ShowChar( 0,2,'A',8,0);
+	OLED_ShowChar( 8,2,'B',8,0);
+	OLED_ShowChar(16,2,'C',8,0);
+	OLED_ShowChar(24,2,'D',8,0);
+	
+	OLED_ShowString(25,6,"Char Test!",16,1);
+
+	delayms(5000);
+	OLED_Clear();//清除屏幕
+	
+/*****************************************
+	*
+	*0.96 OLED 数字显示测试
+	*
+*******************************************/	
+
+	OLED_ShowNum(  0,1,12,2,16,0);
+	OLED_ShowNum( 48,1,34,2,16,0);
+	OLED_ShowNum( 96,1,56,2,16,0);
+	
+	OLED_ShowString(25,6,"Num Test!",16,1);
+	
+	delayms(5000);
+	OLED_Clear();//清除屏幕
+
+/*****************************************
+	*
+	*0.96 OLED 中文显示测试
+	*
+*******************************************/	
+	OLED_ShowCHinese(22   ,3,1,0);//不
+	OLED_ShowCHinese(22+16,3,2,0);//见
+	OLED_ShowCHinese(22+32,3,3,0);//不
+	OLED_ShowCHinese(22+48,3,4,0);//散
+	OLED_ShowCHinese(22+64,3,5,0);//！
+	
+	OLED_ShowString(25,6,"CHN Test!",16,1);
+	
+	delayms(5000);
+	OLED_Clear();//清除屏幕
+	
+/*****************************************
+	*
+	*0.96 OLED 字符串显示测试
+	*
+*******************************************/	
+
+	OLED_ShowString(0,2,"Nebula-Pi,RYMCU!",16,0);
+	
+	OLED_ShowString(25,6,"Str Test!",16,1);
+	
+	delayms(5000);
+	OLED_Clear();//清除屏幕
+/*****************************************
+	*
+	*0.96 OLED 字符串显示测试
+	*
+*******************************************/	
+
 	OLED_DrawBMP(0,0,Logo,0);//显示图片
-//	delayms(2000);
-//	OLED_Clear();//清除屏幕
-//	OLED_ShowCHinese(22   ,3,1,0);
-//	OLED_ShowCHinese(22+16,3,2,0);
-//	OLED_ShowCHinese(22+32,3,3,0);
-//	OLED_ShowCHinese(22+48,3,4,0);
-//	OLED_ShowCHinese(22+64,3,5,0);
-//	delayms(2000);
-//	OLED_DrawBMP(0,0,Logo1,1);//显示图片
-//	delayms(2000);
-//	
-//	OLED_Clear();//清除屏幕
 	
+	OLED_ShowString(25,6,"PIC Test!",16,1);
+	
+	delayms(5000);
+
 	while(1)
 	{
+		/*****************************************
+			*
+			*循环显示充电动画
+			*
+		*******************************************/	
 		chargeFlag++;
 		if(chargeFlag > 9) chargeFlag = 6;
 		OLED_ShowCHinese(111,0,chargeFlag,0);//循环显示充电
-		
+
+		/*****************************************
+			*
+			*采集温度并在LED显示
+			*
+		*******************************************/		
 		Temperature(TempStr);//DS18B20采集温度
 		OLED_ShowString(40,0,TempStr,16,0);//显示温度
 		OLED_ShowCHinese(75,0,0,0);//显示℃
-		
+	
+		/*****************************************
+			*
+			*获取DS1302时间
+			*
+		*******************************************/			
 		if(KeySetValue==0)//时间正常显示模式
 		{
 			Time(TimeStr);//获取DS1302的时间
@@ -95,12 +158,27 @@ void main()
 			TimeToStr(TimeStr);//时间变量转换为字符串
 			flag = 1;//反白显示
 		}
-
+	
+		/*****************************************
+			*
+			*将时间显示到OLED上
+			*
+		*******************************************/
 		OLED_ShowString(35,5,TimeStr,8,flag);
 		OLED_ShowString(20,6,&TimeStr[11],16,flag);	
-		//扫描按键
+	
+		/*****************************************
+			*
+			*扫描时间设置按键
+			*
+		*******************************************/
 		SetTimeByKey();	
-
+	
+		/*****************************************
+			*
+			*整点报时
+			*
+		*******************************************/
 			Alarm();//整点蜂鸣器报警
 	}
 }
