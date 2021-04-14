@@ -50,8 +50,8 @@
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
-          <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <DebugInformation>0</DebugInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>0</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -186,7 +186,7 @@
         </Utilities>
         <Target51>
           <Target51Misc>
-            <MemoryModel>0</MemoryModel>
+            <MemoryModel>2</MemoryModel>
             <RTOS>0</RTOS>
             <RomSize>2</RomSize>
             <DataHold>0</DataHold>
@@ -233,7 +233,7 @@
               <RCB>
                 <Type>0</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0xffff</Size>
               </RCB>
               <RXB>
                 <Type>0</Type>
@@ -315,7 +315,7 @@
             <UseInterruptVector>1</UseInterruptVector>
             <Fuzzy>3</Fuzzy>
             <Optimize>8</Optimize>
-            <WarningLevel>2</WarningLevel>
+            <WarningLevel>0</WarningLevel>
             <SizeSpeed>1</SizeSpeed>
             <ObjectExtend>1</ObjectExtend>
             <ACallAJmp>0</ACallAJmp>
@@ -324,7 +324,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\SRC</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -400,6 +400,41 @@
               <FileName>bsp_uart.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bsp_uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>oledfont.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SRC\oledfont.h</FilePath>
+            </File>
+            <File>
+              <FileName>Drive_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SRC\Drive_I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>Drive_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SRC\Drive_I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>oled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SRC\oled.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SRC\oled.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_timer0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp_timer0.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_timer0.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bsp_timer0.h</FilePath>
             </File>
           </Files>
         </Group>

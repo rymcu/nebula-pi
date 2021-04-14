@@ -49,7 +49,7 @@ void delayms(unsigned int z)//ms延时函数
 {
 	unsigned int x,y;
 	for(x=z;x>0;x--)
-		for(y=78;y>0;y--);
+		for(y=210;y>0;y--);
 }
 
 int WiFiInit(void)
@@ -110,14 +110,14 @@ int WiFiInit(void)
 //	 //Usart_SendString( StartWifi);//透传模式发送数据	
 
 //
-  Usart_SendString( AT_CIPCLOSE_4);//
-	delayms(500);
-	Usart_SendString( Plus3);//退出透传
+  //Usart_SendString( AT_CIPCLOSE_4);//
+	delayms(1500);
+	//Usart_SendString( Plus3);//退出透传
 	delayms(500);
 	Usart_SendString( AT_RESTORE);//恢复出厂值
-	delayms(1500);
+	delayms(3500);
   Usart_SendString( AT_CWMODE_3);//AT+STA
-	delayms(1500);
+	delayms(3500);
 	Usart_SendString( AT_CWJAP_DEF_0);//连接wifi	
   Usart_SendString( AT_CWJAP_DEF_wifi);//连接wifi账号	
 	Usart_SendString( AT_CWJAP_DEF_2);//连接wifi	
@@ -125,11 +125,11 @@ int WiFiInit(void)
 	Usart_SendString( AT_CWJAP_DEF_4);//连接wifi
 	delayms(6000);
 	Usart_SendString( AT_CIFSR);//git device ip
-	delayms(500);
+	delayms(2500);
 	Usart_SendString( AT_CIPMUX_1);//多连接
-	delayms(500);
+	delayms(2500);
 	Usart_SendString( AT_CIPSTART_4);//启动UDP
-	delayms(500);
+	delayms(2500);
 	Usart_SendString( ATE0);//AP		
 //
 

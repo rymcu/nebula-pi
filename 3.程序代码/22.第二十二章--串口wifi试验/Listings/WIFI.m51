@@ -1,21 +1,28 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/12/2021  18:47:11  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/13/2021  21:40:26  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
-D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\bsp_wifi.obj, .\Objects\main.obj, .\Objects\bsp_uart.obj TO .\Objects\WIFI PRINT (
->> .\Listings\WIFI.m51) RAMSIZE (256)
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\bsp_wifi.obj, .\Objects\main.obj, .\Objects\bsp_uart.obj, .\Objects\Drive_I2C.obj,
+>>  .\Objects\oled.obj, .\Objects\bsp_timer0.obj TO .\Objects\WIFI PRINT (.\Listings\WIFI.m51) RAMSIZE (256)
 
 
-MEMORY MODEL: SMALL
+MEMORY MODEL: LARGE
 
 
 INPUT MODULES INCLUDED:
   .\Objects\bsp_wifi.obj (BSP_WIFI)
   .\Objects\main.obj (MAIN)
   .\Objects\bsp_uart.obj (BSP_UART)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  .\Objects\Drive_I2C.obj (DRIVE_I2C)
+  .\Objects\oled.obj (OLED)
+  .\Objects\bsp_timer0.obj (BSP_TIMER0)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C?CLDPTR)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C?CLDOPTR)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C?IMUL)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C?UIDIV)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C?ILDIX)
+  D:\KEIL_V5\C51\LIB\C51L.LIB (?C_INIT)
 
 
 LINK MAP OF MODULE:  .\Objects\WIFI (BSP_WIFI)
@@ -26,251 +33,202 @@ LINK MAP OF MODULE:  .\Objects\WIFI (BSP_WIFI)
 
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
-            DATA    0008H     0012H     UNIT         ?DT?BSP_WIFI
-            DATA    001AH     0003H     UNIT         _DATA_GROUP_
-                    001DH     0003H                  *** GAP ***
-            BIT     0020H.0   0000H.1   UNIT         ?BI?BSP_UART
-                    0020H.1   0000H.7                *** GAP ***
-            DATA    0021H     000DH     UNIT         ?DT?MAIN
-            IDATA   002EH     0001H     UNIT         ?STACK
+                    0008H     0018H                  *** GAP ***
+            BIT     0020H.0   0000H.3   UNIT         _BIT_GROUP_
+            BIT     0020H.3   0000H.1   UNIT         ?BI?BSP_UART
+            BIT     0020H.4   0000H.1   UNIT         ?BI?_OLED_SHOWNUM?OLED
+            BIT     0020H.5   0000H.1   UNIT         ?BI?_OLED_SHOWCHINESE?OLED
+            BIT     0020H.6   0000H.1   UNIT         ?BI?_OLED_DRAWBMP?OLED
+                    0020H.7   0000H.1                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+            XDATA   0000H     0045H     UNIT         ?XD?BSP_UART
+            XDATA   0045H     0013H     UNIT         _XDATA_GROUP_
+            XDATA   0058H     0012H     UNIT         ?XD?BSP_WIFI
+            XDATA   006AH     000BH     UNIT         ?XD?_OLED_SHOWNUM?OLED
+            XDATA   0075H     0008H     UNIT         ?XD?_OLED_DRAWBMP?OLED
+            XDATA   007DH     0005H     UNIT         ?XD?_OLED_SHOWCHINESE?OLED
+            XDATA   0082H     0002H     UNIT         ?XD?OLED_ON?OLED
+            XDATA   0084H     0001H     UNIT         ?XD?_OLED_POW?OLED
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
-            CODE    0003H     0019H     UNIT         ?C?LIB_CODE
-                    001CH     0007H                  *** GAP ***
+            CODE    0003H     0008H     UNIT         ?PR?UART_INIT?BSP_UART
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0015H     UNIT         ?PR?OLED_DISPLAY_OFF?OLED
             CODE    0023H     0003H     ABSOLUTE     
-            CODE    0026H     022FH     UNIT         ?CO?BSP_WIFI
-            CODE    0255H     009DH     UNIT         ?PR?WIFIINIT?BSP_WIFI
-            CODE    02F2H     008CH     UNIT         ?C_C51STARTUP
-            CODE    037EH     002CH     UNIT         ?PR?_USART_SENDSTRING?BSP_UART
-            CODE    03AAH     0028H     UNIT         ?C_INITSEG
-            CODE    03D2H     0022H     UNIT         ?PR?_DELAYMS?BSP_WIFI
-            CODE    03F4H     0018H     UNIT         ?PR?UART_INIT?BSP_UART
-            CODE    040CH     0010H     UNIT         ?PR?UART_R?BSP_UART
-            CODE    041CH     000FH     UNIT         ?PR?MAIN?MAIN
+            CODE    0026H     0636H     UNIT         ?CO?OLED
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/13/2021  21:40:26  PAGE 2
+
+
+            CODE    065CH     022FH     UNIT         ?CO?BSP_WIFI
+            CODE    088BH     019CH     UNIT         ?PR?_OLED_SHOWCHAR?OLED
+            CODE    0A27H     010AH     UNIT         ?PR?_OLED_SHOWCHINESE?OLED
+            CODE    0B31H     00E7H     UNIT         ?PR?OLED_INIT?OLED
+            CODE    0C18H     00DFH     UNIT         ?PR?_OLED_SHOWNUM?OLED
+            CODE    0CF7H     00C3H     UNIT         ?C?LIB_CODE
+            CODE    0DBAH     0093H     UNIT         ?PR?WIFIINIT?BSP_WIFI
+            CODE    0E4DH     0091H     UNIT         ?PR?SHOWRXBUFF?MAIN
+            CODE    0EDEH     008EH     UNIT         ?PR?_OLED_DRAWBMP?OLED
+            CODE    0F6CH     008CH     UNIT         ?C_C51STARTUP
+            CODE    0FF8H     008BH     UNIT         ?PR?_OLED_SHOWSTRING?OLED
+            CODE    1083H     0063H     UNIT         ?PR?UART_R?BSP_UART
+            CODE    10E6H     005BH     UNIT         ?PR?OLED_ON?OLED
+            CODE    1141H     005AH     UNIT         ?PR?OLED_CLEAR?OLED
+            CODE    119BH     0043H     UNIT         ?PR?TIMER0?BSP_TIMER0
+            CODE    11DEH     003DH     UNIT         ?PR?_OLED_SET_POS?OLED
+            CODE    121BH     0038H     UNIT         ?PR?_USART_SENDSTRING?BSP_UART
+            CODE    1253H     0034H     UNIT         ?PR?MAIN?MAIN
+            CODE    1287H     002CH     UNIT         ?PR?_WR_I2C?DRIVE_I2C
+            CODE    12B3H     002AH     UNIT         ?PR?RDACK_I2C?DRIVE_I2C
+            CODE    12DDH     0028H     UNIT         ?PR?RDNAK_I2C?DRIVE_I2C
+            CODE    1305H     0022H     UNIT         ?PR?_DELAYMS?BSP_WIFI
+            CODE    1327H     0022H     UNIT         ?PR?_OLED_WR_BYTE?OLED
+            CODE    1349H     001EH     UNIT         ?PR?_OLED_POW?OLED
+            CODE    1367H     001DH     UNIT         ?PR?_WRITE_IIC_COMMAND?OLED
+            CODE    1384H     001DH     UNIT         ?PR?_WRITE_IIC_DATA?OLED
+            CODE    13A1H     001CH     UNIT         ?C_INITSEG
+            CODE    13BDH     001BH     UNIT         ?PR?OLED_DISPLAY_ON?OLED
+            CODE    13D8H     001AH     UNIT         ?PR?EXUARTINIT?BSP_UART
+            CODE    13F2H     0011H     UNIT         ?CO?MAIN
+            CODE    1403H     0010H     UNIT         ?PR?TIMER0_1MS_INIT?BSP_TIMER0
+            CODE    1413H     000FH     UNIT         ?PR?STOP_I2C?DRIVE_I2C
+            CODE    1422H     000DH     UNIT         ?PR?START_I2C?DRIVE_I2C
+            CODE    142FH     000CH     UNIT         ?PR?DELAY_I2C?DRIVE_I2C
 
 
 
 OVERLAY MAP OF MODULE:   .\Objects\WIFI (BSP_WIFI)
 
 
-SEGMENT                                  DATA_GROUP 
-  +--> CALLED SEGMENT                  START    LENGTH
-------------------------------------------------------
-?C_C51STARTUP                          -----    -----
+SEGMENT                                   BIT_GROUP          XDATA_GROUP
+  +--> CALLED SEGMENT                  START    LENGTH     START    LENGTH
+--------------------------------------------------------------------------
+?C_C51STARTUP                          -----    -----      -----    -----
   +--> ?PR?MAIN?MAIN
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/12/2021  18:47:11  PAGE 2
-
-
   +--> ?C_INITSEG
 
-?PR?MAIN?MAIN                          -----    -----
+?PR?MAIN?MAIN                          -----    -----      -----    -----
   +--> ?PR?UART_INIT?BSP_UART
+  +--> ?PR?OLED_INIT?OLED
+  +--> ?PR?TIMER0_1MS_INIT?BSP_TIMER0
+  +--> ?PR?OLED_CLEAR?OLED
+  +--> ?CO?MAIN
+  +--> ?PR?_OLED_SHOWSTRING?OLED
   +--> ?PR?WIFIINIT?BSP_WIFI
+  +--> ?PR?SHOWRXBUFF?MAIN
 
-?PR?WIFIINIT?BSP_WIFI                  -----    -----
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/13/2021  21:40:26  PAGE 3
+
+
+?PR?UART_INIT?BSP_UART                 -----    -----      -----    -----
+  +--> ?PR?EXUARTINIT?BSP_UART
+
+?PR?OLED_INIT?OLED                     -----    -----      -----    -----
+  +--> ?PR?_OLED_WR_BYTE?OLED
+
+?PR?_OLED_WR_BYTE?OLED                 -----    -----      0055H    0002H
+  +--> ?PR?_WRITE_IIC_DATA?OLED
+  +--> ?PR?_WRITE_IIC_COMMAND?OLED
+
+?PR?_WRITE_IIC_DATA?OLED               -----    -----      0057H    0001H
+  +--> ?PR?START_I2C?DRIVE_I2C
+  +--> ?PR?_WR_I2C?DRIVE_I2C
+  +--> ?PR?STOP_I2C?DRIVE_I2C
+
+?PR?START_I2C?DRIVE_I2C                -----    -----      -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?_WR_I2C?DRIVE_I2C                  0020H.2  0000H.1    -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?STOP_I2C?DRIVE_I2C                 -----    -----      -----    -----
+  +--> ?PR?DELAY_I2C?DRIVE_I2C
+
+?PR?_WRITE_IIC_COMMAND?OLED            -----    -----      0057H    0001H
+  +--> ?PR?START_I2C?DRIVE_I2C
+  +--> ?PR?_WR_I2C?DRIVE_I2C
+  +--> ?PR?STOP_I2C?DRIVE_I2C
+
+?PR?OLED_CLEAR?OLED                    -----    -----      0045H    0002H
+  +--> ?PR?_OLED_WR_BYTE?OLED
+
+?PR?_OLED_SHOWSTRING?OLED              0020H.0  0000H.1    0045H    0009H
+  +--> ?PR?_OLED_SHOWCHAR?OLED
+
+?PR?_OLED_SHOWCHAR?OLED                0020H.1  0000H.1    004EH    0006H
+  +--> ?PR?_OLED_SET_POS?OLED
+  +--> ?CO?OLED
+  +--> ?PR?_OLED_WR_BYTE?OLED
+
+?PR?_OLED_SET_POS?OLED                 -----    -----      0054H    0001H
+  +--> ?PR?_OLED_WR_BYTE?OLED
+
+?PR?WIFIINIT?BSP_WIFI                  -----    -----      -----    -----
+  +--> ?PR?_DELAYMS?BSP_WIFI
   +--> ?CO?BSP_WIFI
   +--> ?PR?_USART_SENDSTRING?BSP_UART
-  +--> ?PR?_DELAYMS?BSP_WIFI
 
-?PR?_USART_SENDSTRING?BSP_UART         001AH    0003H
+?PR?_USART_SENDSTRING?BSP_UART         -----    -----      0045H    0003H
+
+?PR?SHOWRXBUFF?MAIN                    -----    -----      -----    -----
+  +--> ?PR?OLED_CLEAR?OLED
+  +--> ?PR?_OLED_SHOWSTRING?OLED
 
 
 
 SYMBOL TABLE OF MODULE:  .\Objects\WIFI (BSP_WIFI)
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/13/2021  21:40:26  PAGE 4
+
+
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        BSP_WIFI
-  C:0000H         SYMBOL        _ICE_DUMMY_
-  C:0084H         PUBLIC        AT_CIPSEND
-  D:0090H         PUBLIC        P1
-  D:00B0H         PUBLIC        P3
-  D:00E8H         PUBLIC        P4
-  C:0255H         PUBLIC        WiFiInit
-  C:024EH         PUBLIC        ATE0
-  C:0075H         PUBLIC        AT_CIPMODE_1
-  D:00A8H         PUBLIC        IE
-  C:0209H         PUBLIC        AT_CIPSEND_0
-  D:0008H         PUBLIC        codeAT_CWMODE_DEF_1
-  D:00B8H         PUBLIC        IP
-  C:00A1H         PUBLIC        AT_CWJAP_DEF
-  C:002AH         PUBLIC        AT_RESTORE
-  C:00C7H         PUBLIC        AT_CWJAP_DEF_0
-  C:013AH         PUBLIC        AT_CWJAP_DEF_2
-  C:00D6H         PUBLIC        AT_CWJAP_DEF_wifi
-  C:01A2H         PUBLIC        AT_CWJAP_DEF_4
-  D:0098H         PUBLIC        SCON
-  D:0088H         PUBLIC        TCON
-  C:01F3H         PUBLIC        AT_CIPSERVER_1
-  C:0040H         PUBLIC        AT_CWMODE_2
-  C:013EH         PUBLIC        AT_CWJAP_DEF_pwd
-  C:004EH         PUBLIC        AT_CWMODE_3
-  C:0026H         PUBLIC        Plus3
-  C:0091H         PUBLIC        AT_CIPCLOSE_4
-  C:005CH         PUBLIC        AT_CIPMUX_1
-  C:01CAH         PUBLIC        AT_CIPSTART
-  D:00C8H         PUBLIC        T2CON
-  C:006AH         PUBLIC        AT_CIFSR
-  C:0037H         PUBLIC        AT_RST
-  C:03D6H         PUBLIC        _delayms
-  C:01A6H         PUBLIC        AT_CWSAP
-  C:021AH         PUBLIC        AT_CIPSTART_4
-  D:00D0H         PUBLIC        PSW
-  C:03D2H         SYMBOL        L?0012
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/12/2021  18:47:11  PAGE 3
-
-
-  -------         PROC          L?0011
-  -------         ENDPROC       L?0011
-  C:03D2H         SYMBOL        L?0012
-  -------         PROC          _DELAYMS
-  D:0006H         SYMBOL        z
-  -------         DO            
-  D:0006H         SYMBOL        x
-  D:0004H         SYMBOL        y
-  -------         ENDDO         
-  C:03D6H         LINE#         48
-  C:03D6H         LINE#         49
-  C:03D6H         LINE#         51
-  C:03DFH         LINE#         52
-  C:03F3H         LINE#         53
-  -------         ENDPROC       _DELAYMS
-  -------         PROC          WIFIINIT
-  C:0255H         LINE#         55
-  C:0255H         LINE#         56
-  C:0255H         LINE#         113
-  C:025EH         LINE#         114
-  C:0261H         LINE#         115
-  C:026AH         LINE#         116
-  C:026DH         LINE#         117
-  C:0276H         LINE#         118
-  C:027DH         LINE#         119
-  C:0286H         LINE#         120
-  C:028DH         LINE#         121
-  C:0296H         LINE#         122
-  C:029FH         LINE#         123
-  C:02A8H         LINE#         124
-  C:02B1H         LINE#         125
-  C:02BAH         LINE#         126
-  C:02C1H         LINE#         127
-  C:02CAH         LINE#         128
-  C:02CDH         LINE#         129
-  C:02D6H         LINE#         130
-  C:02D9H         LINE#         131
-  C:02E2H         LINE#         132
-  C:02E5H         LINE#         133
-  C:02EEH         LINE#         183
-  C:02F1H         LINE#         184
-  -------         ENDPROC       WIFIINIT
-  -------         ENDMOD        BSP_WIFI
-
-  -------         MODULE        MAIN
-  C:0000H         SYMBOL        _ICE_DUMMY_
-  D:0080H         PUBLIC        P0
-  D:0090H         PUBLIC        P1
-  D:00A0H         PUBLIC        P2
-  D:00B0H         PUBLIC        P3
-  D:00E8H         PUBLIC        P4
-  D:00A8H         PUBLIC        IE
-  D:00B8H         PUBLIC        IP
-  B:0080H.7       PUBLIC        WE
-  C:041CH         PUBLIC        main
-  D:0021H         PUBLIC        pbuf
-  D:0098H         PUBLIC        SCON
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/12/2021  18:47:11  PAGE 4
-
-
-  D:0088H         PUBLIC        TCON
-  D:0026H         PUBLIC        str
-  D:00C8H         PUBLIC        T2CON
-  D:00D0H         PUBLIC        PSW
-  -------         PROC          MAIN
-  C:041CH         LINE#         31
-  C:041CH         LINE#         32
-  C:041CH         LINE#         34
-  C:041FH         LINE#         35
-  C:0422H         LINE#         36
-  C:0425H         LINE#         37
-  C:0427H         LINE#         38
-  C:0429H         LINE#         42
-  -------         ENDPROC       MAIN
-  -------         ENDMOD        MAIN
-
-  -------         MODULE        BSP_UART
-  C:0000H         SYMBOL        _ICE_DUMMY_
-  D:0090H         PUBLIC        P1
-  D:00B0H         PUBLIC        P3
-  D:00E8H         PUBLIC        P4
-  B:00A8H.7       PUBLIC        EA
-  D:00A8H         PUBLIC        IE
-  B:00A8H.4       PUBLIC        ES
-  D:00B8H         PUBLIC        IP
-  B:0098H.0       PUBLIC        RI
-  B:0098H.1       PUBLIC        TI
-  D:0099H         PUBLIC        SBUF
-  D:0087H         PUBLIC        PCON
-  D:0098H         PUBLIC        SCON
-  D:0089H         PUBLIC        TMOD
-  D:0088H         PUBLIC        TCON
-  C:03F4H         PUBLIC        Uart_init
-  B:0020H.0       PUBLIC        busy
-  B:00A8H.3       PUBLIC        ET1
-  D:008DH         PUBLIC        TH1
-  D:008BH         PUBLIC        TL1
-  B:0088H.6       PUBLIC        TR1
-  D:00C8H         PUBLIC        T2CON
-  C:040CH         PUBLIC        Uart_r
-  D:00D0H         PUBLIC        PSW
-  C:037EH         PUBLIC        _Usart_SendString
-  -------         PROC          UART_INIT
-  C:03F4H         LINE#         10
-  C:03F4H         LINE#         11
-  C:03F4H         LINE#         12
-  C:03F7H         LINE#         13
-  C:03FAH         LINE#         15
-  C:03FDH         LINE#         16
-  C:0403H         LINE#         18
-  C:0405H         LINE#         19
-  C:0407H         LINE#         21
-  C:0409H         LINE#         23
-  C:040BH         LINE#         24
-  -------         ENDPROC       UART_INIT
-  -------         PROC          _USART_SENDSTRING
-  D:001AH         SYMBOL        s
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/12/2021  18:47:11  PAGE 5
-
-
-  C:037EH         LINE#         26
-  C:0384H         LINE#         27
-  C:0384H         LINE#         28
-  C:038FH         LINE#         29
-  C:038FH         LINE#         30
-  C:0392H         LINE#         31
-  C:0394H         LINE#         32
-  C:03A7H         LINE#         33
-  C:03A9H         LINE#         34
-  -------         ENDPROC       _USART_SENDSTRING
-  -------         PROC          UART_R
-  C:040CH         LINE#         37
-  C:040CH         LINE#         39
-  C:040FH         LINE#         40
-  C:040FH         LINE#         41
-  C:0411H         LINE#         42
-  C:0414H         LINE#         45
-  C:0414H         LINE#         46
-  C:0417H         LINE#         47
-  C:0417H         LINE#         48
-  C:0419H         LINE#         50
-  C:041BH         LINE#         52
-  C:041BH         LINE#         53
-  -------         ENDPROC       UART_R
-  -------         ENDMOD        BSP_UART
-
   -------         MODULE        ?C?CLDPTR
-  C:0003H         PUBLIC        ?C?CLDPTR
+  C:0CF7H         PUBLIC        ?C?CLDPTR
   -------         ENDMOD        ?C?CLDPTR
 
-Program Size: data=43.1 xdata=0 code=1060
-LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+  -------         MODULE        ?C?CLDOPTR
+  C:0D10H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?IMUL
+  C:0D3DH         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?UIDIV
+  C:0D4FH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?ILDIX
+  C:0DA4H         PUBLIC        ?C?ILDIX
+  -------         ENDMOD        ?C?ILDIX
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RDNAK_I2C?DRIVE_I2C
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RDACK_I2C?DRIVE_I2C
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_DISPLAY_ON?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_DISPLAY_OFF?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_ON?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_OLED_SHOWNUM?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_OLED_SHOWCHINESE?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_OLED_DRAWBMP?OLED
+
+Program Size: data=9.7 xdata=133 code=5179
+LINK/LOCATE RUN COMPLETE.  8 WARNING(S),  0 ERROR(S)
