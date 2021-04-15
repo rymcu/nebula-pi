@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<resource CompactMode="1" Langauage="Chinese (PRC)">
+	<string id="104" value="Windows 通信端口初始化失败。"/>
+	<string id="128" value="TCP&amp;UDP测试工具"/>
+	<string id="129" value="\nTCPUDP\nTCPUDP\n\n\nTCPUDPDbg.Document\nTCPUDP Document"/>
+	<string id="32771" value="创建连接\n创建连接"/>
+	<string id="32772" value="创建服务器\n创建服务器"/>
+	<string id="32773" value="启动服务器\n启动服务器"/>
+	<string id="32774" value="停止服务器\n停止"/>
+	<string id="32775" value="连接\n连接"/>
+	<string id="32776" value="断开\n断开"/>
+	<string id="32777" value="全部断开\n全部断开"/>
+	<string id="32778" value="删除连接\n删除"/>
+	<string id="32779" value="删除所有连接\n删除所有"/>
+	<string id="32780" value="删除服务器\n删除服务器"/>
+	<string id="32789" value="显示或隐藏工具栏\n显隐工具栏"/>
+	<string id="32790" value="显示隐藏工具栏"/>
+	<string id="40000" value="简体中文(Chinese-Simplified)"/>
+	<string id="40001" value="English"/>
+	<string id="57344" value="TCP&amp;UDP测试工具"/>
+	<string id="57345" value="就绪"/>
+	<string id="57600" value="建立新文档\n新建"/>
+	<string id="57601" value="打开一个现有文档\n打开"/>
+	<string id="57602" value="关闭活动文档\n关闭"/>
+	<string id="57603" value="保存活动文档\n保存"/>
+	<string id="57604" value="将活动文档以一个新文件名保存\n另存为"/>
+	<string id="57605" value="改变打印选项\n页面设置"/>
+	<string id="57606" value="改变打印机及打印选项\n打印设置"/>
+	<string id="57607" value="打印活动文档\n打印"/>
+	<string id="57609" value="显示整页\n打印预览"/>
+	<string id="57616" value="打开该文档"/>
+	<string id="57617" value="打开该文档"/>
+	<string id="57618" value="打开该文档"/>
+	<string id="57619" value="打开该文档"/>
+	<string id="57620" value="打开该文档"/>
+	<string id="57621" value="打开该文档"/>
+	<string id="57622" value="打开该文档"/>
+	<string id="57623" value="打开该文档"/>
+	<string id="57624" value="打开该文档"/>
+	<string id="57625" value="打开该文档"/>
+	<string id="57626" value="打开该文档"/>
+	<string id="57627" value="打开该文档"/>
+	<string id="57628" value="打开该文档"/>
+	<string id="57629" value="打开该文档"/>
+	<string id="57630" value="打开该文档"/>
+	<string id="57631" value="打开该文档"/>
+	<string id="57632" value="删除被选对象\n删除"/>
+	<string id="57633" value="全部删除\n全部删除"/>
+	<string id="57634" value="复制被选对象并将其置于剪贴板上\n复制"/>
+	<string id="57635" value="剪切被选对象并将其置于剪贴板上\n剪切"/>
+	<string id="57636" value="查找指定的正文\n查找"/>
+	<string id="57637" value="插入剪贴板内容\n粘贴"/>
+	<string id="57640" value="重复上一步操作\n重复"/>
+	<string id="57641" value="用不同的正文替换指定的正文\n替换"/>
+	<string id="57642" value="选择整个文档\n选择全部"/>
+	<string id="57643" value="撤消最后一步操作\n撤消"/>
+	<string id="57644" value="重新执行先前已撤消的操作\n重新执行"/>
+	<string id="57648" value="为活动文档打开另一个窗口\n新建窗口"/>
+	<string id="57649" value="将图标排列在窗口底部\n排列图标"/>
+	<string id="57650" value="排列窗口成相互重叠\n层叠窗口"/>
+	<string id="57651" value="排列窗口成互不重叠\n平铺窗口"/>
+	<string id="57652" value="排列窗口成互不重叠\n平铺窗口"/>
+	<string id="57653" value="将活动的窗口分隔成窗格\n分隔"/>
+	<string id="57664" value="显示程序信息，版本号和版权\n关于"/>
+	<string id="57665" value="退出应用程序；提示保存文档\n退出"/>
+	<string id="57680" value="切换到下一个窗格\n下一窗格"/>
+	<string id="57681" value="切换回前一个窗格\n前一窗格"/>
+	<string id="59136" value="扩展名"/>
+	<string id="59137" value="大写"/>
+	<string id="59138" value="数字"/>
+	<string id="59139" value="滚动"/>
+	<string id="59140" value="改写"/>
+	<string id="59141" value="记录"/>
+	<string id="59392" value="显示或隐藏工具栏\n显隐工具栏"/>
+	<string id="59393" value="显示或隐藏状态栏\n显隐状态栏"/>
+	<string id="61184" value="改变窗口大小"/>
+	<string id="61185" value="改变窗口位置"/>
+	<string id="61186" value="将窗口缩小成图标"/>
+	<string id="61187" value="把窗口放大到最大尺寸"/>
+	<string id="61188" value="切换到下一个文档窗口"/>
+	<string id="61189" value="切换到先前的文档窗口"/>
+	<string id="61190" value="关闭活动的窗口并提示保存所有文档"/>
+	<string id="61202" value="把窗口恢复到正常大小"/>
+	<string id="61203" value="激活任务表"/>
+	<string id="61215" value="激活该窗口"/>
+	<string id="61445" value="关闭打印预览模式\n取消预阅"/>
+	<string id="61446" value=" "/>
+	<string id="61447" value=" "/>
+	<string id="61448" value="工具栏"/>
+	<string id="61449" value="属性栏"/>
+	<string id="61450" value="客户端模式"/>
+	<string id="61451" value="服务器模式"/>
+	<string id="61452" value=" "/>
+	<string id="61453" value="TCP"/>
+	<string id="61454" value="UDP"/>
+	<string id="61455" value="UDP(组播模式)"/>
+	<string id="61456" value=" "/>
+	<string id="61457" value=" "/>
+	<string id="61458" value=" "/>
+	<string id="61459" value=" "/>
+	<string id="61460" value=" "/>
+	<string id="61461" value=" "/>
+	<string id="61462" value="Local(%s):%d"/>
+	<string id="61463" value="%s:%d"/>
+	<string id="61464" value="连接"/>
+	<string id="61465" value="正在连接..."/>
+	<string id="61466" value="断开连接"/>
+	<string id="61467" value="发送文件 %s"/>
+	<string id="61468" value="创建"/>
+	<string id="61469" value="关闭"/>
+	<string id="61470" value="暂停显示"/>
+	<string id="61471" value="继续显示"/>
+	<string id="61472" value="无法创建文件。"/>
+	<string id="61473" value="没有数据可以发送。"/>
+	<string id="61474" value="打开文件失败。"/>
+	<string id="61475" value="连接已经存在。"/>
+	<string id="61476" value="创建Socket失败。"/>
+	<string id="61477" value="Sock连接失败，错误码: %d。"/>
+	<string id="61478" value="指定的本地端口还没有完全释放，请换用另外一个端口号或不要指定本地端口。"/>
+	<string id="61479" value=" "/>
+	<string id="61480" value=" "/>
+	<string id="61481" value="                           "/>
+	<string id="61482" value="                                 "/>
+	<string id="61483" value="                                                  "/>
+	<string id="61484" value="                        "/>
+	<string id="61485" value=" "/>
+	<string id="61486" value=" "/>
+	<string id="61487" value=" "/>
+	<string id="61488" value=" "/>
+	<string id="61489" value=" "/>
+	<string id="61490" value="发送时间: %s"/>
+	<string id="61491" value="发送速度(B/S): %d"/>
+	<string id="61492" value="接收速度(B/S): %d"/>
+	<string id="61493" value="广播"/>
+	<string id="61494" value="目标IP"/>
+	<string id="61495" value="目标端口"/>
+	<string id="61496" value="指定本地端口"/>
+	<string id="61497" value="类型"/>
+	<string id="61498" value="自动连接"/>
+	<string id="61499" value="每隔"/>
+	<string id="61500" value="连接上后自动发送"/>
+	<string id="61501" value="每隔"/>
+	<string id="61502" value="连接"/>
+	<string id="61503" value="计数"/>
+	<string id="61504" value="发送"/>
+	<string id="61505" value="接收"/>
+	<string id="61506" value="清空"/>
+	<string id="61507" value="发送区"/>
+	<string id="61508" value="自动发送"/>
+	<string id="61509" value="每隔"/>
+	<string id="61510" value="按十六进制发送"/>
+	<string id="61511" value="发送文件"/>
+	<string id="61512" value="发送接收到的数据"/>
+	<string id="61513" value="发送"/>
+	<string id="61514" value="停止"/>
+	<string id="61515" value="清空"/>
+	<string id="61516" value="选项"/>
+	<string id="61517" value="接收区"/>
+	<string id="61518" value="暂停显示"/>
+	<string id="61519" value="清空"/>
+	<string id="61520" value="保存"/>
+	<string id="61521" value="选项"/>
+	<string id="61522" value="十六进制"/>
+	<string id="61523" value="保存到文件(实时)"/>
+	<string id="61524" value="确定"/>
+	<string id="61525" value="取消"/>
+	<string id="61526" value="每次发送的数据块大小"/>
+	<string id="61527" value="接收缓冲区大小"/>
+	<string id="61528" value="字节"/>
+	<string id="61529" value="本机端口"/>
+	<string id="61530" value="每隔"/>
+	<string id="61531" value="秒自动断开与客户端的连接"/>
+	<string id="61532" value="类型"/>
+	<string id="61533" value="目标IP："/>
+	<string id="61534" value="端口"/>
+	<string id="61535" value="本机端口:"/>
+	<string id="61536" value="随机端口"/>
+	<string id="61537" value="指定："/>
+	<string id="61538" value="自动连接"/>
+	<string id="61539" value="连接上后自动发送"/>
+	<string id="61540" value="创建"/>
+	<string id="61541" value="请不要使用广播地址作为目标地址"/>
+	<string id="61542" value="电话: (029) 88888888"/>
+	<string id="61543" value="主页"/>
+	<string id="61544" value="邮箱"/>
+	<string id="61545" value="版本:  V1.032"/>
+	<string id="61546" value="版权所有 (C) 2005-2008, 631去广告版"/>
+	<string id="61547" value="All Files广播包名字输入任意 (*.*)|*.*||"/>
+	<string id="61548" value="广播包发送选项"/>
+	<menu id="128">
+		<menuitem caption="操作(&amp;O)">
+			<menuitem id="32771" caption="创建连接(&amp;C)"/>
+			<menuitem id="32772" caption="创建服务器(&amp;S)"/>
+			<menuitem/>
+			<menuitem id="32773" caption="启动服务器(&amp;T)"/>
+			<menuitem id="32774" caption="停止服务器(&amp;O)"/>
+			<menuitem id="32780" caption="删除服务器(&amp;R)"/>
+			<menuitem/>
+			<menuitem id="32775" caption="连接(&amp;N)"/>
+			<menuitem id="32776" caption="断开(&amp;D)"/>
+			<menuitem/>
+			<menuitem id="32777" caption="全部断开(&amp;A)"/>
+			<menuitem/>
+			<menuitem id="32778" caption="删除连接(&amp;E)"/>
+			<menuitem id="32779" caption="删除所有连接(&amp;L)"/>
+			<menuitem/>
+			<menuitem id="57665" caption="退出(&amp;X)"/>
+		</menuitem>
+		<menuitem caption="查看(&amp;V)">
+			<menuitem id="32789" caption="工具栏(&amp;T)"/>
+			<menuitem id="59393" caption="状态栏(&amp;S)"/>
+			<menuitem id="32781" caption="属性栏(&amp;P)"/>
+		</menuitem>
+		<menuitem caption="窗口(&amp;W)">
+			<menuitem id="57650" caption="层叠(&amp;C)"/>
+			<menuitem id="57651" caption="平铺(&amp;T)"/>
+			<menuitem id="57649" caption="排列图标(&amp;A)"/>
+		</menuitem>
+		<menuitem caption="帮助(&amp;H)">
+			<menuitem id="57664" caption="关于 TCP/UDP测试工具(&amp;A)..."/>
+			<menuitem/>
+			<menuitem id="32785" caption="检查最新版本(&amp;U)"/>
+		</menuitem>
+	</menu>
+	<menu id="129">
+		<menuitem caption="操作(&amp;O)">
+			<menuitem id="32771" caption="创建连接(&amp;C)"/>
+			<menuitem id="32772" caption="创建服务器(&amp;S)"/>
+			<menuitem/>
+			<menuitem id="32773" caption="启动服务器(&amp;T)"/>
+			<menuitem id="32774" caption="停止服务器(&amp;O)"/>
+			<menuitem id="32780" caption="删除服务器(&amp;R)"/>
+			<menuitem/>
+			<menuitem id="32775" caption="连接(&amp;N)"/>
+			<menuitem id="32776" caption="断开(&amp;D)"/>
+			<menuitem/>
+			<menuitem id="32777" caption="全部断开(&amp;A)"/>
+			<menuitem/>
+			<menuitem id="32778" caption="删除连接(&amp;E)"/>
+			<menuitem id="32779" caption="删除所有连接(&amp;L)"/>
+			<menuitem/>
+			<menuitem id="57665" caption="退出(&amp;X)"/>
+		</menuitem>
+		<menuitem caption="查看(&amp;V)">
+			<menuitem id="32789" caption="工具栏(&amp;T)"/>
+			<menuitem id="59393" caption="状态栏(&amp;S)"/>
+			<menuitem id="32781" caption="属性栏(&amp;P)"/>
+		</menuitem>
+		<menuitem caption="窗口(&amp;W)">
+			<menuitem id="57650" caption="层叠(&amp;C)"/>
+			<menuitem id="57651" caption="平铺(&amp;T)"/>
+			<menuitem id="57649" caption="排列图标(&amp;A)"/>
+		</menuitem>
+		<menuitem caption="帮助(&amp;H)">
+			<menuitem id="57664" caption="关于 TCP/UDP测试工具(&amp;A)..."/>
+			<menuitem/>
+			<menuitem id="32785" caption="检查最新版本(&amp;U)"/>
+		</menuitem>
+		<menuitem caption="Language">
+			<menuitem id="40000" caption="简体中文(Chinese-Simplified)"/>
+			<menuitem id="40001" caption="English"/>
+		</menuitem>
+	</menu>
+	<menu id="140">
+		<menuitem caption="Operate(&amp;O)">
+			<menuitem id="32771" caption="CreateConnection(&amp;C)"/>
+			<menuitem id="32772" caption="CreateServer(&amp;S)"/>
+			<menuitem/>
+			<menuitem id="32773" caption="StartServer(&amp;T)"/>
+			<menuitem id="32774" caption="StopServer(&amp;O)"/>
+			<menuitem id="32780" caption="DeleteServer(&amp;R)"/>
+			<menuitem/>
+			<menuitem id="32775" caption="Connect(&amp;N)"/>
+			<menuitem id="32776" caption="Disconnect(&amp;D)"/>
+			<menuitem/>
+			<menuitem id="32777" caption="DisconnectAll(&amp;A)"/>
+			<menuitem/>
+			<menuitem id="32778" caption="DeleteConnection(&amp;E)"/>
+			<menuitem id="32779" caption="DeleteAllConn(&amp;L)"/>
+			<menuitem/>
+			<menuitem id="57665" caption="Exit(&amp;X)"/>
+		</menuitem>
+	</menu>
+	<dialog id="100" caption="关于 TCP&amp;UDP测试工具" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 242, 117">
+		<control id="12" resource="128" style="1342177283" position="6, 6, 20, 20"/>
+		<control id="1002" caption="TCP&amp;UDP测试工具" style="1342308480" position="38, 9, 62, 8"/>
+		<control id="1083" caption="版权所有 (C) 2005-2008," position="38, 97, 184, 8"/>
+		<control id="1" class="BUTTON" caption="确定" style="1342373889" position="182, 8, 50, 14"/>
+		<control id="1082" caption="主页:" position="38, 73, 23, 8"/>
+		<control id="1122" caption="build" position="38, 22, 127, 8"/>
+		<control id="1022" caption="coverlove@163.com" position="66, 56, 88, 8"/>
+		<control id="1023" caption="" position="66, 73, 124, 8"/>
+		<control id="1079" caption="版本:  V1.032" position="119, 10, 53, 8"/>
+		<control id="1080" caption="000000000000000000000000000000000000" position="38, 39, 145, 8"/>
+		<control id="1081" caption="Static" position="38, 55, 19, 8"/>
+	</dialog>
+	<dialog id="134" caption="创建连接" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 241, 165">
+		<control id="1000" class="EDIT" style="1350631552" position="51, 33, 88, 14"/>
+		<control id="1001" class="EDIT" style="1350631552" position="167, 33, 47, 14"/>
+		<control id="1002" class="COMBOBOX" style="1344339971" position="53, 7, 87, 96"/>
+		<control id="1006" class="BUTTON" caption="随机端口" style="1342308361" position="59, 63, 48, 10"/>
+		<control id="1007" class="BUTTON" caption="指定:" style="1342177289" position="115, 63, 41, 10"/>
+		<control id="1003" class="EDIT" style="1350631552" position="161, 60, 52, 14"/>
+		<control id="1" class="BUTTON" caption="创建" style="1342242817" position="57, 139, 50, 14"/>
+		<control id="2" class="BUTTON" caption="取消" style="1342242816" position="121, 139, 50, 14"/>
+		<control id="1077" caption="目标IP:" position="9, 36, 38, 8"/>
+		<control id="1078" caption="端口:" position="142, 36, 21, 8"/>
+		<control id="1076" caption="类型:" position="9, 10, 21, 8"/>
+		<control id="1075" caption="本机端口:" position="9, 63, 46, 8"/>
+		<control style="1342177296" position="3, 52, 238, 1"/>
+		<control style="1342177296" position="4, 79, 237, 1"/>
+		<control style="1342177296" position="5, 24, 237, 1"/>
+		<control style="1342177296" position="6, 129, 231, 1"/>
+		<control id="1048" class="BUTTON" caption="自动连接:" style="1342242819" position="9, 88, 52, 10"/>
+		<control id="1051" class="EDIT" style="1350631552" position="154, 87, 40, 14"/>
+		<control id="1057" caption="s" position="203, 88, 8, 8"/>
+		<control id="1054" class="BUTTON" caption="自动连接上后自动发送:" style="1342242819" position="9, 111, 100, 10"/>
+		<control id="1068" caption="间隔" position="116, 88, 26, 8"/>
+		<control id="1059" caption="间隔" position="116, 111, 27, 8"/>
+		<control caption="ms" position="203, 113, 9, 8"/>
+		<control id="1055" class="EDIT" style="1350631552" position="154, 108, 40, 14"/>
+	</dialog>
+	<dialog id="135" caption="创建服务器" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 198, 119">
+		<control id="1008" class="EDIT" style="1350631552" position="45, 32, 46, 14"/>
+		<control id="1043" class="BUTTON" caption="每隔" style="1342242819" position="5, 66, 32, 10"/>
+		<control id="1042" class="EDIT" style="1350631552" position="45, 63, 40, 14"/>
+		<control id="1" class="BUTTON" caption="确定" style="1342242817" position="29, 100, 50, 14"/>
+		<control id="2" class="BUTTON" caption="取消" style="1342242816" position="91, 100, 50, 14"/>
+		<control id="1075" caption="本机端口:" position="5, 33, 37, 8"/>
+		<control style="1342177296" position="5, 92, 193, 1"/>
+		<control id="1074" caption="秒自动断开与客户端的连接" position="91, 69, 97, 8"/>
+		<control id="1092" class="BUTTON" caption="指定IP" style="1342242819" position="5, 10, 40, 10"/>
+		<control id="1093" class="EDIT" style="1350631552" position="45, 9, 104, 14"/>
+	</dialog>
+	<dialog id="136" fontsize="9" fontface="宋体" style="1342177344" position="0, 0, 424, 267">
+		<control id="1060" caption="目标IP:" position="7, 5, 29, 8"/>
+		<control id="1000" class="EDIT" style="1350631552" position="7, 16, 78, 14"/>
+		<control id="1061" caption="目标端口:" position="7, 35, 41, 8"/>
+		<control id="1001" class="EDIT" style="1350631552" position="51, 32, 33, 14"/>
+		<control id="1062" caption="类型:" position="7, 82, 21, 8"/>
+		<control id="1002" class="COMBOBOX" style="1344339971" position="29, 81, 54, 112"/>
+		<control id="1012" class="BUTTON" caption="连接" style="1342242816" position="12, 159, 58, 14"/>
+		<control id="1064" caption="发送:" position="6, 190, 26, 8"/>
+		<control id="1013" class="EDIT" style="1350631552" position="36, 190, 50, 14"/>
+		<control id="1065" caption="接收:" position="6, 217, 29, 8"/>
+		<control id="1014" class="EDIT" style="1350631552" position="36, 213, 50, 14"/>
+		<control id="1015" class="BUTTON" caption="清空计数" style="1342242816" position="12, 237, 58, 14"/>
+		<control id="1063" caption="计数" position="1, 177, 29, 8"/>
+		<control style="1342177296" position="32, 179, 50, 1"/>
+		<control id="1030" style="1342177297" position="90, 1, 1, 267"/>
+		<control id="1016" class="RICHEDIT" style="1352728644" position="95, 43, 253, 78"/>
+		<control id="1066" caption="发送区" position="98, 8, 25, 8"/>
+		<control class="BUTTON" style="1342177287" position="94, 0, 32, 19"/>
+		<control id="1017" class="BUTTON" caption="自动发送:" style="1342242819" position="136, 7, 52, 10"/>
+		<control id="1067" caption="间隔" position="190, 8, 17, 8"/>
+		<control id="1018" class="EDIT" style="1350631552" position="210, 5, 40, 13"/>
+		<control caption="ms" position="254, 8, 9, 8"/>
+		<control id="1019" class="BUTTON" caption="发送" style="1342242816" position="278, 5, 31, 14"/>
+		<control id="1020" class="BUTTON" caption="停止" style="1342242816" position="311, 5, 31, 14"/>
+		<control id="1021" class="BUTTON" caption="按16进制" style="1342242819" position="99, 24, 48, 10"/>
+		<control id="1022" class="BUTTON" caption="发送文件" style="1342242819" position="149, 24, 48, 10"/>
+		<control id="1023" class="BUTTON" caption="清空" style="1342242816" position="278, 25, 31, 14"/>
+		<control id="1024" class="BUTTON" caption="选项" style="1342242816" position="311, 25, 31, 14"/>
+		<control id="1025" class="RICHEDIT" style="1352728644" position="95, 167, 253, 92"/>
+		<control id="1035" caption="接收区" position="97, 136, 25, 8"/>
+		<control id="1031" class="BUTTON" style="1342177287" position="95, 129, 32, 19"/>
+		<control id="1028" class="BUTTON" caption="暂停显示" style="1342242816" position="136, 134, 40, 14"/>
+		<control id="1029" class="BUTTON" caption="保存" style="1342242816" position="214, 134, 29, 14"/>
+		<control id="1032" class="BUTTON" caption="清空" style="1342242816" position="182, 134, 29, 14"/>
+		<control id="1033" class="BUTTON" caption="选项" style="1342242816" position="246, 134, 29, 14"/>
+		<control id="1034" class="BUTTON" caption="按16进制" style="1342242819" position="279, 136, 48, 10"/>
+		<control id="1027" class="BUTTON" caption="保存到文件(实时)" style="1342242819" position="126, 152, 80, 10"/>
+		<control id="1036" style="1342177296" position="92, 126, 259, 1"/>
+		<control id="1037" class="EDIT" style="1350633600" position="217, 150, 111, 13"/>
+		<control id="1038" class="BUTTON" caption="..." style="1342242816" position="330, 149, 14, 14"/>
+		<control id="1003" class="EDIT" style="1350631552" position="7, 63, 77, 14"/>
+		<control id="1040" class="BUTTON" caption="指定本机端口:" style="1342242819" position="7, 51, 68, 10"/>
+		<control id="1041" class="BUTTON" caption="发送接收到的数据" style="1342242819" position="198, 24, 80, 10"/>
+		<control id="1048" class="BUTTON" caption="自动重连(s)" style="1342242819" position="7, 100, 61, 10"/>
+		<control id="1051" class="EDIT" style="1350631552" position="27, 111, 38, 14"/>
+		<control style="1342177296" position="5, 98, 81, 1"/>
+		<control id="1068" caption="间隔" position="7, 115, 17, 8"/>
+		<control id="1057" caption="s" position="76, 113, 8, 8"/>
+		<control id="1054" class="BUTTON" caption="重连上后自动发送" style="1342242819" position="7, 129, 80, 10"/>
+		<control id="1069" caption="间隔" position="7, 143, 17, 8"/>
+		<control id="1055" class="EDIT" style="1350631552" position="27, 141, 40, 13"/>
+		<control id="1059" caption="ms" position="74, 142, 9, 8"/>
+		<control id="1084" class="BUTTON" caption="广播发送选项" style="1342242816" position="351, 26, 59, 14"/>
+	</dialog>
+	<dialog id="137" caption="设置" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 204, 87">
+		<control id="1039" class="EDIT" style="1350631552" position="106, 12, 40, 14"/>
+		<control id="1040" class="EDIT" style="1350631552" position="106, 32, 40, 14"/>
+		<control id="1" class="BUTTON" caption="确定" style="1342242817" position="44, 66, 50, 14"/>
+		<control id="2" class="BUTTON" caption="取消" style="1342242816" position="103, 66, 50, 14"/>
+		<control id="1070" caption="每次发送数据块长度:" position="26, 15, 77, 8"/>
+		<control id="1072" caption="字节" position="151, 15, 17, 8"/>
+		<control id="1071" caption="数据接收缓冲区大小:" position="26, 36, 77, 8"/>
+		<control id="1073" caption="字节" position="152, 36, 17, 8"/>
+		<control style="1342177296" position="7, 58, 189, 1"/>
+	</dialog>
+	<dialog id="141" caption="广播发送选项" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 210, 149">
+		<control id="1" class="BUTTON" caption="OK" style="1342242817" position="153, 112, 50, 14"/>
+		<control id="2" class="BUTTON" caption="Cancel" style="1342242816" position="153, 128, 50, 14"/>
+		<control class="BUTTON" caption="发送广播包" style="1342177287" position="7, 7, 125, 65"/>
+		<control id="1088" class="BUTTON" caption="发送广播包" style="1342308361" position="31, 27, 97, 10"/>
+		<control id="1089" class="BUTTON" caption="不发送广播包" style="1342177289" position="31, 45, 97, 10"/>
+		<control class="BUTTON" caption="单播包选择" style="1342177287" position="7, 77, 125, 65"/>
+		<control id="1090" class="BUTTON" caption="对所有的连接发送" style="1342308361" position="31, 97, 97, 10"/>
+		<control id="1091" class="BUTTON" caption="只对选择的连接发送" style="1342177289" position="31, 115, 97, 10"/>
+	</dialog>
+</resource>

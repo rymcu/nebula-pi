@@ -1,0 +1,36 @@
+.text {	FONT-FAMILY: "宋体"; FONT-SIZE: 9pt ; color: #000000}
+A:visited {	COLOR: #336699 }
+A:hover { COLOR: #FF0000; TEXT-DECORATION: none }
+A:link {  color: #000000}
+
+A.top:link {text-decoration:none;color:#000000 }
+A.top:visited {text-decoration:none;color:#000000}
+A.top:active {text-decoration:none;color:#000000}
+A.top:hover {text-decoration:none;color:#000000}
+
+A.left:link {text-decoration:none;color:#000000 }
+A.left:visited {text-decoration:none;color:#336699}
+A.left:active {text-decoration:none;color:#FF0000}
+A.left:hover {text-decoration:none;color:#FF0000}
+
+A.down:link {text-decoration:none;color:#000000}
+A.down:visited {text-decoration:none;color:#000000}
+A.down:active {text-decoration:none;color:#000000}
+A.down:hover {text-decoration:none;color:#000000}
+
+.title2 {  font-family: "宋体"; font-size: 12pt}
+.title2-left { font-family: "宋体"; font-size: 10.5pt}
+.pdf { FONT-FAMILY: "宋体"; FONT-SIZE: 9pt ; color: #000000 ; line-height: 12pt}
+.center-text {  font-family: "宋体"; font-size: 9pt; line-height: 14pt}.englishfont {  font-family: "Arial", "Helvetica", "sans-serif"}
+
+
+.bottonclass {BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM: 1px ridge; BORDER-LEFT: #000000 1px ridge; BORDER-RIGHT: 1px ridge; BORDER-TOP: #000000 1px ridge; height: 14pt; font-size: 12px}
+.EN-CNtext {
+font-family: "Verdana", "Arial", "sans-serif", "宋体"; font-size: 9pt; line-height: 12pt
+}
+
+.titletext{
+	font-family: "黑体", "Arial";
+	font-size: 13pt;
+	font-weight: bolder;
+}

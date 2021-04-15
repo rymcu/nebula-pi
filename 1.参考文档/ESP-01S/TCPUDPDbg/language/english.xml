@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<resource CompactMode="1" Langauage="Chinese (PRC)">
+	<string id="104" value="Windows Initail Communication Port Failed"/>
+	<string id="128" value="TCP&amp;UDP-Debug"/>
+	<string id="129" value="\nTCPUDP\nTCPUDP\n\n\nTCPUDPDbg.Document\nTCPUDP Document"/>
+	<string id="32771" value="CreateConnn\nCreateConnn"/>
+	<string id="32772" value="CreateServer\nCreateServer"/>
+	<string id="32773" value="StartServer\nStartServer"/>
+	<string id="32774" value="StopServer\nStop"/>
+	<string id="32775" value="Connect\nConnect"/>
+	<string id="32776" value="Disconnect\nDisconnect"/>
+	<string id="32777" value="DisconnAll\nDisconnAll"/>
+	<string id="32778" value="DeleteConn\nDeleteConn"/>
+	<string id="32779" value="DeleteAllConn\nDeleteAllConn"/>
+	<string id="32780" value="DeleteServer\nDeleteServer"/>
+	<string id="57344" value="TCP&amp;UDP-Debug"/>
+	<string id="57345" value="Ready"/>
+	<string id="57600" value="New\nNew"/>
+	<string id="57601" value="Open\nOpen"/>
+	<string id="57602" value="Close\nClose"/>
+	<string id="57603" value="Save\nSave"/>
+	<string id="57604" value="Save as...\nSave as..."/>
+	<string id="57616" value="Open"/>
+	<string id="57617" value="Open"/>
+	<string id="57618" value="Open"/>
+	<string id="57619" value="Open"/>
+	<string id="57620" value="Open"/>
+	<string id="57621" value="Open"/>
+	<string id="57622" value="Open"/>
+	<string id="57623" value="Open"/>
+	<string id="57624" value="Open"/>
+	<string id="57625" value="Open"/>
+	<string id="57626" value="Open"/>
+	<string id="57627" value="Open"/>
+	<string id="57628" value="Open"/>
+	<string id="57629" value="Open"/>
+	<string id="57630" value="Open"/>
+	<string id="57631" value="Open"/>
+	<string id="57632" value="Delete\nDelete"/>
+	<string id="57633" value="DeleteAll\nDeleteAll"/>
+	<string id="57634" value="Copy\nCopy"/>
+	<string id="57635" value="Cut\nCut"/>
+	<string id="57636" value="Find\nFind"/>
+	<string id="57637" value="Paste\nPaste"/>
+	<string id="57640" value="Redo\nRedo"/>
+	<string id="57641" value="Replace\nReplace"/>
+	<string id="57642" value="SelectAll\nSelectAll"/>
+	<string id="57643" value="Undo\nUndo"/>
+	<string id="57644" value="Redo\nRedo"/>
+	<string id="57653" value="Split\nSplit"/>
+	<string id="57664" value="About\nAbout"/>
+	<string id="57665" value="Exit\nExit"/>
+	<string id="57680" value="Next\nNext"/>
+	<string id="57681" value="Prev\nPrev"/>
+	<string id="59136" value="Extension"/>
+	<string id="59137" value="CAP"/>
+	<string id="59138" value="NUM"/>
+	<string id="59139" value="SCRL"/>
+	<string id="59140" value="OVR"/>
+	<string id="59141" value="REC"/>
+	<string id="59392" value="Show or hide the toolbar\nToggle ToolBar"/>
+	<string id="59393" value="Show or hide the status bar\nToggle StatusBar"/>
+	<string id="61184" value="Change the window size"/>
+	<string id="61185" value="Change the window position"/>
+	<string id="61186" value="Reduce the window to an icon"/>
+	<string id="61187" value="Enlarge the window to full size"/>
+	<string id="61188" value="Switch to the next document window"/>
+	<string id="61189" value="Switch to the previous document window"/>
+	<string id="61190" value="Close the active window and prompts to save the documents"/>
+	<string id="61202" value="Restore the window to normal size"/>
+	<string id="61203" value="Activate Task List"/>
+	<string id="61215" value="Activeate View"/>
+	<string id="61445" value=""/>
+	<string id="61446" value=" "/>
+	<string id="61447" value=" "/>	
+	<string id="61449" value="Properties"/>
+	<string id="61450" value="Client Mode"/>
+	<string id="61451" value="Server Mode"/>
+	<string id="61452" value=" "/>
+	<string id="61453" value="TCP"/>
+	<string id="61454" value="UDP"/>
+	<string id="61455" value="UDP(Group)"/>
+	<string id="61456" value=" "/>
+	<string id="61457" value=" "/>
+	<string id="61458" value=" "/>
+	<string id="61459" value=" "/>
+	<string id="61460" value=" "/>
+	<string id="61461" value=" "/>
+	<string id="61462" value="LocalHost(%s):%d"/>
+	<string id="61463" value="%s:%d"/>
+	<string id="61464" value="Connect"/>
+	<string id="61465" value="Connecting..."/>
+	<string id="61466" value="Disconnect"/>
+	<string id="61467" value="SendFile %s"/>
+	<string id="61468" value="Create"/>
+	<string id="61469" value="Close"/>
+	<string id="61470" value="DisShow"/>
+	<string id="61471" value="Show"/>
+	<string id="61472" value="Can not create file"/>
+	<string id="61473" value="Not data to send"/>
+	<string id="61474" value="File Open Failed"/>
+	<string id="61475" value="Connection is Existed"/>
+	<string id="61476" value="Create Socket Failed"/>
+	<string id="61477" value="Connect Failed，Error: %d。"/>
+	<string id="61478" value="Local Port can not use ,please use other port or do not use specify port"/>
+	<string id="61479" value=" "/>
+	<string id="61480" value=" "/>
+	<string id="61481" value="                           "/>
+	<string id="61482" value="                                 "/>
+	<string id="61483" value="                                                  "/>
+	<string id="61484" value="                        "/>
+	<string id="61485" value=" "/>
+	<string id="61486" value=" "/>
+	<string id="61487" value=" "/>
+	<string id="61488" value=" "/>
+	<string id="61489" value=" "/>
+	<string id="61490" value="Send Time: %s"/>
+	<string id="61491" value="Send Speed(B/S): %d"/>
+	<string id="61492" value="Receive Speed(B/S): %d"/>
+	<string id="61493" value="Broadcast"/>
+	<string id="61494" value="DestIP:"/>
+	<string id="61495" value="DestPort:"/>
+	<string id="61496" value="LocalPort"/>
+	<string id="61497" value="Type"/>
+	<string id="61498" value="AtuoConn"/>
+	<string id="61499" value="Eve"/>
+	<string id="61500" value="AutoSend"/>
+	<string id="61501" value="Eve"/>
+	<string id="61502" value="Connect"/>
+	<string id="61503" value="Count"/>
+	<string id="61504" value="Send"/>
+	<string id="61505" value="Recv"/>
+	<string id="61506" value="Clear"/>
+	<string id="61507" value="Send"/>
+	<string id="61508" value="AtuoSend"/>
+	<string id="61509" value="Eve"/>
+	<string id="61510" value="Send Hex"/>
+	<string id="61511" value="Send File"/>
+	<string id="61512" value="Send Received"/>
+	<string id="61513" value="Send"/>
+	<string id="61514" value="Stop"/>
+	<string id="61515" value="Clear"/>
+	<string id="61516" value="Option"/>
+	<string id="61517" value="Rec"/>
+	<string id="61518" value="StopShow"/>
+	<string id="61519" value="Clear"/>
+	<string id="61520" value="Save"/>
+	<string id="61521" value="Option"/>
+	<string id="61522" value="ShowHex"/>
+	<string id="61523" value="Save(In Time)"/>
+	<string id="61524" value="OK"/>
+	<string id="61525" value="Cancel"/>
+	<string id="61526" value="Send Buffer Size"/>
+	<string id="61527" value="Receive Buffer Size"/>
+	<string id="61528" value="Byte"/>
+	<string id="61529" value="Local Port"/>
+	<string id="61530" value="Every"/>
+	<string id="61531" value="(s) Disconn All Client"/>
+	<string id="61532" value="Type"/>
+	<string id="61533" value="DestIP: "/>
+	<string id="61534" value="Port"/>
+	<string id="61535" value="LocalPort:"/>
+	<string id="61536" value="Auto"/>
+	<string id="61537" value="Special"/>
+	<string id="61538" value="AutoConn"/>
+	<string id="61539" value="Send When Conn"/>
+	<string id="61540" value="Create"/>
+	<string id="61541" value="Can not use Broadcast IP "/>
+	<string id="61542" value="TEL:(029) 88888888"/>
+	<string id="61543" value="Web"/>
+	<string id="61544" value="Mail"/>
+	<string id="61545" value="  V1.031"/>
+	<string id="61546" value="Copyright (C) 2005-2008 "/>
+	<string id="61547" value="All Files When type is broadcast name do not use (*.*)|*.*||"/>
+	<string id="61548" value="BroadOption"/>
+	<menu id="128">
+		<menuitem caption="Operate(&amp;O)">
+			<menuitem id="32771" caption="CreateConn(&amp;C)"/>
+			<menuitem id="32772" caption="CreateServer(&amp;S)"/>
+			<menuitem/>
+			<menuitem id="32773" caption="StartServer(&amp;T)"/>
+			<menuitem id="32774" caption="StopServer(&amp;O)"/>
+			<menuitem id="32780" caption="DeleteServer(&amp;R)"/>
+			<menuitem/>
+			<menuitem id="32775" caption="Connect(&amp;N)"/>
+			<menuitem id="32776" caption="Disconnect(&amp;D)"/>
+			<menuitem/>
+			<menuitem id="32777" caption="DisconnAll(&amp;A)"/>
+			<menuitem/>
+			<menuitem id="32778" caption="DeleteConn(&amp;E)"/>
+			<menuitem id="32779" caption="DeleteAllConn(&amp;L)"/>
+			<menuitem/>
+			<menuitem id="57665" caption="Exit(&amp;X)"/>
+		</menuitem>
+		<menuitem caption="View(&amp;V)">			
+			<menuitem id="32789" caption="ToolBar(&amp;T)"/>
+			<menuitem id="59393" caption="Status(&amp;S)"/>
+			<menuitem id="32781" caption="Properties(&amp;P)"/>
+		</menuitem>
+		<menuitem caption="Windows(&amp;W)">
+			<menuitem id="57650" caption="Cascade(&amp;C)"/>
+			<menuitem id="57651" caption="Tile(&amp;T)"/>
+			<menuitem id="57649" caption="Arrange(&amp;A)"/>
+		</menuitem>
+		<menuitem caption="Help(&amp;H)">
+			<menuitem id="57664" caption="About TCP/UDP-Debug(&amp;A)..."/>
+			<menuitem/>
+			<menuitem id="32785" caption="Update(&amp;U)"/>
+		</menuitem>
+	</menu>
+	<menu id="129">
+		<menuitem caption="Operate(&amp;O)">
+			<menuitem id="32771" caption="CreateConn(&amp;C)"/>
+			<menuitem id="32772" caption="CreateServer(&amp;S)"/>
+			<menuitem/>
+			<menuitem id="32773" caption="StartServer(&amp;T)"/>
+			<menuitem id="32774" caption="StopServer(&amp;O)"/>
+			<menuitem id="32780" caption="DeleteServer(&amp;R)"/>
+			<menuitem/>
+			<menuitem id="32775" caption="Connect(&amp;N)"/>
+			<menuitem id="32776" caption="Disconnect(&amp;D)"/>
+			<menuitem/>
+			<menuitem id="32777" caption="DisconnAll(&amp;A)"/>
+			<menuitem/>
+			<menuitem id="32778" caption="DeleteConn(&amp;E)"/>
+			<menuitem id="32779" caption="DeleteAllConn(&amp;L)"/>
+			<menuitem/>
+			<menuitem id="57665" caption="Exit(&amp;X)"/>
+		</menuitem>
+		<menuitem caption="View(&amp;V)">
+			<menuitem id="32789" caption="ToolBar(&amp;T)"/>
+			<menuitem id="59393" caption="Status(&amp;S)"/>
+			<menuitem id="32781" caption="Properties(&amp;P)"/>
+		</menuitem>
+		<menuitem caption="Windows(&amp;W)">
+			<menuitem id="57650" caption="Cascade(&amp;C)"/>
+			<menuitem id="57651" caption="Tile(&amp;T)"/>
+			<menuitem id="57649" caption="Arrange(&amp;A)"/>
+		</menuitem>
+		<menuitem caption="Help(&amp;H)">
+			<menuitem id="57664" caption="About TCP/UDP-Debug(&amp;A)..."/>
+			<menuitem/>
+			<menuitem id="32785" caption="Update(&amp;U)"/>
+		</menuitem>
+	</menu>
+	<menu id="140">
+		<menuitem caption="Operate(&amp;O)">
+			<menuitem id="32771" caption="CreateConnection(&amp;C)"/>
+			<menuitem id="32772" caption="CreateServer(&amp;S)"/>
+			<menuitem/>
+			<menuitem id="32773" caption="StartServer(&amp;T)"/>
+			<menuitem id="32774" caption="StopServer(&amp;O)"/>
+			<menuitem id="32780" caption="DeleteServer(&amp;R)"/>
+			<menuitem/>
+			<menuitem id="32775" caption="Connect(&amp;N)"/>
+			<menuitem id="32776" caption="Disconnect(&amp;D)"/>
+			<menuitem/>
+			<menuitem id="32777" caption="DisconnectAll(&amp;A)"/>
+			<menuitem/>
+			<menuitem id="32778" caption="DeleteConn(&amp;E)"/>
+			<menuitem id="32779" caption="DeleteAllConn(&amp;L)"/>
+			<menuitem/>
+			<menuitem id="57665" caption="Exit(&amp;X)"/>
+		</menuitem>
+	</menu>
+	<dialog id="100" caption="About TCP&amp;UDP Debug Tool" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 242, 117">
+		<control resource="128" style="1342177283" position="6, 6, 20, 20"/>
+		<control id="1002" caption="TCP&amp;UDP-Debug Tool" style="1342308480" position="38, 9, 62, 8"/>
+		<control caption="Copyright (C) 2005-2008, " position="35, 97, 184, 8"/>
+		<control id="1" class="BUTTON" caption="Ok" style="1342373889" position="182, 8, 50, 14"/>
+		<control style="1342177288" position="0, 90, 242, 1"/>
+		<control caption="Tel: (020) 22644382 22644381" position="38, 39, 121, 8"/>
+		<control caption="Mail:" position="38, 56, 25, 8"/>
+		<control caption="Web:" position="38, 73, 23, 8"/>
+		<control id="1122" caption="build" position="38, 22, 127, 8"/>
+		<control id="1022" caption="coverlove@163.com" position="66, 56, 88, 8"/>
+		<control id="1023" caption="" position="66, 73, 124, 8"/>
+		<control id="1079" caption="Ver:  V1.031" position="119, 10, 53, 8"/>
+	</dialog>
+	<dialog id="134" caption="Create Connection" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 241, 165">
+		<control id="1000" class="EDIT" style="1350631552" position="40, 33, 92, 14"/>
+		<control id="1001" class="EDIT" style="1350631552" position="166, 33, 47, 14"/>
+		<control id="1002" class="COMBOBOX" style="1344339971" position="40, 7, 92, 96"/>
+		<control id="1006" class="BUTTON" caption="Auto" style="1342308361" position="54, 63, 64, 10"/>
+		<control id="1007" class="BUTTON" caption="Special:" style="1342177289" position="124, 63, 36, 10"/>
+		<control id="1003" class="EDIT" style="1350631552" position="161, 60, 52, 14"/>
+		<control id="1" class="BUTTON" caption="Create" style="1342242817" position="57, 139, 50, 14"/>
+		<control id="2" class="BUTTON" caption="Cancel" style="1342242816" position="121, 139, 50, 14"/>
+		<control id="1077" caption="DestIP:" position="9, 36, 29, 8"/>
+		<control id="1078" caption="Port:" position="141, 36, 21, 8"/>
+		<control id="1076" caption="Type:" position="9, 10, 21, 8"/>
+		<control id="1075" caption="LocalPort:" position="9, 63, 37, 8"/>
+		<control style="1342177296" position="3, 52, 238, 1"/>
+		<control style="1342177296" position="4, 79, 237, 1"/>
+		<control style="1342177296" position="5, 24, 237, 1"/>
+		<control style="1342177296" position="6, 129, 231, 1"/>
+		<control id="1048" class="BUTTON" caption="AutoConn:" style="1342242819" position="9, 88, 52, 10"/>
+		<control id="1051" class="EDIT" style="1350631552" position="151, 87, 40, 14"/>
+		<control id="1057" caption="s" position="201, 88, 8, 8"/>
+		<control id="1054" class="BUTTON" caption="Send When Conn:" style="1342242819" position="9, 111, 100, 10"/>
+		<control id="1068" caption="Eve" position="115, 88, 17, 8"/>
+		<control id="1069" caption="Eve" position="116, 111, 17, 8"/>
+		<control id="1059" caption="ms" position="201, 113, 9, 8"/>
+		<control id="1055" class="EDIT" style="1350631552" position="151, 108, 40, 14"/>
+		<control id="1084" class="BUTTON" caption="Broad Send Option" style="1342242816" position="351, 26, 59, 14"/>
+	</dialog>
+	<dialog id="135" caption="Create Server" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 198, 119">
+		<control id="1008" class="EDIT" style="1350631552" position="45, 32, 46, 14"/>
+		<control id="1043" class="BUTTON" caption="Eve" style="1342242819" position="5, 66, 32, 10"/>
+		<control id="1042" class="EDIT" style="1350631552" position="45, 63, 40, 14"/>
+		<control id="1" class="BUTTON" caption="Create" style="1342242817" position="29, 100, 50, 14"/>
+		<control id="2" class="BUTTON" caption="Cancel" style="1342242816" position="91, 100, 50, 14"/>
+		<control id="1075" caption="LocalPort:" position="5, 33, 37, 8"/>
+		<control style="1342177296" position="5, 92, 193, 1"/>
+		<control id="1074" caption="(s) Disconnect All Client" position="91, 69, 97, 8"/>
+		<control id="1092" class="BUTTON" caption="Local IP" style="1342242819" position="5, 10, 40, 10"/>
+		<control id="1093" class="EDIT" style="1350631552" position="45, 9, 104, 14"/>
+	</dialog>
+	<dialog id="136" fontsize="9" fontface="宋体" style="1342177344" position="0, 0, 424, 267">
+		<control id="1060" caption="目标IP:" position="7, 5, 29, 8"/>
+		<control id="1000" class="EDIT" style="1350631552" position="7, 16, 78, 14"/>
+		<control id="1061" caption="目标端口:" position="7, 35, 41, 8"/>
+		<control id="1001" class="EDIT" style="1350631552" position="51, 32, 33, 14"/>
+		<control id="1062" caption="类型:" position="7, 82, 21, 8"/>
+		<control id="1002" class="COMBOBOX" style="1344339971" position="29, 81, 54, 112"/>
+		<control id="1012" class="BUTTON" caption="连接" style="1342242816" position="12, 159, 58, 14"/>
+		<control id="1064" caption="发送:" position="6, 190, 26, 8"/>
+		<control id="1013" class="EDIT" style="1350631552" position="36, 190, 50, 14"/>
+		<control id="1065" caption="接收:" position="6, 217, 29, 8"/>
+		<control id="1014" class="EDIT" style="1350631552" position="36, 213, 50, 14"/>
+		<control id="1015" class="BUTTON" caption="清空计数" style="1342242816" position="12, 237, 58, 14"/>
+		<control id="1063" caption="计数" position="1, 177, 29, 8"/>
+		<control style="1342177296" position="32, 179, 50, 1"/>
+		<control id="1030" style="1342177297" position="90, 1, 1, 267"/>
+		<control id="1016" class="RICHEDIT" style="1352728644" position="95, 43, 253, 78"/>
+		<control id="1066" caption="发送区" position="98, 8, 25, 8"/>
+		<control class="BUTTON" style="1342177287" position="94, 0, 32, 19"/>
+		<control id="1017" class="BUTTON" caption="自动发送:" style="1342242819" position="136, 7, 52, 10"/>
+		<control id="1067" caption="间隔" position="190, 8, 17, 8"/>
+		<control id="1018" class="EDIT" style="1350631552" position="210, 5, 40, 13"/>
+		<control caption="ms" position="254, 8, 9, 8"/>
+		<control id="1019" class="BUTTON" caption="发送" style="1342242816" position="278, 5, 31, 14"/>
+		<control id="1020" class="BUTTON" caption="停止" style="1342242816" position="311, 5, 31, 14"/>
+		<control id="1021" class="BUTTON" caption="按16进制" style="1342242819" position="99, 24, 48, 10"/>
+		<control id="1022" class="BUTTON" caption="发送文件" style="1342242819" position="149, 24, 48, 10"/>
+		<control id="1023" class="BUTTON" caption="清空" style="1342242816" position="278, 25, 31, 14"/>
+		<control id="1024" class="BUTTON" caption="选项" style="1342242816" position="311, 25, 31, 14"/>
+		<control id="1025" class="RICHEDIT" style="1352728644" position="95, 167, 253, 92"/>
+		<control id="1035" caption="接收区" position="97, 136, 25, 8"/>
+		<control id="1031" class="BUTTON" style="1342177287" position="95, 129, 32, 19"/>
+		<control id="1028" class="BUTTON" caption="暂停显示" style="1342242816" position="136, 134, 40, 14"/>
+		<control id="1029" class="BUTTON" caption="保存" style="1342242816" position="214, 134, 29, 14"/>
+		<control id="1032" class="BUTTON" caption="清空" style="1342242816" position="182, 134, 29, 14"/>
+		<control id="1033" class="BUTTON" caption="选项" style="1342242816" position="246, 134, 29, 14"/>
+		<control id="1034" class="BUTTON" caption="按16进制" style="1342242819" position="279, 136, 48, 10"/>
+		<control id="1027" class="BUTTON" caption="保存到文件(实时)" style="1342242819" position="126, 152, 80, 10"/>
+		<control id="1036" style="1342177296" position="92, 126, 259, 1"/>
+		<control id="1037" class="EDIT" style="1350633600" position="217, 150, 111, 13"/>
+		<control id="1038" class="BUTTON" caption="..." style="1342242816" position="330, 149, 14, 14"/>
+		<control id="1003" class="EDIT" style="1350631552" position="7, 63, 77, 14"/>
+		<control id="1040" class="BUTTON" caption="指定本机端口:" style="1342242819" position="7, 51, 68, 10"/>
+		<control id="1041" class="BUTTON" caption="发送接收到的数据" style="1342242819" position="198, 24, 80, 10"/>
+		<control id="1048" class="BUTTON" caption="自动重连(s)" style="1342242819" position="7, 100, 61, 10"/>
+		<control id="1051" class="EDIT" style="1350631552" position="27, 111, 38, 14"/>
+		<control style="1342177296" position="5, 98, 81, 1"/>
+		<control id="1068" caption="间隔" position="7, 115, 17, 8"/>
+		<control id="1057" caption="s" position="76, 113, 8, 8"/>
+		<control id="1054" class="BUTTON" caption="重连上后自动发送" style="1342242819" position="7, 129, 80, 10"/>
+		<control id="1069" caption="间隔" position="7, 143, 17, 8"/>
+		<control id="1055" class="EDIT" style="1350631552" position="27, 141, 40, 13"/>
+		<control id="1059" caption="ms" position="74, 142, 9, 8"/>
+		<control id="1084" class="BUTTON" caption="广播发送选项" style="1342242816" position="351, 26, 59, 14"/>
+	</dialog>
+	<dialog id="137" caption="Setting" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 204, 87">
+		<control id="1039" class="EDIT" style="1350631552" position="106, 12, 40, 14"/>
+		<control id="1040" class="EDIT" style="1350631552" position="106, 32, 40, 14"/>
+		<control id="1" class="BUTTON" caption="Ok" style="1342242817" position="44, 66, 50, 14"/>
+		<control id="2" class="BUTTON" caption="Cancel" style="1342242816" position="103, 66, 50, 14"/>
+		<control id="1070" caption="SendBuf:" position="26, 15, 77, 8"/>
+		<control id="1072" caption="Byte" position="151, 15, 17, 8"/>
+		<control id="1071" caption="RecvBuf:" position="26, 36, 77, 8"/>
+		<control id="1073" caption="Byte" position="152, 36, 17, 8"/>
+		<control style="1342177296" position="7, 58, 189, 1"/>
+	</dialog>
+	<dialog id="141" caption="Broadcast Send Option" fontsize="9" fontface="宋体" style="-2134376256" position="0, 0, 210, 149">
+		<control id="1" class="BUTTON" caption="OK" style="1342242817" position="153, 108, 50, 14"/>
+		<control id="2" class="BUTTON" caption="Cancel" style="1342242816" position="153, 124, 50, 14"/>
+		<control class="BUTTON" caption="Broadcast" style="1342177287" position="7, 7, 125, 65"/>
+		<control id="1088" class="BUTTON" caption="Send Broadcast" style="1342308361" position="31, 27, 56, 10"/>
+		<control id="1089" class="BUTTON" caption="Do not Send Broadcast" style="1342177289" position="31, 45, 64, 10"/>
+		<control class="BUTTON" caption="Point 2 Point " style="1342177287" position="7, 77, 125, 65"/>
+		<control id="1090" class="BUTTON" caption="Send All Conn" style="1342308361" position="35, 97, 80, 10"/>
+		<control id="1091" class="BUTTON" caption="Send selected Conn" style="1342177289" position="35, 115, 88, 10"/>
+	</dialog>
+</resource>
