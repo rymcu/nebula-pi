@@ -387,11 +387,6 @@
               <FilePath>.\bsp_wifi.h</FilePath>
             </File>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\bsp_uart.c</FilePath>
@@ -435,6 +430,11 @@
               <FileName>bsp_timer0.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bsp_timer0.h</FilePath>
+            </File>
+            <File>
+              <FileName>main1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main1.c</FilePath>
             </File>
           </Files>
         </Group>
