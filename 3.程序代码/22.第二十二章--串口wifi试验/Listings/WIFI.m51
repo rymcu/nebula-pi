@@ -1,9 +1,9 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/13/2021  21:40:26  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/10/2021  19:16:52  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
-D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\bsp_wifi.obj, .\Objects\main.obj, .\Objects\bsp_uart.obj, .\Objects\Drive_I2C.obj,
->>  .\Objects\oled.obj, .\Objects\bsp_timer0.obj TO .\Objects\WIFI PRINT (.\Listings\WIFI.m51) RAMSIZE (256)
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\bsp_wifi.obj, .\Objects\bsp_uart.obj, .\Objects\Drive_I2C.obj, .\Objects\oled.obj,
+>>  .\Objects\bsp_timer0.obj, .\Objects\main1.obj TO .\Objects\WIFI PRINT (.\Listings\WIFI.m51) RAMSIZE (256)
 
 
 MEMORY MODEL: LARGE
@@ -11,11 +11,11 @@ MEMORY MODEL: LARGE
 
 INPUT MODULES INCLUDED:
   .\Objects\bsp_wifi.obj (BSP_WIFI)
-  .\Objects\main.obj (MAIN)
   .\Objects\bsp_uart.obj (BSP_UART)
   .\Objects\Drive_I2C.obj (DRIVE_I2C)
   .\Objects\oled.obj (OLED)
   .\Objects\bsp_timer0.obj (BSP_TIMER0)
+  .\Objects\main1.obj (MAIN1)
   D:\KEIL_V5\C51\LIB\C51L.LIB (?C_STARTUP)
   D:\KEIL_V5\C51\LIB\C51L.LIB (?C?CLDPTR)
   D:\KEIL_V5\C51\LIB\C51L.LIB (?C?CLDOPTR)
@@ -34,9 +34,11 @@ LINK MAP OF MODULE:  .\Objects\WIFI (BSP_WIFI)
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
                     0008H     0018H                  *** GAP ***
-            BIT     0020H.0   0000H.3   UNIT         _BIT_GROUP_
-            BIT     0020H.3   0000H.1   UNIT         ?BI?BSP_UART
-            BIT     0020H.4   0000H.1   UNIT         ?BI?_OLED_SHOWNUM?OLED
+            BIT     0020H.0   0000H.1   UNIT         ?BI?BSP_UART
+            BIT     0020H.1   0000H.1   UNIT         ?BI?_WR_I2C?DRIVE_I2C
+            BIT     0020H.2   0000H.1   UNIT         ?BI?_OLED_SHOWCHAR?OLED
+            BIT     0020H.3   0000H.1   UNIT         ?BI?_OLED_SHOWNUM?OLED
+            BIT     0020H.4   0000H.1   UNIT         ?BI?_OLED_SHOWSTRING?OLED
             BIT     0020H.5   0000H.1   UNIT         ?BI?_OLED_SHOWCHINESE?OLED
             BIT     0020H.6   0000H.1   UNIT         ?BI?_OLED_DRAWBMP?OLED
                     0020H.7   0000H.1                *** GAP ***
@@ -44,13 +46,23 @@ LINK MAP OF MODULE:  .\Objects\WIFI (BSP_WIFI)
 
             * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
             XDATA   0000H     0045H     UNIT         ?XD?BSP_UART
-            XDATA   0045H     0013H     UNIT         _XDATA_GROUP_
-            XDATA   0058H     0012H     UNIT         ?XD?BSP_WIFI
-            XDATA   006AH     000BH     UNIT         ?XD?_OLED_SHOWNUM?OLED
-            XDATA   0075H     0008H     UNIT         ?XD?_OLED_DRAWBMP?OLED
-            XDATA   007DH     0005H     UNIT         ?XD?_OLED_SHOWCHINESE?OLED
-            XDATA   0082H     0002H     UNIT         ?XD?OLED_ON?OLED
-            XDATA   0084H     0001H     UNIT         ?XD?_OLED_POW?OLED
+            XDATA   0045H     0012H     UNIT         ?XD?BSP_WIFI
+            XDATA   0057H     000BH     UNIT         ?XD?_OLED_SHOWNUM?OLED
+            XDATA   0062H     0009H     UNIT         ?XD?_OLED_SHOWSTRING?OLED
+            XDATA   006BH     0008H     UNIT         ?XD?_OLED_DRAWBMP?OLED
+            XDATA   0073H     0006H     UNIT         ?XD?_OLED_SHOWCHAR?OLED
+            XDATA   0079H     0005H     UNIT         ?XD?_OLED_SHOWCHINESE?OLED
+            XDATA   007EH     0003H     UNIT         _XDATA_GROUP_
+            XDATA   0081H     0002H     UNIT         ?XD?_OLED_WR_BYTE?OLED
+            XDATA   0083H     0002H     UNIT         ?XD?OLED_CLEAR?OLED
+            XDATA   0085H     0002H     UNIT         ?XD?OLED_ON?OLED
+            XDATA   0087H     0001H     UNIT         ?XD?_WRITE_IIC_COMMAND?OLED
+            XDATA   0088H     0001H     UNIT         ?XD?_WRITE_IIC_DATA?OLED
+            XDATA   0089H     0001H     UNIT         ?XD?_OLED_SET_POS?OLED
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  19:16:52  PAGE 2
+
+
+            XDATA   008AH     0001H     UNIT         ?XD?_OLED_POW?OLED
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
@@ -59,9 +71,6 @@ LINK MAP OF MODULE:  .\Objects\WIFI (BSP_WIFI)
             CODE    000EH     0015H     UNIT         ?PR?OLED_DISPLAY_OFF?OLED
             CODE    0023H     0003H     ABSOLUTE     
             CODE    0026H     0636H     UNIT         ?CO?OLED
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/13/2021  21:40:26  PAGE 2
-
-
             CODE    065CH     022FH     UNIT         ?CO?BSP_WIFI
             CODE    088BH     019CH     UNIT         ?PR?_OLED_SHOWCHAR?OLED
             CODE    0A27H     010AH     UNIT         ?PR?_OLED_SHOWCHINESE?OLED
@@ -69,119 +78,61 @@ LINK MAP OF MODULE:  .\Objects\WIFI (BSP_WIFI)
             CODE    0C18H     00DFH     UNIT         ?PR?_OLED_SHOWNUM?OLED
             CODE    0CF7H     00C3H     UNIT         ?C?LIB_CODE
             CODE    0DBAH     0093H     UNIT         ?PR?WIFIINIT?BSP_WIFI
-            CODE    0E4DH     0091H     UNIT         ?PR?SHOWRXBUFF?MAIN
-            CODE    0EDEH     008EH     UNIT         ?PR?_OLED_DRAWBMP?OLED
-            CODE    0F6CH     008CH     UNIT         ?C_C51STARTUP
-            CODE    0FF8H     008BH     UNIT         ?PR?_OLED_SHOWSTRING?OLED
-            CODE    1083H     0063H     UNIT         ?PR?UART_R?BSP_UART
-            CODE    10E6H     005BH     UNIT         ?PR?OLED_ON?OLED
-            CODE    1141H     005AH     UNIT         ?PR?OLED_CLEAR?OLED
-            CODE    119BH     0043H     UNIT         ?PR?TIMER0?BSP_TIMER0
-            CODE    11DEH     003DH     UNIT         ?PR?_OLED_SET_POS?OLED
-            CODE    121BH     0038H     UNIT         ?PR?_USART_SENDSTRING?BSP_UART
-            CODE    1253H     0034H     UNIT         ?PR?MAIN?MAIN
-            CODE    1287H     002CH     UNIT         ?PR?_WR_I2C?DRIVE_I2C
-            CODE    12B3H     002AH     UNIT         ?PR?RDACK_I2C?DRIVE_I2C
-            CODE    12DDH     0028H     UNIT         ?PR?RDNAK_I2C?DRIVE_I2C
-            CODE    1305H     0022H     UNIT         ?PR?_DELAYMS?BSP_WIFI
-            CODE    1327H     0022H     UNIT         ?PR?_OLED_WR_BYTE?OLED
-            CODE    1349H     001EH     UNIT         ?PR?_OLED_POW?OLED
-            CODE    1367H     001DH     UNIT         ?PR?_WRITE_IIC_COMMAND?OLED
-            CODE    1384H     001DH     UNIT         ?PR?_WRITE_IIC_DATA?OLED
-            CODE    13A1H     001CH     UNIT         ?C_INITSEG
-            CODE    13BDH     001BH     UNIT         ?PR?OLED_DISPLAY_ON?OLED
-            CODE    13D8H     001AH     UNIT         ?PR?EXUARTINIT?BSP_UART
-            CODE    13F2H     0011H     UNIT         ?CO?MAIN
-            CODE    1403H     0010H     UNIT         ?PR?TIMER0_1MS_INIT?BSP_TIMER0
-            CODE    1413H     000FH     UNIT         ?PR?STOP_I2C?DRIVE_I2C
-            CODE    1422H     000DH     UNIT         ?PR?START_I2C?DRIVE_I2C
-            CODE    142FH     000CH     UNIT         ?PR?DELAY_I2C?DRIVE_I2C
+            CODE    0E4DH     008EH     UNIT         ?PR?_OLED_DRAWBMP?OLED
+            CODE    0EDBH     008CH     UNIT         ?C_C51STARTUP
+            CODE    0F67H     008BH     UNIT         ?PR?_OLED_SHOWSTRING?OLED
+            CODE    0FF2H     0086H     UNIT         ?CO?MAIN1
+            CODE    1078H     0063H     UNIT         ?PR?UART_R?BSP_UART
+            CODE    10DBH     005BH     UNIT         ?PR?OLED_ON?OLED
+            CODE    1136H     005AH     UNIT         ?PR?OLED_CLEAR?OLED
+            CODE    1190H     0043H     UNIT         ?PR?TIMER0?BSP_TIMER0
+            CODE    11D3H     0042H     UNIT         ?PR?MAIN?MAIN1
+            CODE    1215H     003DH     UNIT         ?PR?_OLED_SET_POS?OLED
+            CODE    1252H     0038H     UNIT         ?PR?_USART_SENDSTRING?BSP_UART
+            CODE    128AH     002CH     UNIT         ?PR?_WR_I2C?DRIVE_I2C
+            CODE    12B6H     002AH     UNIT         ?PR?RDACK_I2C?DRIVE_I2C
+            CODE    12E0H     0028H     UNIT         ?PR?RDNAK_I2C?DRIVE_I2C
+            CODE    1308H     0022H     UNIT         ?PR?_DELAYMS?BSP_WIFI
+            CODE    132AH     0022H     UNIT         ?PR?_OLED_WR_BYTE?OLED
+            CODE    134CH     001EH     UNIT         ?PR?_OLED_POW?OLED
+            CODE    136AH     001DH     UNIT         ?PR?_WRITE_IIC_COMMAND?OLED
+            CODE    1387H     001DH     UNIT         ?PR?_WRITE_IIC_DATA?OLED
+            CODE    13A4H     001CH     UNIT         ?C_INITSEG
+            CODE    13C0H     001BH     UNIT         ?PR?OLED_DISPLAY_ON?OLED
+            CODE    13DBH     001AH     UNIT         ?PR?EXUARTINIT?BSP_UART
+            CODE    13F5H     0010H     UNIT         ?PR?TIMER0_1MS_INIT?BSP_TIMER0
+            CODE    1405H     000FH     UNIT         ?PR?STOP_I2C?DRIVE_I2C
+            CODE    1414H     000DH     UNIT         ?PR?START_I2C?DRIVE_I2C
+            CODE    1421H     000CH     UNIT         ?PR?DELAY_I2C?DRIVE_I2C
 
 
 
 OVERLAY MAP OF MODULE:   .\Objects\WIFI (BSP_WIFI)
 
 
-SEGMENT                                   BIT_GROUP          XDATA_GROUP
-  +--> CALLED SEGMENT                  START    LENGTH     START    LENGTH
---------------------------------------------------------------------------
-?C_C51STARTUP                          -----    -----      -----    -----
-  +--> ?PR?MAIN?MAIN
+SEGMENT                                  XDATA_GROUP
+  +--> CALLED SEGMENT                  START    LENGTH
+------------------------------------------------------
+?C_C51STARTUP                          -----    -----
+  +--> ?PR?MAIN?MAIN1
   +--> ?C_INITSEG
 
-?PR?MAIN?MAIN                          -----    -----      -----    -----
+?PR?MAIN?MAIN1                         -----    -----
   +--> ?PR?UART_INIT?BSP_UART
-  +--> ?PR?OLED_INIT?OLED
-  +--> ?PR?TIMER0_1MS_INIT?BSP_TIMER0
-  +--> ?PR?OLED_CLEAR?OLED
-  +--> ?CO?MAIN
-  +--> ?PR?_OLED_SHOWSTRING?OLED
-  +--> ?PR?WIFIINIT?BSP_WIFI
-  +--> ?PR?SHOWRXBUFF?MAIN
-
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/13/2021  21:40:26  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  19:16:52  PAGE 3
 
 
-?PR?UART_INIT?BSP_UART                 -----    -----      -----    -----
-  +--> ?PR?EXUARTINIT?BSP_UART
-
-?PR?OLED_INIT?OLED                     -----    -----      -----    -----
-  +--> ?PR?_OLED_WR_BYTE?OLED
-
-?PR?_OLED_WR_BYTE?OLED                 -----    -----      0055H    0002H
-  +--> ?PR?_WRITE_IIC_DATA?OLED
-  +--> ?PR?_WRITE_IIC_COMMAND?OLED
-
-?PR?_WRITE_IIC_DATA?OLED               -----    -----      0057H    0001H
-  +--> ?PR?START_I2C?DRIVE_I2C
-  +--> ?PR?_WR_I2C?DRIVE_I2C
-  +--> ?PR?STOP_I2C?DRIVE_I2C
-
-?PR?START_I2C?DRIVE_I2C                -----    -----      -----    -----
-  +--> ?PR?DELAY_I2C?DRIVE_I2C
-
-?PR?_WR_I2C?DRIVE_I2C                  0020H.2  0000H.1    -----    -----
-  +--> ?PR?DELAY_I2C?DRIVE_I2C
-
-?PR?STOP_I2C?DRIVE_I2C                 -----    -----      -----    -----
-  +--> ?PR?DELAY_I2C?DRIVE_I2C
-
-?PR?_WRITE_IIC_COMMAND?OLED            -----    -----      0057H    0001H
-  +--> ?PR?START_I2C?DRIVE_I2C
-  +--> ?PR?_WR_I2C?DRIVE_I2C
-  +--> ?PR?STOP_I2C?DRIVE_I2C
-
-?PR?OLED_CLEAR?OLED                    -----    -----      0045H    0002H
-  +--> ?PR?_OLED_WR_BYTE?OLED
-
-?PR?_OLED_SHOWSTRING?OLED              0020H.0  0000H.1    0045H    0009H
-  +--> ?PR?_OLED_SHOWCHAR?OLED
-
-?PR?_OLED_SHOWCHAR?OLED                0020H.1  0000H.1    004EH    0006H
-  +--> ?PR?_OLED_SET_POS?OLED
-  +--> ?CO?OLED
-  +--> ?PR?_OLED_WR_BYTE?OLED
-
-?PR?_OLED_SET_POS?OLED                 -----    -----      0054H    0001H
-  +--> ?PR?_OLED_WR_BYTE?OLED
-
-?PR?WIFIINIT?BSP_WIFI                  -----    -----      -----    -----
-  +--> ?PR?_DELAYMS?BSP_WIFI
-  +--> ?CO?BSP_WIFI
+  +--> ?CO?MAIN1
   +--> ?PR?_USART_SENDSTRING?BSP_UART
 
-?PR?_USART_SENDSTRING?BSP_UART         -----    -----      0045H    0003H
+?PR?UART_INIT?BSP_UART                 -----    -----
+  +--> ?PR?EXUARTINIT?BSP_UART
 
-?PR?SHOWRXBUFF?MAIN                    -----    -----      -----    -----
-  +--> ?PR?OLED_CLEAR?OLED
-  +--> ?PR?_OLED_SHOWSTRING?OLED
+?PR?_USART_SENDSTRING?BSP_UART         007EH    0003H
 
 
 
 SYMBOL TABLE OF MODULE:  .\Objects\WIFI (BSP_WIFI)
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/13/2021  21:40:26  PAGE 4
-
-
 
   VALUE           TYPE          NAME
   ----------------------------------
@@ -207,10 +158,16 @@ SYMBOL TABLE OF MODULE:  .\Objects\WIFI (BSP_WIFI)
   -------         ENDMOD        ?C?ILDIX
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?WIFIINIT?BSP_WIFI
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?RDNAK_I2C?DRIVE_I2C
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?RDACK_I2C?DRIVE_I2C
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_INIT?OLED
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?OLED_DISPLAY_ON?OLED
@@ -219,10 +176,19 @@ SYMBOL TABLE OF MODULE:  .\Objects\WIFI (BSP_WIFI)
     SEGMENT: ?PR?OLED_DISPLAY_OFF?OLED
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_CLEAR?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  19:16:52  PAGE 4
+
+
     SEGMENT: ?PR?OLED_ON?OLED
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_OLED_SHOWNUM?OLED
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_OLED_SHOWSTRING?OLED
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_OLED_SHOWCHINESE?OLED
@@ -230,5 +196,8 @@ SYMBOL TABLE OF MODULE:  .\Objects\WIFI (BSP_WIFI)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_OLED_DRAWBMP?OLED
 
-Program Size: data=9.7 xdata=133 code=5179
-LINK/LOCATE RUN COMPLETE.  8 WARNING(S),  0 ERROR(S)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0_1MS_INIT?BSP_TIMER0
+
+Program Size: data=9.7 xdata=139 code=5165
+LINK/LOCATE RUN COMPLETE.  13 WARNING(S),  0 ERROR(S)

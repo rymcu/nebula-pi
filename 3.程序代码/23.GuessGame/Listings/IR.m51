@@ -1,0 +1,475 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/10/2021  20:55:06  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Drive_1602.obj, .\Objects\HongWai.obj, .\Objects\GuessGame.obj, .\Objects\Rand.obj
+>>  TO .\Objects\IR PRINT (.\Listings\IR.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Drive_1602.obj (DRIVE_1602)
+  .\Objects\HongWai.obj (HONGWAI)
+  .\Objects\GuessGame.obj (GUESSGAME)
+  .\Objects\Rand.obj (RAND)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?ULSHR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\IR (DRIVE_1602)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         _DATA_GROUP_
+            DATA    000EH     0005H     UNIT         ?DT?GUESSGAME
+            DATA    0013H     0004H     UNIT         ?DT?HONGWAI
+                    0017H     0009H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?HONGWAI
+            BIT     0020H.1   0000H.1   UNIT         _BIT_GROUP_
+                    0020H.2   0000H.6                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000DH     UNIT         ?PR?_DISP_1602_NUM?DRIVE_1602
+                    0010H     0003H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+            CODE    0016H     0151H     UNIT         ?PR?GETKEYVALUE?GUESSGAME
+            CODE    0167H     00E1H     UNIT         ?PR?MAIN?GUESSGAME
+            CODE    0248H     00E0H     UNIT         ?PR?INT1?HONGWAI
+            CODE    0328H     00B0H     UNIT         ?CO?GUESSGAME
+            CODE    03D8H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0464H     0052H     UNIT         ?C?LIB_CODE
+            CODE    04B6H     0031H     UNIT         ?PR?T_COUNT?HONGWAI
+            CODE    04E7H     0028H     UNIT         ?PR?_DISP_1602_STR?DRIVE_1602
+            CODE    050FH     001EH     UNIT         ?PR?_WR_CMD?DRIVE_1602
+            CODE    052DH     0014H     UNIT         ?PR?INIT_1602?DRIVE_1602
+            CODE    0541H     0013H     UNIT         ?PR?INITIR?HONGWAI
+            CODE    0554H     0011H     UNIT         ?PR?_WR_DAT?DRIVE_1602
+            CODE    0565H     000BH     UNIT         ?PR?READY?DRIVE_1602
+            CODE    0570H     000BH     UNIT         ?PR?RD_STA?DRIVE_1602
+            CODE    057BH     000BH     UNIT         ?C_INITSEG
+            CODE    0586H     0009H     UNIT         ?PR?RAND?RAND
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 2
+
+
+            CODE    058FH     0008H     UNIT         ?PR?INITRANDTIMER?RAND
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\IR (DRIVE_1602)
+
+
+SEGMENT                                  BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                 START    LENGTH     START    LENGTH
+-------------------------------------------------------------------------
+?PR?INT1?HONGWAI                      -----    -----      0008H    0002H
+  +--> ?PR?T_COUNT?HONGWAI
+
+?PR?T_COUNT?HONGWAI                   0020H.1  0000H.1    -----    -----
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP                         -----    -----      -----    -----
+  +--> ?PR?MAIN?GUESSGAME
+  +--> ?C_INITSEG
+
+?PR?MAIN?GUESSGAME                    -----    -----      -----    -----
+  +--> ?PR?INIT_1602?DRIVE_1602
+  +--> ?CO?GUESSGAME
+  +--> ?PR?_DISP_1602_STR?DRIVE_1602
+  +--> ?PR?INITIR?HONGWAI
+  +--> ?PR?INITRANDTIMER?RAND
+  +--> ?PR?GETKEYVALUE?GUESSGAME
+  +--> ?PR?RAND?RAND
+  +--> ?PR?_DISP_1602_NUM?DRIVE_1602
+
+?PR?INIT_1602?DRIVE_1602              -----    -----      -----    -----
+  +--> ?PR?_WR_CMD?DRIVE_1602
+
+?PR?_WR_CMD?DRIVE_1602                -----    -----      000DH    0001H
+  +--> ?PR?READY?DRIVE_1602
+
+?PR?READY?DRIVE_1602                  -----    -----      -----    -----
+  +--> ?PR?RD_STA?DRIVE_1602
+
+?PR?_DISP_1602_STR?DRIVE_1602         -----    -----      000AH    0003H
+  +--> ?PR?_WR_CMD?DRIVE_1602
+  +--> ?PR?_WR_DAT?DRIVE_1602
+
+?PR?_WR_DAT?DRIVE_1602                -----    -----      000DH    0001H
+  +--> ?PR?READY?DRIVE_1602
+
+?PR?GETKEYVALUE?GUESSGAME             -----    -----      -----    -----
+  +--> ?CO?GUESSGAME
+
+?PR?_DISP_1602_NUM?DRIVE_1602         -----    -----      000AH    0001H
+  +--> ?PR?_WR_CMD?DRIVE_1602
+  +--> ?PR?_WR_DAT?DRIVE_1602
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\IR (DRIVE_1602)
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 3
+
+
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DRIVE_1602
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:051CH         PUBLIC        _WR_Cmd
+  C:0554H         PUBLIC        _WR_Dat
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00B0H.4       PUBLIC        EN_1602
+  C:0570H         PUBLIC        RD_sta
+  C:052DH         PUBLIC        Init_1602
+  B:00B0H.6       PUBLIC        RS_1602
+  B:00B0H.5       PUBLIC        RW_1602
+  D:00C8H         PUBLIC        T2CON
+  C:0003H         PUBLIC        _Disp_1602_num
+  C:0565H         PUBLIC        Ready
+  C:04E7H         PUBLIC        _Disp_1602_str
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DISP_1602_STR
+  D:0007H         SYMBOL        row
+  D:0005H         SYMBOL        column
+  D:000AH         SYMBOL        str
+  -------         DO            
+  D:0007H         SYMBOL        addr
+  -------         ENDDO         
+  C:04E7H         LINE#         9
+  C:04EDH         LINE#         10
+  C:04EDH         LINE#         13
+  C:04EDH         LINE#         14
+  C:04F0H         LINE#         16
+  C:04FBH         LINE#         17
+  C:04FBH         LINE#         18
+  C:050CH         LINE#         19
+  C:050EH         LINE#         20
+  -------         ENDPROC       _DISP_1602_STR
+  -------         PROC          _DISP_1602_NUM
+  D:0007H         SYMBOL        row
+  D:0005H         SYMBOL        column
+  D:000AH         SYMBOL        num
+  -------         DO            
+  D:0007H         SYMBOL        addr
+  -------         ENDDO         
+  C:0003H         LINE#         22
+  C:0005H         LINE#         23
+  C:0005H         LINE#         26
+  C:0005H         LINE#         27
+  C:0008H         LINE#         29
+  -------         ENDPROC       _DISP_1602_NUM
+  -------         PROC          INIT_1602
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 4
+
+
+  C:052DH         LINE#         32
+  C:052DH         LINE#         33
+  C:052DH         LINE#         34
+  C:0532H         LINE#         35
+  C:0537H         LINE#         36
+  C:053CH         LINE#         37
+  -------         ENDPROC       INIT_1602
+  -------         PROC          READY
+  C:0565H         LINE#         39
+  C:0565H         LINE#         40
+  C:0565H         LINE#         41
+  C:0568H         LINE#         42
+  C:056FH         LINE#         43
+  -------         ENDPROC       READY
+  -------         PROC          RD_STA
+  -------         DO            
+  D:0007H         SYMBOL        sta
+  -------         ENDDO         
+  C:0570H         LINE#         45
+  C:0570H         LINE#         46
+  C:0570H         LINE#         49
+  C:0572H         LINE#         50
+  C:0574H         LINE#         52
+  C:0576H         LINE#         53
+  C:0578H         LINE#         54
+  C:057AH         LINE#         56
+  C:057AH         LINE#         57
+  -------         ENDPROC       RD_STA
+  -------         PROC          L?0013
+  -------         ENDPROC       L?0013
+  -------         PROC          _WR_CMD
+  D:000DH         SYMBOL        cmd
+  C:051CH         LINE#         58
+  C:051EH         LINE#         59
+  C:051EH         LINE#         60
+  C:0521H         LINE#         62
+  C:0523H         LINE#         63
+  C:0525H         LINE#         65
+  C:0528H         LINE#         67
+  C:052AH         LINE#         68
+  C:052CH         LINE#         69
+  -------         ENDPROC       _WR_CMD
+  -------         PROC          _WR_DAT
+  D:000DH         SYMBOL        dat
+  C:0554H         LINE#         70
+  C:0556H         LINE#         71
+  C:0556H         LINE#         72
+  C:0559H         LINE#         74
+  C:055BH         LINE#         75
+  C:055DH         LINE#         77
+  C:0560H         LINE#         79
+  C:0562H         LINE#         80
+  C:0564H         LINE#         81
+  -------         ENDPROC       _WR_DAT
+  -------         ENDMOD        DRIVE_1602
+
+  -------         MODULE        HONGWAI
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 5
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0541H         PUBLIC        InitIR
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:0088H.3       PUBLIC        IE1
+  C:04BCH         PUBLIC        T_Count
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  D:008AH         PUBLIC        TL0
+  B:00B0H.3       PUBLIC        IR_in
+  B:0088H.4       PUBLIC        TR0
+  C:0248H         PUBLIC        Int1
+  D:00C8H         PUBLIC        T2CON
+  D:0013H         PUBLIC        Data_IR
+  B:0020H.0       PUBLIC        Flag_IR
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INITIR
+  C:0541H         LINE#         22
+  C:0541H         LINE#         23
+  C:0541H         LINE#         24
+  C:0543H         LINE#         26
+  C:0546H         LINE#         27
+  C:0549H         LINE#         29
+  C:054BH         LINE#         30
+  C:054DH         LINE#         32
+  C:054FH         LINE#         33
+  C:0551H         LINE#         35
+  C:0553H         LINE#         36
+  -------         ENDPROC       INITIR
+  -------         PROC          L?0016
+  -------         ENDPROC       L?0016
+  -------         PROC          T_COUNT
+  B:0020H.1       SYMBOL        flag
+  C:04BCH         LINE#         37
+  C:04BCH         LINE#         38
+  C:04BCH         LINE#         39
+  C:04BFH         LINE#         40
+  C:04C1H         LINE#         41
+  C:04C3H         LINE#         44
+  C:04D6H         LINE#         46
+  C:04D8H         LINE#         47
+  C:04E6H         LINE#         48
+  -------         ENDPROC       T_COUNT
+  -------         PROC          INT1
+  -------         DO            
+  D:0082H         SYMBOL        i
+  D:0008H         SYMBOL        T_Low
+  D:0002H         SYMBOL        T_High
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 6
+
+
+  -------         ENDDO         
+  C:0248H         LINE#         50
+  C:0261H         LINE#         55
+  C:0266H         LINE#         56
+  C:026DH         LINE#         58
+  C:0299H         LINE#         60
+  C:029CH         LINE#         61
+  C:029CH         LINE#         62
+  C:02A1H         LINE#         63
+  C:02A8H         LINE#         65
+  C:02D4H         LINE#         66
+  C:02E9H         LINE#         67
+  C:0304H         LINE#         68
+  C:030DH         LINE#         69
+  C:030FH         LINE#         71
+  C:0311H         LINE#         72
+  -------         ENDPROC       INT1
+  -------         ENDMOD        HONGWAI
+
+  -------         MODULE        GUESSGAME
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0167H         PUBLIC        main
+  D:000EH         PUBLIC        KeyValue
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:000FH         PUBLIC        RandNum
+  D:0010H         PUBLIC        Key_Str
+  C:0016H         PUBLIC        GetKeyValue
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0167H         LINE#         30
+  C:0167H         LINE#         31
+  C:0167H         LINE#         34
+  C:016AH         LINE#         36
+  C:0177H         LINE#         37
+  C:0184H         LINE#         39
+  C:0187H         LINE#         40
+  C:018AH         LINE#         42
+  C:018AH         LINE#         43
+  C:018AH         LINE#         44
+  C:018DH         LINE#         45
+  C:018DH         LINE#         46
+  C:018FH         LINE#         47
+  C:0192H         LINE#         49
+  C:0198H         LINE#         50
+  C:0198H         LINE#         51
+  C:01A5H         LINE#         52
+  C:01B2H         LINE#         54
+  C:01B7H         LINE#         55
+  C:01B9H         LINE#         56
+  C:01C4H         LINE#         57
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 7
+
+
+  C:01C4H         LINE#         58
+  C:01CAH         LINE#         59
+  C:01CAH         LINE#         60
+  C:01D7H         LINE#         61
+  C:01E0H         LINE#         62
+  C:01E8H         LINE#         64
+  C:01EAH         LINE#         65
+  C:01FBH         LINE#         66
+  C:01FBH         LINE#         67
+  C:01FEH         LINE#         68
+  C:0207H         LINE#         69
+  C:020DH         LINE#         70
+  C:020FH         LINE#         72
+  C:020FH         LINE#         73
+  C:0212H         LINE#         74
+  C:021BH         LINE#         75
+  C:0228H         LINE#         76
+  C:0228H         LINE#         78
+  C:022BH         LINE#         80
+  C:022BH         LINE#         81
+  C:0238H         LINE#         82
+  C:0245H         LINE#         83
+  C:0245H         LINE#         84
+  C:0245H         LINE#         85
+  -------         ENDPROC       MAIN
+  -------         PROC          GETKEYVALUE
+  -------         DO            
+  D:0007H         SYMBOL        Key
+  -------         ENDDO         
+  C:0016H         LINE#         88
+  C:0016H         LINE#         89
+  C:0016H         LINE#         92
+  C:0023H         LINE#         93
+  C:006AH         LINE#         94
+  C:006AH         LINE#         95
+  C:0074H         LINE#         96
+  C:007EH         LINE#         97
+  C:0088H         LINE#         98
+  C:0092H         LINE#         99
+  C:009CH         LINE#         100
+  C:00A6H         LINE#         101
+  C:00B0H         LINE#         102
+  C:00BDH         LINE#         103
+  C:00C7H         LINE#         104
+  C:00D4H         LINE#         105
+  C:00DEH         LINE#         106
+  C:00E8H         LINE#         107
+  C:00F5H         LINE#         108
+  C:0102H         LINE#         109
+  C:010FH         LINE#         110
+  C:011CH         LINE#         111
+  C:0129H         LINE#         112
+  C:0136H         LINE#         113
+  C:0143H         LINE#         114
+  C:0150H         LINE#         115
+  C:015DH         LINE#         116
+  C:0166H         LINE#         117
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/10/2021  20:55:06  PAGE 8
+
+
+  C:0166H         LINE#         118
+  -------         ENDPROC       GETKEYVALUE
+  -------         ENDMOD        GUESSGAME
+
+  -------         MODULE        RAND
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00E8H         PUBLIC        P4
+  C:0586H         PUBLIC        Rand
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:058FH         PUBLIC        InitRandTimer
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.3       PUBLIC        ET1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INITRANDTIMER
+  C:058FH         LINE#         3
+  C:058FH         LINE#         4
+  C:058FH         LINE#         5
+  C:0592H         LINE#         7
+  C:0594H         LINE#         9
+  C:0596H         LINE#         10
+  -------         ENDPROC       INITRANDTIMER
+  -------         PROC          RAND
+  C:0586H         LINE#         12
+  C:0586H         LINE#         13
+  C:0586H         LINE#         14
+  C:058EH         LINE#         15
+  -------         ENDPROC       RAND
+  -------         ENDMOD        RAND
+
+  -------         MODULE        ?C?CLDPTR
+  C:0464H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?ULSHR
+  C:047DH         PUBLIC        ?C?ULSHR
+  -------         ENDMOD        ?C?ULSHR
+
+  -------         MODULE        ?C?CCASE
+  C:0490H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+Program Size: data=24.2 xdata=0 code=1428
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
